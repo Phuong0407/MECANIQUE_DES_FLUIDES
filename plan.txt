@@ -1,25 +1,44 @@
 Partie 1 :
 Théorie fondamentale :
-•	L’approche par MMC : cinématique, dynamique, modélisation des forces, loi constitutive.
-•	Fluides idéals : équation d’Euler, theorème de Bernoulli, base des vagues.
-•	Écoulements potentiels : théorie, applications conformes, les forces sur les corps, paradoxe d’Alambert.
-•	Fluides visqueux : lois constitutive pour les fluides newtonien, équation de Navier-Stokes, cas d’incompressibilité.
-•	Solutions d’équation Navier-Stokes : des solutions des cas aux théorie de la couche limite.
-•	Dynamiques des tourbillons.
-•	Fluides non-newtonien : les différents lois constitutives. Une explanation microscopique, 
+	|---L’approche par MMC :
+		|---cinématique.
+		|---dynamique.
+		|---modélisation des forces.
+		|---loi constitutive.
+	|---Fluides idéals :
+		|---équation d’Euler.
+		|---theorème de Bernoulli.
+		|---base des vagues.
+	|---Écoulements potentiels :
+		|---théorie.
+		|---applications conformes.
+		|---les forces sur les corps.
+		|---paradoxe d’Alambert.
+	|---Fluides visqueux :
+		|---lois constitutive pour les fluides newtonien.
+		|---équation de Navier-Stokes.
+		|---cas d’incompressibilité.
+	|---Solutions d’équation Navier-Stokes :
+		|---des solutions des cas aux théorie de la couche limite.
+	|---Dynamiques des tourbillons.
+	|---Fluides non-newtonien :
+		|---les différents lois constitutives.
+		|---Une explanation microscopique.
 Partie 2 :
 Théorie avancée :
-•	Turbulence : 
-•	Couches limites : 
-•	
+	|---Turbulence : 
+	|---Couches limites : 
+	|---
 Partie 3:
 Application :
-•	Écoulement internes.
-•	Écoulement externes.
-•	Écoulement ouverts.
-•	Écoulement magnétohydrodynamique.
+	|---Écoulement internes.
+	|---Écoulement externes.
+	|---Écoulement ouverts.
+	|---Écoulement magnétohydrodynamique.
 Partie 4:
 Specialisation :
-•	Systèmes des propulsions.
-•	Fluide machinery.
-•	Aérodynamique, couplage.
+	|---Systèmes des propulsions.
+	|---Fluide machinery.
+	|---Aérodynamique.
+	|---couplage.
+	
