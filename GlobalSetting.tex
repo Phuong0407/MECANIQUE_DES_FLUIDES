@@ -1,0 +1,38 @@
+%================================================Page layout setting=================================================
+\usepackage[paperwidth=19cm,paperheight=27cm,inner=1.8cm,outer=1.8cm,top=2cm,bottom=2cm,heightrounded=true]{geometry}
+\usepackage{pifont,framed,enumitem,enumerate,scrextend,indentfirst,titlesec,subfiles}
+\usepackage[hidelinks]{hyperref}
+\usepackage[atend]{bookmark}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+
+%================================================Text typeset setting================================================
+\usepackage[utf8]{inputenc}
+\usepackage[OT1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{lmodern}
+
+%=============================================Scientific typeset setting=============================================
+\usepackage{amsfonts,amsthm,amsmath,mathtools,amssymb,mathrsfs,bbm,esint,stmaryrd}
+\usepackage{physics,siunitx}
+
+\changefontsizes{13pt}
+
+%==========================================Reduced formulas used frequently==========================================
+\newcommand{\bi}[1]{\emph{\textbf{#1}}}
+
+
+%=============================================Mathematical environnement=============================================
+\newtheoremstyle{bfnote}
+    {}{}
+    {\itshape}{}
+    {\bfseries}{.}
+    { }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\theoremstyle{bfnote}
+
+\theoremstyle{bfnote}
+\newtheorem{lemme}{Bổ đề}[chapter]
+\theoremstyle{bfnote}
+\newtheorem{theoreme}{Định lý}[chapter]
+\theoremstyle{bfnote}
+\newtheorem{desmonstration}{Chứng minh}[chapter]
