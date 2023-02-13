@@ -1,0 +1,79 @@
+\documentclass[DONG_CHAY_NEN_DUOC.tex]{subfiles}
+
+\begin{document}
+\chapter{SÓNG XUNG KÍCH THẲNG}
+
+Chúng ta đã biết một số lượng lớn các dòng chảy tốc độ rất lớn mà trong lòng lưu chất có những biến thiên rất mạnh của các thông số đặc trưng trong một khoảng rất nhỏ. Khoảng nhỏ này có thể vào cở quảng đường tự do trung bình của các phân tử cấu thành lưu chất. Do đó, trong lòng các lưu chất này, các phương trình môi trường liên tục không còn được nghiệm đúng nữa. Vì vậy, chúng ta cần thiết lập một mô hình khác để mô hình hóa bài toán này và tính vào đó những sự không liên tục của môi trường lưu chất - các sóng xung kích.
+
+
+
+\section{Phương trình cân bằng khi đi qua một sóng xung kích}
+
+Chúng ta đặt mình trong cơ sở các phép gần đúng :
+\begin{enumerate}
+	\item không có lực nhớt cũng như lực thể tích.
+	\item các đường dòng là song song với nhau và thẳng góc với mặt của sóng sốc.
+	\item không có phản ứng hóa học cũng như sự trao đổi nhiệt với môi trường bên ngoài, và lưu chất nằm trong cân bằng nhiệt động.
+\end{enumerate}
+
+Do đó nến gọi (1) và (2) là trạng thái của chất lưu ở hai bên một sóng xung kích thì ta có các phương trình cân bằng :
+\begin{enumerate}
+	\item khối lượng : $\rho_1 v_1 = \rho_2 v_2$.
+	\item động lượng : $p_1 + \rho_1 v_1^2 = p_2 + \rho_2 v_2^2$.
+	\item năng lượng : $h_1 + \frac{v_1^2}{2} = h_2 + \frac{v_2^2}{2}$.
+\end{enumerate}
+
+Và ta có thể đưa ra dạng tổng quát của phương trình trạng thái : $\rho = \rho(s,p)$.
+
+\section{Sóng xung kích thẳng đối với một khí lý tưởng}
+
+Áp dụng các phương trình trên, ta có :
+
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			M_2^2 = \frac{2 + (\gamma-1)M_1^2}{2\gamma M_1^2 + 1 - \gamma}
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\frac{T_2}{T_1} = \Biggl( \frac{2\gamma}{\gamma +1} M_1^2 - \frac{\gamma-1}{\gamma+1}   \Biggr)\Biggl( \frac{\gamma-1}{\gamma+1}  + \frac{2}{(\gamma+1)M_1^2}\Biggr)
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\frac{p_2}{p_1} = \frac{2\gamma}{\gamma + 1}M_1^2-\frac{\gamma-1}{\gamma+1}
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\frac{\rho_2}{\rho_1} = \frac{(\gamma+1)M_1^2}{2+(\gamma-1)M_1^2}
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\frac{v_1}{v_2} = \frac{(\gamma+1)M_1^2}{2+(\gamma-1)M_1^2}
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\frac{s_2-s_1}{c_v} = \ln\Biggl[ \Bigg(   \frac{1}{\gamma + 1}\Bigg)^{\gamma +1 } \Big(2\gamma M_1^2 - \gamma + 1\Big)\Bigg( \frac{2}{M_1^2 }+\gamma -1 \Bigg)^{\gamma}\Biggr]
+		}
+	\end{aligned}
+\end{equation}
+\section{Hệ thức Hugoniot và đường Rayleigh}
+
+Ta có thể biểu diển công thức của đường Rayleigh dưới dạng : 
+
+
+\end{document}

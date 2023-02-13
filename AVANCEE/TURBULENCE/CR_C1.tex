@@ -1,0 +1,23 @@
+\documentclass[CHAY_ROI.tex]{subfiles}
+\begin{document}
+\chapter{GIỚI THIỆU VÀ TỔNG QUAN}
+Chúng ta muốn đặt mình trong khuôn khổ của sự tuyến tính, trong đó \emph{sự chồng chất trạng thái} có thể được thực hiện. Tuy nhiên, không phải lúc nào cũng có thể làm được như vậy. Chúng ta thấy rất nhiều hiện tượng mà bản chất nội tại của nó lúc nào cũng là phi tuyến. 
+\section{Hệ động lực học}
+Để nghiên cứu các kết quả do sự phi tuyến tính gây ra, chúng ta sẽ chú ý vào các vấn đề tiến triển của một tập hợp các \bfit{biến trạng thái} của một hệ thống. Các biến trạng thái là các hàm phụ thuộc vào một biến độc lập duy nhất được gọi là \bfit{thời gian} (khái niệm của hệ động lực học). 
+
+Chúng ta chỉ xét các hệ thống được định nghĩa dựa vào các biến trạng thái mà các biến này bị chi phối bởi một phương trình vi phân nào đó. Như vậy, chúng ta có thể viết phương trình vi phân chi phối một hệ động lực học như sau :
+\begin{equation}
+    \begin{aligned}
+        \dot{X}_i=\mathcal{F}_i(X_1(t),\dots,X_d(t),t),\qquad i=1,\dots,d,
+    \end{aligned}
+\end{equation}
+trong đó $d$ được gọi là \bfit{số chiều} của hệ thống được mô tả bởi tập hợp các biến trạng thái $\{X_i(t)|i=1,\dots,d\}$
+
+Trong khuôn khổ thời gian-rời rạc, hệ thống được mô tả bởi phương trình :
+\begin{equation}
+    \begin{aligned}
+        X_{i,k+1}=\mathcal{F}_i(X_{1,k},\dots,X_{d,k},k),\qquad i=1,\dots,d,
+    \end{aligned}
+\end{equation}
+
+\end{document}

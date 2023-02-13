@@ -1,0 +1,153 @@
+\documentclass[DONG_CHAY_NEN_DUOC.tex]{subfiles}
+
+\begin{document}
+\chapter{DÒNG CHẢY MỘT CHIỀU ỔN ĐỊNH}
+\section{Giới thiệu}
+Chúng ta sẽ xử lý động học của chất khí trong trường hợp đơn giản. Chúng ta sẽ chỉ nghiên cứu dòng chảy một chiều, khi xét đến sự nhớt và sự truyền nhiệt. Nghiên cứu này chỉ được thực hiện đối với chế độ chuyển động ổn định. Chúng ta chỉ xét các khí lý tưởng, 
+
+\section{Dòng chuyển động đẳng entropy của khí thực}
+\subsection{Thiết lập các phương trình}
+
+Chúng ta đặt mình trong chế độ chảy một chiều ổn định, trong đó không có sự trao đổi công và nhiệt. Chúng ta cũng bỏ qua các tác dụng của lực nhớt và tất cả các lực thể tích. Dòng chảy được xem là đẳng entropy.
+
+Trong trường hợp này, lưu lượng khối được bảo toàn :
+\begin{equation}
+	\begin{aligned}
+ 		\dot{m} = \rho A v = cte.
+	\end{aligned}
+\end{equation}
+
+Năng lượng được bảo toàn do nguyên lý thứ nhất của nhiệt động lực học, đối với một hệ mở trong chế độ vĩnh cữu, chúng ta có thể viết :
+\begin{equation}
+	\begin{aligned}
+ 		h + \frac{v^2}{2} = h_i = cte.
+	\end{aligned}
+\end{equation}
+trong đó, $h_i$ là enthalpie nghỉ, đó là enthalpie của lưu chất khi lưu chất ở trạng thái nghỉ.
+
+Định lý bảo toàn động lượng có thể được viết từ một cân bằng vĩ mô của một phần tử lưu chất, từ đó ta tìm được phương trình bảo toàn :
+\begin{equation}
+	\begin{aligned}
+ 		dp + \rho vdv = 0.
+	\end{aligned}
+\end{equation}
+
+Ngoài ra ta còn tính đến cả sự bảo toàn entropy, do đó
+\begin{equation}
+	\begin{aligned}
+ 		s = cte.
+	\end{aligned}
+\end{equation}
+\subsection{Sự biến đổi của diện tích}
+Lấy đạo hàm hệ thức lưu lượng khối lượng, ta có :
+$$
+ 	\frac{dv}{v}+\frac{d\rho}{\rho}+\frac{dA}{A}=0.
+$$
+
+Đầu tiên khi tính đến vận tốc âm thanh :
+\begin{equation}
+	\begin{aligned}
+ 		\boxed{
+ 			c^2 = \Bigg( \frac{\partial p}{\partial \rho}\Bigg)_s
+ 		}.
+	\end{aligned}
+\end{equation}
+
+Kết hợp với phương trình bảo toàn động lượng ở trên, đặt ra \bfit{số Mach địa phương $M = v/c$}. Ta thu được một hệ thức cực kỳ quan trọng được đặt tên theo Hugoniot\footnote{Mời quý độc giả chứng minh điều này.} :
+\begin{equation}
+	\begin{aligned}
+ 		\boxed{
+ 			\Big(1-M^2\Big)\frac{dv}{v} + \frac{dA}{A} = 0
+ 		}.
+	\end{aligned}
+\end{equation}
+
+Và ta có thể tính đến sự thay đổi của diện tích mặt cắt theo áp suất :
+\begin{equation}
+	\begin{aligned}
+ 		\Big(M^2-1\Big)\frac{dp}{p} + \frac{\rho v^2}{p}\frac{dA}{A} = 0
+	\end{aligned}
+\end{equation}
+
+Chúng ta có thể nhìn thấy rằng đối với một dòng chảy siêu thanh, khi giảm diện tích mặt cắt ngang sẽ làm giảm vận tốc dòng nhưng lại làm tăng áp suất.
+
+\subsection{Điều kiện tới hạn}
+
+Khi dòng chảy đạt được vận tốc âm thanh, chúng ta nói lưu chất đạt được điều kiện tới hạn $(v_*, T_*, p_*,\dots)$ tại mức của của họng ống trong hệ một chiều (điều này ngụ ý rằng $dA = 0$).
+
+\begin{description}
+	\item[Chú ý :] Điều ngược lại nói chung là không đúng. Thật vậy, khi $dA = 0$, ta có thể có $dv=0$ hoặc (hiếm hơn) $M = 1$. Họng ống đơn giản là tạo một vi phân diện tích mặt cắt ngang triệt tiêu.
+\end{description}
+
+\section{Trường hợp khí lý tưởng}
+\subsection{Các phương trình tổng quát}
+
+Phương trình trạng thái được viết đơn giản :
+\begin{equation}
+	\begin{aligned}
+		p = \rho rT
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		h = C_pT
+	\end{aligned}
+\end{equation}
+
+Đối với một quá trình đẳng entropy, quan hệ biến đổi của hệ như sau :
+\begin{equation}
+	\begin{aligned}
+		\frac{p}{\rho^{\gamma}} =cte.
+	\end{aligned}
+\end{equation}
+
+Do đó, vận tốc âm thanh được viết :
+\begin{equation}
+	\begin{aligned}
+ 		c^2 = \frac{\gamma p}{\rho} = \gamma rT.
+	\end{aligned}
+\end{equation}
+
+Các hệ thức sau đây là quan trọng :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+		\frac{T_i}{T} = 1 + \frac{\gamma-1}{2}M^2
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+		\frac{p_i}{p} = \Bigg( 1 + \frac{\gamma-1}{2}M^2 \Bigg)^{\frac{\gamma}{\gamma-1}}
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+		\frac{\rho_i}{\rho} = \Bigg( 1 + \frac{\gamma-1}{2}M^2 \Bigg)^{\frac{1}{\gamma-1}}
+		}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+		\frac{A}{A_*} = \frac{1}{M}\Biggl[\frac{2}{1+\gamma}\Bigg(1 + \frac{\gamma-1}{2}M^2 \Bigg)\Biggr]^{\frac{\gamma+1}{2(\gamma-1)}}
+		}
+	\end{aligned}
+\end{equation}
+
+
+
+
+\section{Ống khuếch tán và ống xả}
+Ống khuếch tán là một thiết bị được sử dụng để tăng áp suất lưu chất trong khi giảm vận tốc của nó. Còn ống xả hoạt động với cơ chế ngược lại.
+
+Hai thiết bị này hoạt động mà không sinh công cũng như không làm biến đổi thế năng. Ta bỏ qua sự trao đổi nhiệt, 
+
+
+
+
+
+\end{document}

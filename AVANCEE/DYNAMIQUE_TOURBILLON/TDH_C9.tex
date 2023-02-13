@@ -1,0 +1,45 @@
+\documentclass[THUY_DONG_HOC.tex]{subfiles}
+\begin{document}
+
+\chapter{LÝ THUYẾT LỚP BIÊN TẦNG}
+\section{Giới thiệu}
+
+Để đơn giản, chúng ta xem xét dòng chảy phẳng của chất lỏng có độ nhớt thấp
+qua một cố thể hình trụ mỏng. Các vận tốc có bậc độ lớn của vận tốc dòng chuyển động tự do $U$ ngoài một vùng lân cận bề mặt cố thể. Trong phần dòng chuyển động này, đường dòng và trường vận tốc hầu như giống với dòng chuyển động của lưu chất lý tưởng.
+
+Tuy nhiên, các nghiên cứu sâu hơn cho thấy rằng lưu chất trên bề mặt không trượt dọc theo thành rắn, như trong trường hợp dòng chảy thế, nhưng dính vào bề mặt cố thể. Do đó, có một sự chuyển đổi từ vận tốc bằng không tại thành rắn sang vận tốc của dòng tự do ở một khoảng cách nhất định từ thàng rắn. Quá trình chuyển đổi này diễn ra trong một lớp rất mỏng gọi là lớp biên. Chúng ta đầu tiên sẽ mô tả nó một cách hình ảnh :
+\begin{enumerate}
+	\item Một lớp mỏng nằm sát bề mặt cố thể trong đó gradient vận tốc vuông góc với bề mặt là rất lớn, mặc dù độ nhớt là không lớn nhưng nó rất quan trọng.
+	\item Miền còn lại bên ngoài lớp này. Ở đây gradient vận tốc không quá lớn, vì vậy tác động của độ nhớt là không đáng kể. Trong miền này ta xấp xỉ các dòng chảy như là không ma sát và thế.
+\end{enumerate}
+
+\section{Phương trình dòng chảy bên trong lớp biên}
+\subsection{Trường hợp một tấm phẳng}
+Chúng ta sẽ phân tích dòng chảy ổn định hai chiều phẳng trong mặt phẳng $(xOy)$ rất gần một tấm phẳng $y=0$, đối với một thế dòng chảy, phương trình Navier-Stokes được viết :
+\begin{equation}
+	\begin{aligned}
+		u\frac{{\partial u}}{{\partial x}} + v\frac{{\partial u}}{{\partial y}} &=  - \frac{1}{\rho }\frac{{\partial p}}{{\partial x}} + \nu \frac{{{\partial ^2}u}}{{\partial {y^2}}}\\
+		u\frac{{\partial v}}{{\partial x}} + v\frac{{\partial v}}{{\partial y}} &=  - \frac{1}{\rho }\frac{{\partial p}}{{\partial y}} + \nu \frac{{{\partial ^2}v}}{{\partial {y^2}}}
+	\end{aligned}
+\end{equation}
+
+Nếu gọi độ dày lớp biên ở vị trí $x$ là $\delta(x)$, đối với các nghiệm mà chúng ta đã thảo luận ở bên trên, có một dạng biểu diển đã được hiệu chỉnh theo thứ nguyên :
+\begin{equation}
+	\begin{aligned}
+		\frac{\delta(x)}{l}\sim\frac{1}{\sqrt{Re}}
+	\end{aligned}
+\end{equation}
+
+Chúng ta khử thứ nguyên các phương trình Navier-Stokes :
+\begin{equation}
+	\begin{aligned}
+		u\frac{{\partial u}}{{\partial x}} + v\frac{{\partial u}}{{\partial y}} &=  - \frac{1}{\rho }\frac{{\partial p}}{{\partial x}} + \nu \frac{{{\partial ^2}u}}{{\partial {y^2}}}\\
+		u\frac{{\partial v}}{{\partial x}} + v\frac{{\partial v}}{{\partial y}} &=  - \frac{1}{\rho }\frac{{\partial p}}{{\partial y}} + \nu \frac{{{\partial ^2}v}}{{\partial {y^2}}}
+	\end{aligned}
+\end{equation}
+
+
+
+
+
+\end{document}

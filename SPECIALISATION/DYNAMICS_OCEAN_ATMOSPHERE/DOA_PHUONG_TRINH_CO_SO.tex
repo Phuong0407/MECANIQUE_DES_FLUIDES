@@ -1,0 +1,105 @@
+\documentclass[DONG_HOC_KHI_QUYEN.tex]{subfiles}
+
+\begin{document}
+\chapter{CÁC PHƯƠNG TRÌNH CƠ SỞ}
+Như trong cơ học lưu chất, chúng ta đã biết rằng các phương trình vận động của lưu chất bao gồm các phương trình sau :
+\begin{enumerate}
+    \item Phương trình bảo toàn khối lượng :
+    \begin{equation}
+        \begin{aligned}
+            \frac{D\rho}{Dt}+\rho\underline{\nabla}\cdot\underline{u}=0.
+        \end{aligned}
+    \end{equation}
+    \item Phương trình động lượng (Navier-Stokes) :
+    \begin{equation}
+        \begin{aligned}
+            \rho\frac{D\underline{u}}{Dt}=\mu\Delta\underline{u}+\left(\mu+\lambda\right)\underline{\nabla}\left(\underline{\nabla}\cdot\underline{u}\right)-\underline{\nabla}p+\underline{f}_{\text{vol}}.
+        \end{aligned}
+    \end{equation}
+    trong đó $\mu$ và $\lambda$ là các hằng số và $\mu$ được gọi là hệ số ứng suất trượt, $\underline{f}_{\text{vol}}$ là đương lượng thể tích của lực thể tích.
+\end{enumerate}
+
+Rõ ràng chúng ta có ba đại lượng cần xác định là vận tốc $\underline{u}$ (có ba thành phần), áp suất $p$ và khối lượng riêng $\rho$. Phương trình Navier-Stokes cung cấp cho chúng ta ba phương trình dưới dạng vecteur, cộng với phương trình bảo toàn khối lượng nữa, thì chúng ta chỉ có 4 phương trình, như vậy là còn thiếu một phương trình để tìm được nghiệm dòng chảy. Do đó, ta cần phải tìm thêm một \bfit{phương trình trạng thái} của lưu chất, loại phương trình này yêu cầu phải thêm vào đại lượng nhiệt độ $T$ mà ban đầu chúng ta cũng chưa biết. Như vậy, chúng ta sẽ cần thêm một phương trình nữa để mô tả động thái của lưu chất khi chuyển động, và phương trình này sẽ có bản chất nhiệt động.
+\begin{itemize}
+    \item Nếu lưu chất là không nén được : $\rho=0$.
+    \item Nếu lưu chất là nén được, hành vi đẳng entropy hay đẳng nhiệt chẳng hạn, cũng sẽ được xem xét.
+\end{itemize}
+\section{Phương trình trạng thái}
+Đối tượng của các nghiên cứu này là không khí trong khí quyển và nước biển trong đại dương. Đối với nước biển, nồng độ muối hòa tan gần như được giữ ở một nồng độ cố định, mà chúng ta gọi là độ mặn $s$. Độ mặn này được đo bằng khối lượng muối hòa tan trên khối lượng nước tinh khiết. Do đó, đối với đại dương, phương trình trạng thái được viết :
+\begin{equation}
+    \begin{aligned}
+        \rho=\rho\left(p,T,s\right).
+    \end{aligned}
+\end{equation}
+
+Đối với không khí, thành phần không khí gần như là ổn định, trừ hơi nước, mà chúng ta có thể viết thành :
+
+
+\section{Phương trình động lực học}
+
+Trong giả thiết lưu chất không nén được, phương trình Navier-Stokes cho ta :
+\begin{equation}\label{eq:navier_stokes_incompressible}
+	\begin{aligned}
+		\frac{D\underline{u}}{Dt}=\frac{\underline{f}_{\text{vol}}}{\rho}-\frac{\underline{\nabla}p}{\rho}+\frac{\mu}{\rho}\Delta\underline{u}.
+	\end{aligned}
+\end{equation}
+
+Phương trình này đúng cho mọi hệ quy chiếu. Trong trường hợp hệ quy chiếu hành tinh, là hệ quy chiếu cố định ở tâm tỉ cự của trái đất và chuyển động quay với vận tốc góc $\underline{\Omega}$ so với hệ quy chiếu Galilée, đương lượng thể tích của các lực được viết :
+\begin{equation}
+	\begin{aligned}
+		\underline{f}_{\text{vol}}=\rho\left(\underline{g}-\underline{\Omega}\wedge\left(\underline{\Omega}\wedge\underline{r}\right)-2\underline{\Omega}\wedge\underline{u}\right)
+	\end{aligned}
+\end{equation}
+
+Thay lại vào (\ref{eq:navier_stokes_incompressible}), chúng ta thu được phương trình động lực học của lưu chất trong hệ quy chiếu trái đất:
+\begin{equation}\label{eq:fund_dynamics}
+	\begin{aligned}
+		\frac{D\underline{u}}{Dt}+2\underline{\Omega}\wedge\underline{u}=\underline{\nabla}\Phi-\frac{1}{\rho}\underline{\nabla}p+\frac{\mu}{\rho}\Delta\underline{u}.
+	\end{aligned}
+\end{equation}
+trong đó $\Phi$ là \emph{địa thế} (géopotentiel) và được viết :
+\begin{equation}
+	\begin{aligned}
+		\Phi=\Phi_g-\frac{1}{2}\left(\underline{\Omega}\wedge\underline{r}\right)^2.
+	\end{aligned}
+\end{equation}
+và $\Phi_g$ là thế trọng trường.
+
+\section{Xấp xỉ Boussinesq}
+
+Rõ ràng là trong phương trình động lực học bên trên, chúng ta đã cho rằng khối lượng riêng của lưu chất là không đổi. Tuy nhiên, chúng ta phải tính đến sự thay đổi của khối lượng riêng (mà một hệ quả của nó là lực đẩy Archmimède). Bây giờ chúng ta sẽ sử dụng một điều kiện xấp xỉ gọi là \bfit{xấp xỉ Boussinesq}. Nguyên tắc là trạng thái lưu chất sẽ bị nhiễu loạn xung quanh một \emph{trạng thái tham chiếu}.
+
+Trạng thái tham chiếu được định nghĩa là \emph{trạng thái mà entropy $s_r$ và khối lượng riêng $\rho_r$ là đồng nhất. Lưu chất là đứng yên và sự biến đổi áp suất $p_r$ chỉ diển ra theo phương thẳng đứng}. Như vậy, điều kiện thủy tĩnh được thỏa mãn :
+
+\begin{equation}
+	\begin{aligned}
+		\frac{dp_z}{dz}=-\rho_rg.
+	\end{aligned}
+\end{equation}
+
+Để tìm áp suất này, chúng ta sẽ tích phân phương trình này theo phương thẳng đứng $z$ với điều kiện đầu của tích phân là áp suất trung bình ở mặt thoáng cho trường hợp khí quyển và áp suất trung bình ở đáy biển cho trường hợp đại dương.
+
+Trong khuôn khổ xấp xỉ Boussinesq, chúng ta có thể viết áp suất, khối lượng riêng và entropy dưới dạng bị nhiễu loạn :
+
+\begin{equation}
+	\begin{aligned}
+		p(M,t)=p_r(z)+p_{per}(M,t)\quad\text{với}\quad p_{per}(M,t)\ll p_r(z);
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\rho(M,t)=\rho_r(z)+\rho_{per}(M,t)\quad\text{với}\quad \rho_{per}(M,t)\ll \rho_r(z);
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		s(M,t)=s_r(z)+s_{per}(M,t)\quad\text{với}\quad s_{per}(M,t)\ll s_r(z);
+	\end{aligned}
+\end{equation}
+
+Bây giờ chúng ta sẽ phát triển phương trình động lực học (\ref{eq:fund_dynamics}). Đầu tiên, ta có :
+
+
+
+
+\end{document}

@@ -1,0 +1,176 @@
+\documentclass[CO_LUU_CHAT.tex]{subfiles}
+\begin{document}
+\chapter{LƯU CHẤT NHỚT}
+\newpage
+\section{Phương trình chuyển động của lưu chất nhớt}
+Từ đây, ta suy ra được phương trình Navier-Stokes :
+\begin{equation}
+    \begin{aligned}
+        \rho\left(\frac{\partial\underline{v}}{\partial t}+\left(\underline{v}\cdot\underline{\nabla}\right)\underline{v}\right)=\underline{f}_{\text{vol}}-\underline{\nabla}p+\eta\Delta\underline{v}+\left(\zeta+\frac{1}{3}\eta\right)\underline{\nabla}\left(\underline{\nabla}\cdot\underline{v}\right).
+    \end{aligned}
+\end{equation}
+
+Trong trường hợp lưu chất không nén được, dạng của phương trình trên đơn giản lại thành :
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial\underline{v}}{\partial t}+\left(\underline{v}\cdot\underline{\nabla}\right)\underline{v}=-\frac{1}{\rho}\underline{\nabla}p+\frac{\eta}{\rho}\Delta\underline{v}
+    \end{aligned}
+\end{equation}
+và tenseur ứng suất được viết đơn giản thành :
+\begin{equation}
+    \begin{aligned}
+        \sigma_{ik}=-p\delta_{ik}+\eta\left(\frac{\partial v_i}{\partial x_k}+\frac{\partial v_k}{\partial x_i}\right).
+    \end{aligned}
+\end{equation}
+Chúng ta có thể đặt $\nu=\eta/\rho$, và chúng ta gọi nó là độ nhớt động học.
+
+\begin{description}
+	\item[Chú ý 1 :] Dòng chảy của chất lỏng ở cấp độ vi mô bị chi phối bởi các hiện tượng trong lĩnh vực cơ học thống kê trong đó va chạm giữa các hạt được mô tả bởi toán tử va chạm của các cụm hạt. Phương trình Navier-Stokes suy ra được bằng cách xấp xỉ va chạm bởi va chạm của hai hạt, và chỉ trong trường hợp khí loãng mới có thể thực hiện việc này. Tuy nhiên, vì không còn sự lựa chọn nào tốt hơn, chúng tôi vẫn sử dụng phương trình Navier-Stokes này như mô hình hợp lý cho các dòng lưu chất tổng quát.
+	
+	\item[Chú ý 2 :] Nguồn gốc đặt ra giới hạn đối với phạm vi hiệu lực của phương trình Navier-Stokes. Do đó, các hiện tượng trên thang độ dài cở của quảng đường tự do trung bình của không khí ở áp suất khí quyển (cở $10^{-3}$ cm) không thể được mô tả bởi một mô hình liên tục. Lưu ý tương tự cũng được sử dụng cho sự nhiễu biên độ : khi chúng ta ở trong một chế độ trong đó sự nhiễu có thể so sánh được với những dao động nhiệt, mô hình dựa trên phương trình Navier-Stokes không còn phù hợp.
+\end{description}
+
+Bây giờ chúng ta sẽ loại đi vai trò của áp suất bằng cách lấy rota hai vế :
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial\underline{\omega}}{\partial t}+\left(\underline{v}\cdot\underline{\nabla}\right)\underline{\omega}=\left(\underline{\omega}\cdot\underline{\nabla}\right)\underline{v}+\nu\Delta\underline{\omega}
+    \end{aligned}
+\end{equation}
+
+Giờ đây, nếu tìm được phân bố vận tốc của dòng lưu chất, chúng ta có thể tìm lại được phân bố áp suất :
+\begin{equation}
+    \begin{aligned}
+        \Delta p=-\rho\frac{\partial v_i}{\partial x_k}\frac{\partial v_k}{\partial x_i}.
+    \end{aligned}
+\end{equation}
+
+Hàm dòng lúc này phải thỏa phương trình :
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial}{\partial t}\Delta\psi-\frac{\partial\psi}{\partial x}\frac{\partial\Delta\psi}{\partial y}+\frac{\partial\psi}{\partial y}\frac{\partial\Delta\psi}{\partial x}-\nu\Delta\Delta\psi=0.
+    \end{aligned}
+\end{equation}
+
+Lưu chất có nhớt, do đó có lực hút giữa thành rắn và lưu chất, do đó ở lân cận bề mặt, lưu chất phải không có vận tốc, do đó :
+\begin{equation}
+    \begin{aligned}
+        \underline{v}=\underline{0}.
+    \end{aligned}
+\end{equation}
+và rõ ràng là điều kiện biên này khác với điều kiện biên của lưu chất lý tưởng đã được đề cập.
+
+Bây giờ chúng ta tính lực của lưu chất tác dụng lên thành rắn. Nó chính là biến thiên động lượng đi qua bề mặt :
+
+\section{Năng lượng bị suy hao}
+Tổng động năng của một lưu chất không nén được có dạng :
+$$
+E=\frac{1}{2}\rho\int_{\mathcal{V}} v^2d\tau.
+$$
+Sau một số phép biến đổi, chúng ta rút ra :
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^2\right)=
+        -\underline{\nabla}\cdot\left[\rho\underline{v}\left(\frac{1}{2}v^2+\frac{p}{\rho}\right)-\deuxtenseur{\sigma}'\cdot\underline{v}\right]-\sigma'_{ik}\frac{\partial v_i}{\partial x_k}.
+    \end{aligned}
+\end{equation}
+Chúng ta lấy đạo hàm của nó theo thời gian và thay thế bởi phương trình Navier-Stokes thì thu được :
+$$
+\begin{aligned}
+	\frac{\partial}{\partial t}\iiint_{\mathscr{V}}\frac{1}{2}\rho {v^2}d\tau&=\iiint_{\mathscr{V}}-\underline\nabla\cdot\left[\rho \underline u \left( {\frac{1}{2}{u^2} + \frac{p}{\rho }} \right) - \underline u  \cdot \underline{\underline \sigma } '\right]d\tau-\iiint_{\mathscr{V}}{\sigma {'_{ik}}\frac{{\partial {v_i}}}{{\partial {x_k}}}d\tau }\\
+	&=\oiint_{\mathscr{S}}\left[\rho \underline u \left( {\frac{1}{2}{u^2} + \frac{p}{\rho }} \right) - \underline u  \cdot \underline{\underline \sigma } '\right]\cdot d\underline{S}-\iiint_{\mathscr{V}}{\sigma {'_{ik}}\frac{{\partial {v_i}}}{{\partial {x_k}}}d\tau }
+\end{aligned}
+$$
+Tích phân đầu tiên nếu mở rộng ra toàn không gian sẽ đồng nhất không, do vận tốc bị triệt tiêu ở vô cùng, do đó năng lượng bị biến thiên sẽ được tính :
+$$
+\begin{aligned}
+	\dot{\mathcal{E}}=-\iiint_{\mathscr{V}}{\sigma {'_{ik}}\frac{{\partial {v_i}}}{{\partial {x_k}}}d\tau}=-\frac{1}{2}\iiint_{\mathscr{V}}{\sigma {'_{ik}}\left(\frac{{\partial {v_i}}}{{\partial {x_k}}}+\frac{{\partial {v_k}}}{{\partial {x_i}}}\right)d\tau}
+\end{aligned}
+$$
+
+Thay thế định nghĩa tensor ứng suất nhớt, chúng ta có :
+\begin{equation}
+	\begin{aligned}
+	\boxed{	
+		\dot{\mathcal{E}}=-\frac{1}{2}\eta\iiint_{\mathscr{V}}\left(\frac{{\partial {v_i}}}{{\partial {x_k}}}+\frac{{\partial {v_k}}}{{\partial {x_i}}}\right)^2d\tau
+	}.
+	\end{aligned}
+\end{equation}
+
+\chapter{NGHIỆM CỦA PHƯƠNG TRÌNH NAVIER-STOKES}
+
+\newpage
+
+\section{Dòng chuyển động có điều kiện biên phẳng}
+\subsection{Dòng chuyển động Couette-Poiseuille}
+
+Lưu chất được giới hạn giữa hai mặt phẳng song song với nhau. Dòng chuyển động chỉ được thực hiện trong một chiều $x$, và đặt $y$ vuông góc với hai mặt phẳng 
+giới hạn, dòng chảy được diển ra do tác động của gradient của áp suất. Hai mặt phẳng được định vị ở tọa độ $y=0$ và $y=h$, trong đó các trường vận tốc :
+\begin{equation}
+	\begin{aligned}
+        \left.\underline{u}\left(y\right)\right|_{y = 0}=(0,V,0)\quad\text{và}\quad\left.\underline{u}\left(y\right)\right|_{y = h}=(U,V,0);
+	\end{aligned}
+\end{equation}
+
+Từ phương trình liên tục, chúng ta có $\partial v/\partial y = 0$, do đó vận tốc theo phương $y$ là hằng số và bằng $V$ : $u_y=V$. Nếu không có lực thể tích, ta có $\partial p/\partial y = 0$, do đó $p=p(x)$, và phương trình Navier-Stokes được thu gọn thành :
+
+\begin{equation}
+	\begin{aligned}
+        V\frac{\partial u_x}{\partial y}=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\frac{\partial^2u_x}{\partial^2y}.
+	\end{aligned}
+\end{equation}
+
+Nếu gradient áp suất là một hằng số : $\partial p/\partial x=-P_x$, giải phương trình, chúng ta có :
+
+\begin{equation}
+	\begin{aligned}
+        {u_x}\left( y \right) = U\left( {1 - \frac{{{P_x}h}}{{\rho UV}}} \right)\frac{1}{{1 - {e^{{\mathop{\rm Re}\nolimits} }}}}\left( {1 - {e^{\frac{V}{\nu }y}}} \right) + \frac{{{P_x}}}{{\rho V}}y
+	\end{aligned}
+\end{equation}
+trong đó $Re=Vh/\nu$ là số Reynolds.
+
+Lưu lượng khối lượng của lưu chất dọc theo chiều dài kênh trên đơn vị độ sâu là :
+\begin{equation}
+	\begin{aligned}
+        Q=\int_0^h\rho u_ydy=\frac{1}{2}\rho Uh\left(1+\frac{P_xh^2}{6\nu U}\right).
+	\end{aligned}
+\end{equation}
+
+\subsection{Dòng chảy Beltrami}
+
+Dòng chảy Beltrami là dòng chảy mà vecteur xoáy $\underline{\omega}$ và vecteur vận tốc $\underline{u}$ là song song với nhau, sử dụng phương trình của độ xoáy, ta có :
+
+\begin{equation}
+	\begin{aligned}
+        \frac{\partial\underline{\omega}}{\partial t}=\underline{\nabla}\wedge\underline{f}_{\text{vol}}+\nu\Delta\underline{\omega}.
+	\end{aligned}
+\end{equation}
+
+Dòng chảy này có thể được tổng quát hóa dưới dạng :
+
+\begin{equation}
+	\begin{aligned}
+		\underline{\nabla}\wedge\left(\underline{u}\wedge\underline{\omega}\right)=\underline{0}.
+	\end{aligned}
+\end{equation}
+
+
+
+\section{Dòng chảy tại điểm dừng}
+
+Khi một dòng chất lỏng nhớt ổn định tiếp cận một hình trụ đứng yên cứng nhắc,
+dòng được đưa đến phần còn lại trên bề mặt của cơ thể và phân chia về nó.
+Mặc dù chất lỏng đứng yên, tại mỗi điểm trên bề mặt của hình trụ, bởi
+tương tự với dòng chảy của chất lỏng không nhớt, chúng tôi xác định các điểm đình trệ là
+những điểm trên bề mặt mà dòng chảy gắn vào hoặc tách ra khỏi,
+xi lanh. Dòng chảy trong vùng lân cận của một điểm gắn kết đình trệ
+có thể được mô hình hóa bởi dòng chảy hướng tới một tấm phẳng cứng nhắc vô hạn. Bây giờ, cho một
+chất lỏng không nhớt, dòng chảy không đối xứng với tấm phẳng y = 0 đã được biết rõ
+là u = kx, v = - ky. Hằng số k không liên quan trực tiếp đến dòng chảy
+mẫu gần với điểm đình trệ và tỷ lệ thuận với dòng tự do
+tốc độ xung quanh hình trụ. Hàm dòng không nhớt là $\psi$ = kxy. Trong việc học của anh ấy
+của dòng chảy của chất lỏng nhớt tại một điểm đình trệ, nó sẽ xuất hiện
+Đương nhiên Hiemenz (1911) đã giả định $\psi$(x, y) = x F(y). Nếu chúng ta
+giới thiệu các biến không thứ nguyên, lưu ý rằng không có thang độ dài tự nhiên
+trong vấn đề này, sau đó
+
+\end{document}

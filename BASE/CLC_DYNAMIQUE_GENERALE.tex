@@ -1,0 +1,190 @@
+\documentclass[CO_LUU_CHAT.tex]{subfiles}
+
+\begin{document}
+
+\chapter{TỔNG QUAN VỀ ĐỘNG LỰC HỌC LƯU CHẤT}
+
+	Theo như những gì đã phát triển, ta sẽ xem xét môn cơ học lưu chất từ quan điểm của cơ học môi trường liên tục. Điều này mang lại nhiều lợi ích, như là có sự tổng quát hóa trong cách thức tiếp cận, tìm được sự liên kết với cơ học các vật rắn biến dạng. Chương này có nhiệm vụ nhắc lại những điều đã được phát triển trong cơ học môi trường liên tục áp dụng vào trong lưu chất.
+
+\newpage
+
+\section{Giả thiết môi trường liên tục}
+		
+		Lưu chất là một khái niệm thống nhất để chỉ bao gồm các chất lỏng và các chất khí. Sự khác biệt về giữa chất lỏng và chất khí về mặt vĩ mô đến từ khả năng dể bị nén của chất khí trong khi chất lỏng hầu như không thể bị nén. Về mặt vi mô, các quan sát về khoảng cách trung bình giữa các phân tử lân cận nhau là một trong những phương pháp cho phép phân biệt chúng, khoảng cách trung bình giữa hai phân tử lân cận của chất lỏng là nhỏ hơn so với chất khí, và do đó các phân tử chất khí chuyển động tự do mạnh mẽ hơn chất lỏng. Tuy nhiên, trong các khuôn khổ nhất định mà ta sẽ chỉ ra, sự biến đổi khối lượng riêng là không quá lớn và ta sẽ xấp xỉ chúng bằng cùng một hệ phương trình chi phối. Đó là lý do ta gọp chung chúng lại với nhau để nghiên cứu.
+		
+		Khuôn khổ của các nghiên cứu cơ lưu chất thông thường được dựa trên một giả thiết nền tảng : \bfit{môi trường liên tục}. Giả thiết này được đặt ra ở thang đo vĩ mô, trong đó ta có thể định nghĩa ở mọi điểm trong miền tồn tại của lưu chất các đại lượng vĩ mô như khối lượng riêng, vận tốc, áp suất, nhiệt độ,... và chúng biến đổi một cách liên tục - giống như nghĩa liên tục trong toán học. Và sự liên tục này giúp chúng ta mô hình hóa lưu chất bởi một tập hợp các "hạt lưu chất", một tập hợp gồm một số lượng lớn phân tử và có thể tích vô cùng nhỏ ở thang vĩ mô. Các hạt lưu chất như vậy là ở \bfit{thang đo trung mô.}
+		
+		Để sự mô hình hóa các môi trường liên tục còn có hiệu lực, kích cở đặc trưng của các hạt lưu chất (ví dụ như bán kính của hạt hình cầu) phải đủ lớn so với quảng đường tự do trung bình. Nếu không, sự thăng giáng của các đại lượng vĩ mô là quá lớn theo thời gian và các đại lượng vĩ mô này là không còn có ý nghĩa của nó.
+		
+\section{Động học lưu chất}
+\subsection{Phép đạo hàm đối lưu}
+
+		\begin{align}
+			\dfrac{D}{Dt}\iiint_{\Omega(t)}Bd\Omega(t)=\iiint_{\Omega(t)}\dfrac{\partial B}{\partial t}d\Omega(t)+\oiint_{\partial\Omega(t)}B\vt ud\vt S(t)-\iint_{\Sigma(t)}\dcon{B}\vt W\cdot d\vt\Sigma(t)
+		\end{align}
+
+
+\section{Động lực học lưu chất}
+\subsection{Lực bề mặt}
+
+		Bên trong lòng chất lỏng, chúng ta tưởng tượng có một mặt kín bao lấy một vùng chất lỏng. Rõ ràng là ở mức độ trung mô, các hạt chất lỏng bên ngoài mặt kín này tác dụng các lực lên các hạt lưu chất ở bên trong mặt kín này.
+
+		Xét một phần tử diện tích $dS$ của mặt tưởng tượng $\Sigma$ bên trên. Lực của các hạt lưu chất bên ngoài tác dụng lên các hạt lưu chất bên trong tại vị trí $dS$ được kí hiệu là $\underline{F}$ mà chúng ta có thể phân tích thành một thành phần pháp tuyến $\underline{F}_N$ và một thành phần tiếp tuyến $\underline{F}_T$:
+		\[
+			\underline{F}=\underline{F}_N+\underline{F}_T.
+		\]
+		Ta gọi vecteur ứng suất, $\underline T(\underline x,\underline n(\underline x))$, là mật độ diện tích của lực bề mặt trên, tức là
+		\begin{align}
+			\vt{F}=\vt T(\vt X,\vt n(\vt x))dS
+		\end{align}
+		Với những gì đã phát triển ở cơ học môi trường liên tục, ta có thể mô hình vecteur ứng suất bởi tenseur ứng suất Cauchy như sau:
+		\begin{align}
+			\vt T(\vt x,\vt n (\vt x))=\dt\sigma(\vt x)\cdot\vt n(\vt x)
+		\end{align}
+		
+		Ta có thể phân tích tenseur ứng suất này thành hai thành phần:
+		\begin{align}
+			\dt\sigma(\vt x)=-p(\vt x)\dt{\mathbbm{1}}+\dt\tau(\vt x)
+		\end{align}
+		thành phần đầu tiên $p$ được gọi là \bfit{áp suất thủy tĩnh}, thành phần thứ hai được gọi là $\dt\tau$ được gọi là \bfit{tenseur ứng suất trượt} mà viết một cách tường minh đưới dạng ma trận (ta đã đơn giản bỏ qua kí hiệu vị trí):
+		\begin{align}
+			\widetilde{\dt\sigma}(\vt x)=
+				\left[
+					\begin{array}{*{20}{c}}
+						-p&\tau_{12}&\tau_{13}\\
+						\tau_{21}&-p&\tau_{23}\\
+						\tau _{31}&\tau_{32}&-p
+					\end{array}
+				\right]
+		\end{align}
+		Như vậy, lực bề mặt bên trên có thể được biểu diển nhờ vào sự giúp đở của hai thành phần này:
+		\begin{align}
+			F_i(\vt x)=-p(\vt x)n_i(\vt x)dS+\tau_{ij}(\vt x)n_{ij}(\vt x)dS
+		\end{align}
+
+\subsubsection{Lưu chất ở trạng thái nghỉ}
+
+		Đối với một lưu chất ở trạng thái nghỉ, lực bề mặt không còn số hạng trượt mà chỉ còn số hạng áp suất, do dó ta viết:
+		\begin{align}
+			\vt F(\vt x,t)=-p(\vt x,t)\vt ndS.
+		\end{align}
+		Đối với các lưu chất ở trạng thái nghỉ, ta sẽ nghiên cứu kỹ nó hơn trong khuôn khổ \bfit{thủy tĩnh học}.
+
+\subsubsection{Lưu chất lý tưởng}
+
+		Đối với một lưu chất lý tưởng, chỉ có thành phần áp suất là hiện diện, thành phần trượt bị triệt tiêu bất kể lưu chất có chuyển động hay không. Lực bề mặt được rút gọn thành:
+			\begin{align}
+				\vt F(\vt x)=-p(\vt x)\vt ndS
+			\end{align}
+		mà ta sẽ nghiên cứu kỹ nó trong khuôn khổ \bfit{lưu chất lý tưởng}.
+\subsubsection{Lưu chất thực}
+
+		Đối với một lưu chất thực thông thường ứng suất trượt phụ thuộc tường mminh vào tốc độ trượt của lưu chất, nhiệt độ và khối lượng riêng của lưu chất, do đó ta viết:
+		\begin{align}
+			\dt\tau=\dt g(\dt{\dot{\varepsilon}},\rho,T).
+		\end{align}
+		Đối với các lưu chất trong điều kiện thông thường, chúng ứng xử như những môi trường đàn hồi tuyến tính, tương ứng với trường hợp \bfit{lưu chất newton}, mà quan hệ ứng suất-biến dạng được viết:
+		\begin{equation}\label{eq:newton_fluid_constitutive}
+			\begin{aligned}
+				\boxed{
+					\dt\tau = \mu\left(\vnabla\cdot\vt u + ^t\vnabla\cdot\vt u-\dfrac{2}{3}\left(\vnabla\cdot\vt u\right)\dt{\mathbbm{1}}\right)+\zeta\left(\vnabla\cdot\vt u\right)\dt{\mathbbm{1}}
+					}.
+			\end{aligned}
+		\end{equation}
+		[THEM CHUNG MINH]
+		Nghiên cứu trường hợp lưu chất Newton được thực hiện kỹ ở phần \bfit{lưu chất nhớt}.
+
+		Tuy nhiên, quan hệ này là đơn giản và chỉ áp dụng cho các điều kiện nhất định. Thực tế, mọi lưu chất đều là không ứng xử hoàn toàn theo quan hệ này, và ta cần hiệu chỉnh phương trình này. Hơn nữa, có các lưu chất hoàn toàn không ứng xử theo quan hệ (\ref{eq:newton_fluid_constitutive}), ta gọi chúng là các \bfit{lưu chất phi newton} và sẽ nghiên cứu kỹ chúng ở phần \bfit{lưu biến học}.
+
+\subsubsection{Các hiện tượng bề mặt}
+
+		Các hiện tượng bề mặt luôn luôn tồn tại trong lưu chất ở biên tiếp xúc giữa lưu chất và thành rắn hoặc ở biên giới lỏng-rắn: căn bề mặt, mao dẫn,.. Ta sẽ bỏ qua sức căng bề mặt ở đây để kết luận rằng áp suất bên trong lòng lưu chất là liên tục. Và không thể bỏ qua lực căng bề mặt khi trong các hệ có kích thước nhỏ, ống mao dẫn chẳng hạn.
+
+\subsection{Đương lượng thể tích và đương lượng khối lượng}
+
+		Để thực hiện các nghiên cứu về sau, chúng ta tính toán đương lượng thể tích và đương lượng khối lượng của các lực, đặc biệt là các lực bề mặt.
+
+		Đương lượng thể tích $\underline{f}_{\text{vol}}$ của một lực $\underline{F}$ nào đó tác dụng lên một phần tử lưu chất có khối lượng $dm$ với thể tích $d\tau$ được định nghĩa như sau :
+			\begin{equation}
+				\begin{aligned}
+					\underline{F}=\underline{f}_{\text{vol}}d\tau.
+				\end{aligned}
+			\end{equation}
+		Đương lượng khối lượng $\underline{f}_{\text{m}}$ được định nghĩa như sau :
+			\begin{equation}
+				\begin{aligned}
+					\underline{F}=\underline{f}_{\text{m}}dm.
+				\end{aligned}
+			\end{equation}
+
+		Đối với áp lực, xét một thể tích nguyên tố $d\Omega$ mà bề mặt của nó được kí hiệu là $\partial\Omega$ trong lòng lưu chất, áp lực tác dụng lên thể tích này được tính theo áp suất $p(M,t)$ trên bề mặt được tính như sau :
+			\[
+				d\underline F_p  = \int_{\partial \Omega } { - p\left( {\vt x,t} \right)\underline n(\vt x) dS}  = \int_{d\Omega } { - \underline \nabla  p\left( {\vt x,t} \right)d\tau }.
+			\]
+		% Trong đó, $M$ trong tích phân đầu tiên là các điểm trên bề mặt $\partial\Omega$ và $\underline{n}$ là vecteur pháp tuyến đơn vị hướng ra ngoài bề mặt. Trong tích phân thứ hai, $M$ là điểm nằm bên trong thể tích $d\Omega$. Để đi từ tích phân thứ nhất sang tích phân thứ hai, chúng ta đã sử dụng định lý Gauss-Ostrogradsky.
+		Khi cho thể tích $d\Omega$ tiến tới gần không, trong thể tích vi mô này, chúng ta giả sử $-\underline\nabla p\left(M,t\right)$ biến đổi nhỏ và do đó ta có thể bỏ qua sự biến đổi của nó, và do đó, đương lượng thể tích của áp lực là :
+			\begin{equation}
+				\begin{aligned}
+					\boxed{
+						\underline{f}_{\text{p,vol}}=-\underline\nabla p.
+					}
+				\end{aligned}
+			\end{equation}
+		Nếu tính đến đương lượng khối lượng của áp lực, chúng ta có :
+			\begin{equation}
+				\begin{aligned}
+					\boxed{
+						\underline{f}_{\text{p,m}}=-\frac{\underline\nabla p}{\rho}.
+					}
+				\end{aligned}
+			\end{equation}
+
+		Một phép tính đơn giản với trọng lực cho ta đương lượng thể tích và đương lượng khối lượng của nó lần lượt là :
+			\begin{equation}
+				\begin{aligned}
+					\underline{f}_{\text{gravity,vol}}=\rho\underline{g},\quad\underline{f}_{\text{gravity,m}}=\underline{g}.
+				\end{aligned}
+			\end{equation}
+
+\subsection{Hệ thức cơ bản của động lực học lưu chất}
+		
+		Sử dụng hệ thức cơ bản của động lực học áp dụng cho môi trường liên tục, phương trình động lượng Cauchy, đối với một lưu chất, ta viết:
+		\begin{align}
+			\rho\dfrac{D\vt u}{Dt}=\vnabla\cdot\dt\sigma+\vt f_{v}
+		\end{align}
+		trong đó $\vt f_{v}$ là tổng đương lượng thể tích của các lực khối. Sử dụng dạng phân tích (...), ta viết lại phương trình này dưới dạng trực quan hơn cho lưu chất:
+		\begin{align}
+			\rho\dfrac{D\vt u}{Dt}=-\vnabla\ p+\vnabla\cdot\dt\tau+\vt f_{v}
+		\end{align}
+		trong cơ sở \textsc{Descartes} trực chuẩn, nó được viết đưới dạng đại số như sau:
+		\begin{align}
+			\rho\dfrac{Du_i}{Dt}=-\dfrac{\partial p}{\partial x_i}+\dfrac{\partial\tau_{ij}}{\partial x_j}+f_{vi}
+		\end{align}
+		
+		Ở dưới dạng tích phân, xét một phần tử khối lượng lưu chất, ta có thể viết:
+		\begin{align}
+			ád
+		\end{align}
+		
+
+		Bên trong lòng lưu chất, có thể có các bề mặt không liên tục được sinh ra, ví dụ như sự tồn tại của sóng xung kích chẳng hạn. Do đó, sự khảo sát các đại lượng cơ học liên quan đến sự tồn tại của mặt không liên tục. Đối với trường hợp phương trình động lực học, ta có:
+		\begin{align}
+			\dcon{p}\vt n-\dcon{\dt\tau}\cdot\vt n+\rho\dcon{\vt U}\left[\left(\vt U-\vt W\right)\cdot\vt n\right]=0.
+		\end{align}
+		
+\subsection{Sự cân bằng moment động lượng}
+		
+		Theo những gì đã phát triển trong cơ học môi trường liên tục, sự cân bằng moment được viết:
+		\begin{align}
+			ads
+		\end{align}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass[13pt,a4paper,twoside]{extbook}
+\usepackage[inner=2cm,outer=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{vietnam}
+\usepackage{mathtools,amsmath,amsfonts,amssymb}
+\usepackage{indentfirst}
+\usepackage{subfiles}
+\usepackage{ntheorem}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{blindtext}
+\usepackage{bbm}
+\usepackage{siunitx}
+\usepackage{scrextend}
+
+
+\changefontsizes{13pt}
+\newcommand*{\vect}[1]{\underline{#1}}
+\newcommand*{\deuxtenseur}[1]{\underline{\underline{#1}}}
+\newcommand*{\quatretenseur}[1]{\underline{\underline{\underline{\underline{#1}}}}}
+
+\theoremstyle{break}
+\theoremindent=1.5cm
+\theoremheaderfont{\kern-1cm\normalfont\bfseries} 
+
+% \newtheorem{exmp}{Ví dụ}[chapter]
+\theoremstyle{definition}
+\newtheorem{exmp}{Ví dụ}[chapter]
+\let\olddefinition\exmp
+\renewcommand{\exmp}{\olddefinition\normalfont}
+
+\graphicspath{{IMAGE/}}
+
+\begin{document}
+
+\subfile{CLC_NC_C1.tex}
+
+\end{document}

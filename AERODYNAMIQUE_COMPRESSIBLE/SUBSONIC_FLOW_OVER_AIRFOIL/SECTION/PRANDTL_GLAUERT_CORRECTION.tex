@@ -1,0 +1,22 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+Khi gọi lại phương trình thế vận tốc tuyến tính hóa, ta thấy nó có dạng giống với phương trình Laplace của dòng không nén được. Do đó, chúng ta sẽ thực hiện một phép đổi biến sau cho ta thu được phương trình Laplace đã đề cập. Đầu tiên, giả sử số Mach của dòng tự do là không đổi, do đó nếu đặt $\beta^2=1-M_\infty^2$, phươn trình (...) biến thành:
+	\begin{align}
+		\beta^2\dfrac{\partial^2\widehat{\phi}}{\partial x^2}+\dfrac{\partial^2\widehat{\phi}}{\partial y^2}=0.
+	\end{align}
+Thực hiện phép đổi biến $(x,y)=(\beta\xi,\eta)$. Ta thực hiện tính toán các đạo hàm:
+	\[
+		\dfrac{\partial\widehat{\phi}}{\partial\xi}=\dfrac{\partial\widehat{\phi}}{\partial x}\dfrac{\partial x}{\partial\xi}=\beta\dfrac{\partial\widehat{\phi}}{\partial x}
+	\]
+	\[
+		\dfrac{\partial^2\widehat{\phi}}{\partial\xi^2}=\dfrac{\partial}{\partial\xi}\left(\dfrac{\partial\widehat{\phi}}{\partial\xi}\right)=\dfrac{\partial x}{\partial\xi}\dfrac{\partial}{\partial x}\left(\beta\dfrac{\partial\widehat{\phi}}{\partial x}\right)=\beta^2\dfrac{\partial^2\widehat{\phi}}{\partial x^2}
+	\]
+	\[
+		\dfrac{\partial^2\widehat{\phi}}{\partial y^2}=\dfrac{\partial^2\widehat{\phi}}{\partial\eta^2}	
+	\]
+	Thay thế các đạo hàm bậc hai này vào phương trình bên trên, ta có:
+	\begin{align}
+		\dfrac{\partial^2\widehat{\phi}}{\partial\xi^2}+\dfrac{\partial^2\widehat{\phi}}{\partial\eta^2}=0
+	\end{align}
+\end{document}

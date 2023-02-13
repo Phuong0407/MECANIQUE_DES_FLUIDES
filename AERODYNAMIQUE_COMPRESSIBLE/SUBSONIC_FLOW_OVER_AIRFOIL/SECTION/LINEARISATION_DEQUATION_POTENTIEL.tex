@@ -1,0 +1,67 @@
+\documentclass[../../DONG_CHAY_NEN_DUOC.tex]{subfiles}
+
+\begin{document}
+\subsection{Phép tuyến tính hóa}
+	Như đã thảo luận ở trên, hệ ba phương trình này là phi tuyến. Bây giờ ta sẽ áp đặt các giả thiết phù hợp để tuyến tính hóa các phương trình này để thao tác các phương trình này đơn giản hơn.
+
+	Giả thiết dòng chuyển động tự do chỉ chuyển động theo một chiều, tức là $\boxed{\underline{V}_\infty=V_\infty\underline{e}_x}$. Lúc này, áp dụng giả thiết dòng đi qua biên dạng cánh là nhiễu loạn nhỏ, ta có:
+		\begin{align}
+			\underline{u}=(V_\infty+\widehat{u})\underline{e}_x+\widehat{v}\underline{e}_x,
+		\end{align}
+	trong đó $\widehat{u}$, $\widehat{v}\ll V_\infty$. Thế vận tốc như vậy sẽ có một số hạng nhiễu loạn chồng chập với số hạng thế vận tốc dòng tự do:
+		\begin{align}
+			\phi=V_{\infty}x+\widehat{\phi}.
+		\end{align}
+	Trong đó, vận tốc nhiễu loạn được tính:
+		\begin{align}
+			\widehat{u}=\dfrac{\partial\widehat{\phi}}{\partial x}\quad\text{và}\quad\widehat{v}=\dfrac{\partial\widehat{\phi}}{\partial y}
+		\end{align}
+	Tính toán các đạo hàm bậc một và bậc hai của $\phi$ theo $x$ và $y$ rồi thay thế vào phương trình (\ref{eq:compressible_velocity_potential}), tiếp theo nhân hai vế của nó với $c^2$, ta có:
+		\[
+			\left[c^2-\left(V_\infty+\dfrac{\partial\widehat{\phi}}{\partial x}\right)^2\right]\dfrac{\partial^2\widehat{\phi}}{\partial x^2}+\left[c^2-\left(\dfrac{\partial\widehat{\phi}}{\partial y}\right)^2\right]\dfrac{\partial^2\widehat{\phi}}{\partial y^2}-2\left(V_\infty+\dfrac{\partial\widehat{\phi}}{\partial x}\right)\dfrac{\partial\widehat{\phi}}{\partial y}\dfrac{\partial^2\widehat{\phi}}{\partial x\partial y}=0.
+		\]
+		Phương trình này được gọi là \bi{phương trình thế vận tốc nhiễu loạn}. Tiếp theo để tính đến sự biến đổi của vận tốc lan truyền âm thanh địa phương theo phương trình năng lượng được viết khi tính đến các vận tốc nhiễu loạn:
+		\begin{align}
+			\dfrac{c_\infty^2}{\gamma-1}+\dfrac{V_\infty^2}{2}=\dfrac{c^2}{\gamma-1}+\dfrac{\left(V_\infty+\widehat{u}\right)^2+ \widehat{v}^2}{2}
+		\end{align}
+	Thay thế phương trình này vào phương trình thế nhiễu loạn, ta có số hạng trong dấu ngoặc vuông được biến đổi:
+		\[
+			\begin{aligned}
+				c^2-\left(V_\infty+\dfrac{\partial\widehat{\phi}}{\partial x}\right)^2&=c_\infty^2+\dfrac{\gamma-1}{2}V_\infty^2-\dfrac{\gamma-1}{2}\left[\left(V_\infty+\widehat{u}\right)^2+ \widehat{v}^2\right]-\left(V_\infty+\dfrac{\partial\widehat{\phi}}{\partial x}\right)^2\\
+				&\approx c_\infty^2\left(1-M_\infty^2\right).
+			\end{aligned}
+		\]
+	Trong đó ta đã bỏ đi các số hạng có bậc cao hơn bậc một, tức là đã bỏ qua các số hạng $\widehat{u}^2$ và $\widehat{v}^2$. Tương tự, số hạng trong ngoặc vuông thứ hai được rút gọn thành $c_\infty^2$. Số hạng thứ ba được biến đối thành:
+		\[
+			\begin{aligned}
+				\left(V_\infty+\dfrac{\partial\widehat{\phi}}{\partial x}\right)\dfrac{\partial\widehat{\phi}}{\partial y}\dfrac{\partial^2\widehat{\phi}}{\partial x\partial y}=
+			\end{aligned}
+		\]
+
+
+	của phương trình có bậc hai theo số Mach của dòng tự do. Do đó ta đơn giản được phương trình này thành:
+		\begin{align}
+			\boxed{
+				\left(1-M_\infty^2\right)\dfrac{\partial^2\widehat{\phi}}{\partial x^2}+\dfrac{\partial^2\widehat{\phi}}{\partial y^2}=0
+				}.
+		\end{align}
+	Như vậy ta thu được một phương trình vi phân đạo hàm riêng tuyến tính, dạng của nó đã đơn giản hơn.
+\subsection{Hệ số áp suất}
+	Tương tự với những gì đã làm ở môn khí động lực học các dòng không nén được. Chúng ta sẽ tính hệ số áp suất. Theo định nghĩa:
+		\begin{align}
+			\boxed{C_p=}\dfrac{p-p_\infty}{q_\infty}=\dfrac{2(p-p_\infty)}{\rho_\infty c_\infty^2M_\infty^2}=\dfrac{2(p-p_\infty)}{p_\infty c_\infty^2M_\infty^2}=\boxed{\dfrac{2}{M_\infty^2}\left(\dfrac{p}{p_\infty}-1\right)}
+		\end{align}
+	Bây giờ chúng ta sẽ tuyến tính hóa phương trình này, sử dụng hệ thức liên hệ giữa áp suất và nhiệt độ đã thiết lập, kết hợp với hệ thức vận tốc đã tuyến tính hóa, ta có:
+		\[
+			\begin{aligned}
+				\dfrac{p}{p_\infty}=\left(\dfrac{T}{T_\infty}\right)^{\gamma/(\gamma-1)}&=\left[1+(\gamma-1)\dfrac{V_\infty^2-V^2}{2\gamma RT_\infty}\right]^{\gamma/(\gamma-1)}\\
+				&=\left[1+(\gamma-1)\dfrac{V_\infty^2-V^2}{2c_\infty^2}\right]^{\gamma/(\gamma-1)}\\
+				&=\left(1-\dfrac{\gamma-1}{c_\infty^2}V_\infty\widehat{u}\right)^{\gamma/(\gamma-1)}\\
+				&\approx 1-\dfrac{\gamma}{c_\infty^2}V_\infty\widehat{u}.
+			\end{aligned}
+		\]
+	Do đó, hệ số áp suất được tính:
+		\begin{align}
+			C_p=-2\gamma\dfrac{\widehat{u}}{V_\infty}
+		\end{align}
+\end{document}

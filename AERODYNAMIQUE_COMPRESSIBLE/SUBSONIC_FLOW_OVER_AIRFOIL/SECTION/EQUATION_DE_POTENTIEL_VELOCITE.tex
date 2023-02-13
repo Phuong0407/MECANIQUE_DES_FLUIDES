@@ -1,0 +1,79 @@
+\documentclass[../../DONG_CHAY_NEN_DUOC.tex]{subfiles}
+
+\begin{document}
+Ta vẫn đặc mình trong khuôn khổ dòng chuyển động không nhớt, dừng. Như vậy, dòng chuyển động này không có bất kỳ cơ chế nào để sinh ra các nguồn xoáy, và do đó ta sẽ xem dòng chuyển động như là \bi{dòng chuyển động thế}.
+
+Phương trình bảo toàn lưu lượng đối với dòng chảy hai chiều được viết:
+	\begin{align}
+		\underline{\nabla}\cdot\left(\rho\underline{u}\right)=0.
+	\end{align}
+Khai triển biểu diển dive của phương trình này ra, ta thu được:
+ 	\begin{align}
+		\rho\underline{\nabla}\cdot\underline{u}+\underline{\nabla}\rho\cdot\underline{u}=0.
+	\end{align}
+Nếu kí hiệu vận tốc dòng là $\boxed{\underline{u}=u\underline{e}_x+ v\underline{e}_y}$, tiếp tục khai triển phương trình vô hướng này:
+	\begin{align}\label{eq:Equation_conservation_explicite}
+		\rho\left(\dfrac{\partial u}{\partial x}+\dfrac{\partial v}{\partial y}\right)+u\dfrac{\partial\rho}{\partial x}+v\dfrac{\partial\rho}{\partial y}=0.
+	\end{align}
+Dòng chuyển động là không nhớt, sử dụng phương trình Euler ta có:
+	\begin{align}\label{eq:Euler_equation}
+		\rho\left(\underline{u}\cdot\underline{\nabla}\right)\underline{u}=-\underline{\nabla}p.
+	\end{align}
+Biến đổi vế trái của (\ref{eq:Euler_equation}) nhờ các phép biến đổi sau, trong đó đại lượng độ xoáy của trường vecteur là bằng không do các khuôn khổ khảo sát của chúng ta:
+	\[
+		\rho\left(\underline{u}\cdot\underline{\nabla}\right)\underline{u}=\rho\nabla\cdot\left(\dfrac{\underline{u}^2}{2}\right)+\rho\underbrace{\left(\underline{\nabla}\wedge\underline{u}\right)\wedge\underline{u}}_{=\underline{0}}=\dfrac{\rho}{2}\nabla\cdot\left(\underline{u}^2\right)=-\underline{\nabla}p.
+	\]
+Chiếu phương trình này theo các phương, ta có:
+	\begin{align}
+		&\dfrac{\partial p}{\partial x}=-\dfrac{\rho}{2}\dfrac{\partial}{\partial x}\left(u^2+v^2\right)\\
+		&\dfrac{\partial p}{\partial y}=-\dfrac{\rho}{2}\dfrac{\partial}{\partial y}\left(u^2+v^2\right)
+	\end{align}
+
+Để tiếp tục biến đổi, ta sẽ đưa vào vận tốc âm thanh địa phương được định nghĩa bởi:
+	\begin{align}
+		c^2=\left(\dfrac{\partial p}{\partial\rho}\right)_{s=cte}
+	\end{align}
+Điều kiện này được áp dụng đúng cho mọi điểm của lưu chất bởi vì dòng chuyển động là đẳng entropy, do đó khi sử dụng định nghĩa này, theo phương $x$, ta có:
+	\[
+		\dfrac{\partial p}{\partial x}=-\dfrac{\rho}{2}\dfrac{\partial}{\partial x}\left(u^2+v^2\right)=c^2\dfrac{\partial\rho}{\partial x}
+	\]
+Tức là đối với cả hai phương $x$ và $y$, ta có:
+	\begin{align}
+		&\dfrac{\partial\rho}{\partial x}=-\dfrac{\rho}{2c^2}\dfrac{\partial}{\partial x}\left(u^2+v^2\right)\\
+		&\dfrac{\partial\rho}{\partial y}=-\dfrac{\rho}{2c^2}\dfrac{\partial}{\partial y}\left(u^2+v^2\right)
+	\end{align}
+Thay thế biểu thức này vào phương trình liên tục (\ref{eq:Equation_conservation_explicite}), ta biến đổi:
+	\[
+		\rho\left(\dfrac{\partial u}{\partial x}+\dfrac{\partial v}{\partial y}\right)=\dfrac{\rho u}{2c^2}\dfrac{\partial}{\partial x}\left(u^2+v^2\right)+\dfrac{\rho v}{2c^2}\dfrac{\partial}{\partial y}\left(u^2+v^2\right)
+	\]
+Dòng chuyển động là dòng chuyển động thế, tức là tồn tại một thế vô hướng $\phi$ xác định tại mọi điểm của dòng chuyển động, thay thế biểu thức vận tốc thông qua thế vận tốc vô hướng, ta có:
+	\[
+		\begin{aligned}
+			\dfrac{\partial^2\phi}{\partial x^2}+\dfrac{\partial^2\phi}{\partial y^2}&=\dfrac{\partial u}{\partial x}+\dfrac{\partial v}{\partial y}\\
+			&=\dfrac{u}{c^2}\dfrac{\partial}{\partial x}\left(u^2+v^2\right)+\dfrac{v}{c^2}\dfrac{\partial}{\partial y}\left(u^2+v^2\right)\\
+			&=\dfrac{1}{c^2}\dfrac{\partial\phi}{\partial x}\dfrac{\partial}{\partial x}\left[\left(\dfrac{\partial\phi}{\partial x}\right)^2+\left(\dfrac{\partial\phi}{\partial y}\right)^2\right]+\dfrac{1}{c^2}\dfrac{\partial\phi}{\partial y}\dfrac{\partial}{\partial x}\left[\left(\dfrac{\partial\phi}{\partial x}\right)^2+\left(\dfrac{\partial\phi}{\partial y}\right)^2\right]
+		\end{aligned}
+	\]
+Biếu đổi tiếp tục các biểu thức trong dấu ngoặc vuông rồi nhóm các số hạng lại với nhau tùy theo thừa số chung, ta thu được phương trình quan trọng sau:
+	\begin{equation}\label{eq:compressible_velocity_potential}
+		\boxed{
+			\begin{aligned}
+				\left[1-\dfrac{1}{c^2}\left(\dfrac{\partial\phi}{\partial x}\right)^2\right]\dfrac{\partial^2\phi}{\partial x^2}+\left[1-\dfrac{1}{c^2}\left(\dfrac{\partial\phi}{\partial y}\right)^2\right]\dfrac{\partial^2\phi}{\partial y^2}-\dfrac{2}{c^2}\dfrac{\partial\phi}{\partial x}\dfrac{\partial\phi}{\partial y}\dfrac{\partial^2\phi}{\partial x\partial y}=0
+			\end{aligned}
+			}
+	\end{equation}
+
+Phương trình này tuy có dạng khá tốt, nó vẫn chưa đầy đủ vì vận tốc âm thanh cục bộ là phụ thuộc vào số Mach, ta có từ các chương trước:
+	\begin{align}
+		c^2=c^2_0+\dfrac{\gamma-1}{2}M^2
+	\end{align}
+trong đó số Mach được tính:
+	\begin{align}
+		M^2=\dfrac{1}{c^2}\left[\left(\dfrac{\partial\phi}{\partial x}\right)^2+\left(\dfrac{\partial\phi}{\partial y}\right)^2\right]
+	\end{align}
+Như vậy, ta đã thu được hệ ba phương trình (mà thực ra là một phương trình mà chúng ta không muốn viết chúng quá cồng kềnh) mà nó chỉ có một ẩn chưa biết, đó là thế vận tốc $\phi$. Việc tìm được $\phi$ sẽ được thực hiện bằng việc giải hệ phương trình này kết hợp với điều kiện biên sẽ giúp ta tính được mọi đặc điểm của dòng chuyển động nén được qua biên dạng cánh.
+\begin{description}
+	\item[Nhận xét 1 :] Khi đưa vào vận tốc âm thanh địa phương, chúng ta đã rút gọn các định luật cơ học dạng vecteur thành một phương trình vô hướng của duy nhất một đại lượng vô hướng là thế vận tốc và điều này giúp cho phương trình dể giải hơn. Đây là một lợi tốt khi chúng ta đặc mình trong khuôn khổ dòng chuyển động không xoay, đẳng entropy và dừng.
+	\item[Nhận xét 2:] Mặc dù đơn giản là thế, hệ ba phương trình này là phi tuyến. Việc tìm kiếm nghiệm giải tích của các phương trình vi phân đạo hàm riêng phi tuyến là gần như bất khả thi, do đó ta sẽ không bao giờ tìm nghiệm giải tích của hệ phương trình này. Để triển khai các phương trình này, người ta chủ yếu sử dụng các phương pháp số thông qua máy tính hơn là tìm kiếm các nghiệm giải tích.
+\end{description}
+\end{document}

@@ -1,0 +1,172 @@
+\documentclass[THUY_DONG_HOC.tex]{subfiles}
+\begin{document}
+\chapter{XOÁY, ĐỘNG LỰC HỌC CỦA XOÁY, DÒNG CHẢY XOAY}
+\section{Cuộn xoáy và sự tương đồng với điện từ học}
+\subsection{Vecteur xoáy}
+
+Chúng ta định nghĩa giả-vecteur xoáy tại điểm $\underline{r}$ theo trường vecteur vận tốc của dòng chảy $\underline{v}(\underline{r})$ :
+\begin{equation}
+	\begin{aligned}
+		\underline{\omega}(\underline{r})=\underline{\nabla}\wedge\underline{v}(\underline{r})
+	\end{aligned}
+\end{equation}
+
+Xoáy sẽ xuất hiện bất cứ khi nào dòng chảy không phải là dòng chảy thế và do đó là đối với lưu chất nhớt. Nó đóng một vai trò cực kỳ quan trọng trong dòng chảy rối.
+
+\section{Động lực học của lưu số}
+Ta định nghĩa lưu số đối với một trường vận tốc trên một đường cong kín $\mathscr{C}$ :
+\begin{equation}
+	\begin{aligned}
+		\oint_\mathscr{C} \underline{u}\cdot d\underline{\ell},
+	\end{aligned}
+\end{equation}
+trong đó $d\underline{\ell}$ là vecteur vô cùng nhỏ tiếp tuyến với đường cong.
+
+Chúng ta sẽ nghiên cứu động lực học của xoáy bằng việc nghiên cứu sự biến đổi của lưu số trên một đường cong kín bất kỳ. Các kết quả này cũng được áp dụng cho sự phân bố liên tục của xoáy trong trường hợp có đường dòng bị kì dị.
+
+\subsection{Định lý Kelvin : sự bảo toàn lưu số}
+\subsubsection{Thiết lập định lý Kelvin}
+Định lý Kelvin mô tả lưu số đối với một đường cong kín, mà mỗi điểm của nó bị dịch chuyển với vận tốc của lưu chất tại điểm đó. Chúng ta đặt mình trong khuôn khổ sau :
+\begin{itemize}
+	\item[$-$] Lưu chất là không nhớt : $\eta=0$;
+	\item[$-$] Các ngoại lực là các lực thế : $\underline{f}=-\underline{\text{grad}}\ \underline{\varphi}$;
+	\item[$-$] Khối lượng riêng là hằng số hoặc là chỉ phụ thuộc vào áp suất (chất lưu chảy khuynh áp) : $\rho=f(p)$.
+\end{itemize}
+
+Đầu tiên chúng ta sẽ đạo hàm lưu số trên một đường cong kín $\mathcal{C}$ theo thời gian :
+\[\frac{D}{{Dt}}\left( {\oint_\mathcal{C} {\underline u }  \cdot d\underline \ell } \right) = \oint_\mathcal{C} {\frac{{D\underline u }}{{Dt}} \cdot d\underline \ell }  + \oint_\mathcal{C} {\underline u \frac{{D\left( {d\underline \ell } \right)}}{{Dt}}}.\]
+Từ phương trình Euler, ta có :
+\[\frac{{D\underline u }}{{Dt}} =  - \underline \nabla  \varphi  - \frac{1}{\rho }\underline \nabla  p.\]
+Do đó, vì lưu chất chảy khuynh áp, khi thay thế phương trình Euler vào tích phân thứ nhất, chúng ta thu được tích phân của một gradient trên một đường cong kín, do đó tích phân này đồng nhất không và do đó, đạo hàm theo thời gian của lưu số được viết lại :
+\[
+\begin{aligned}
+\frac{D}{{Dt}}\left( {\oint_\mathcal{C} {\underline u }  \cdot d\underline \ell } \right) = \oint_\mathcal{C} {\underline u \frac{{D\left( {d\underline \ell } \right)}}{{Dt}}}=\oint_\mathcal{C}\underline{u}\cdot d\underline{u}=\oint_\mathcal{C}d\left(\frac{\underline{u}^2}{2}\right)=0.
+\end{aligned}
+\]
+
+Cuối cùng, chúng ta thu được định lý Kelvin :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\frac{D}{{Dt}}\left( {\oint_\mathcal{C} {\underline u }  \cdot d\underline \ell }\right)=0
+		}.
+	\end{aligned}
+\end{equation}
+
+\subsubsection{Các hệ quả của định lý Kelvin}
+\begin{itemize}
+	\item Một chất lỏng không nhớt, bắt đầu chuyển động từ trạng thái nghỉ, sẽ có một dòng chảy không xoáy vào những thời điểm sau.
+	\item Trong dòng chảy xoáy, ống xoáy sẽ di chuyển đúng theo đường đi được tạo nên bởi hạt lưu chất.
+	\item Thông lượng của xoáy được bảo toàn dọc theo ống xoáy.
+	\item Nguồn xoáy (trong trường hợp này là một đường xoáy) sẽ di chuyển với tốc độ cục bộ của lưu chất.
+\end{itemize}
+
+\subsection{Nguồn hình thành của lưu số}
+
+Thay thế phương trình Navier-Stokes vào biểu thức của đạo hàm lưu số, chúng ta suy ra :
+$$
+	\frac{D}{{Dt}}\left[ {\oint_\mathscr{C} {\underline u  \cdot d\underline l } } \right] = \oint_\mathscr{C} {\frac{{D\underline u }}{{Dt}} \cdot d\underline l }  = \oint_\mathscr{C} {\underline{f}_{\text{vol}}  \cdot d\underline l }  - \oint_\mathscr{C} {\frac{1}{\rho }{\underline{\nabla}p} \cdot d\underline l }  + \oint_\mathscr{C} {\nu \Delta \underline u  \cdot d\underline l }
+$$
+
+Số hạng đầu tiên ở vế phải của phương trình này là số hạng lực. Nếu lực này \bfit{không} được suy ra từ một thế, và lưu số của nó trên một đường cong kín là không bị triệt tiêu, là một nguồn tạo ra lưu số. Chúng ta xét hai trường hợp quan trọng :
+\begin{itemize}
+	\item Lực Coriolis : Đây là một lực không có nguồn gốc từ thực tế, mà chỉ là một hiệu ứng do sự thay đổi hệ tọa độ. Ở trái đất, nó là nguồn gốc của các lốc xoáy.
+	\item Lực từ thủy động : Đây là lực được tạo ra do sự tác động của một trường từ. Trường từ này không gia tốc hạt mà chỉ làm thay đổi hướng của dòng chảy.
+\end{itemize}
+
+Số hạng thứ hai là số hạng gradient áp suất. Nếu lưu chất không chảy hướng áp, tích phân thứ hai là không khác không. Trong trường hợp này, tâm lực Archimede không trùng với trọng tâm của một phần tử lưu chất (tâm của lực đẩy Archimede được xác định thông qua các đường đẳng áp trong lưu chất), điều này tạo ra một moment trên phần tử lưu chất và chính nó tạo ra lưu số. Thực vậy,
+\[
+\begin{aligned}
+\oint_\mathscr{C} {\frac{1}{\rho } {\underline {\nabla} p}\cdot d\underline \ell }  &= \iint_\mathscr{S} {\underline {\nabla}\wedge\left({\frac{1}{\rho } {\underline {\nabla} p}}\right)\cdot d\underline S}=\underbrace{\iint_\mathscr{S}\left(\frac{1}{\rho}\underline{\nabla}\wedge\underline{\nabla}pd\underline{S}\right) }_{=0}+\iint_\mathscr{S}\underline {\nabla} \frac{1}{\rho } \wedge \underline {\nabla} p \cdot d\underline S\\
+&=\iint_\mathscr{S}\underline {\nabla} \frac{1}{\rho } \wedge \underline {\nabla} p \cdot d\underline S.
+\end{aligned}
+\]
+Kết quả này thể hiện rõ hơn điều đó (lưu số do gradient áp suất được tạo ra do sự không trùng nhau của đường đẳng áp và đường đẳng khối lượng riêng).
+
+Số hạng thứ ba của phương trình này là số hạng nhớt. Độ nhớt gây ra các gradient vận tốc xuất hiện gần các bức tường và do đó tạo ra lưu số : tích phân trên một đường cong kín của số hạng lực nhớt là khác không.
+
+\section{Động lực học của xoáy}
+\subsection{Phương trình vận chuyển xoáy}
+Từ phương trình Navier-Stokes của lưu chất :
+$$
+	\frac{{\partial\underline u}}{{\partial t}} - \underline u \wedge \underline \omega   + \underline{\nabla}\left( {\frac{{{{\underline v }^2}}}{2}} \right) = \underline f_{\text{vol}}  - \frac{1}{\rho }\underline {\nabla} p + \nu \Delta \underline u.
+$$
+Lấy rota hai vế của phương trình này, trong giả thiết lưu chất chảy khuynh áp, lưu chất là không nén được và lực thể tích là lực thế, chúng ta có :
+\begin{equation}\label{eq:vortex_only}
+	\begin{aligned}
+		\boxed{
+		\frac{{D\underline \omega  }}{{Dt}}= \left( {\underline \omega   \cdot \underline {\nabla} } \right)\underline u  + \nu \Delta \underline \omega
+	}.
+	\end{aligned}
+\end{equation}
+Phương trình này cho chúng thấy được sự duy trì không xoay trong dòng chảy của lưu chất lý tưởng nếu ban đầu nó là không xoay. 
+
+\subsubsection{Sự đối lưu và sự bập bênh của ống xoáy}
+Hiện tại chúng ta sẽ bỏ qua hiệu ứng nhớt. Để phân tích sự biến đổi của $\underline{\omega}$, chúng ta sẽ xét một ống xoáy có chiều dài $dl$, vecteur diện tích $S$ song song với $\underline{\omega}$. Đầu tiên chúng ta phân tích số hạng thứ hai của vế phải của (\ref{eq:vortex_only}) theo một thành phần song song và một thành phần vuông góc với $\underline{\omega}$ :
+$$
+\left( {\underline \omega   \cdot \underline {\nabla} } \right)\underline u=\omega\frac{\partial v_z}{\partial z}\underline{e}_z+\omega\frac{\partial v_\bot}{\partial z}\underline{e}_\bot.
+$$
+
+Thay biểu thúc được phân tích này vào (\ref{eq:vortex_only}), chúng ta có :
+\begin{equation}\label{eq:vortex_only}
+	\begin{aligned}
+		\frac{{D\underline \omega  }}{{Dt}}= \omega\frac{\partial v_z}{\partial z}\underline{e}_z+\omega\frac{\partial v_\bot}{\partial z}\underline{e}_\bot
+	\end{aligned}
+\end{equation}
+
+Số hạng $\omega{\partial v_z}/{\partial z}$ thể hiện hiệu ứng đối lưu của ống xoáy, và số hạng $\omega{\partial v_\bot}/{\partial z}$ thể hiện hiệu ứng xoay.
+
+Số hạng đối lưu phản ánh trực tiếp sự bảo toàn moment động lượng, liên kết với sự bảo toàn lưu số bao quanh một ống xoáy.
+
+\subsubsection{Nghiên cứu xoáy Hill}
+Xoáy này được giới hạn trong một hình cầu bán kính $R$ với trường xoáy như sau trong tọa độ trụ :
+\begin{equation}
+	\begin{aligned}
+		\underline{\omega}=\begin{cases}
+				Ar\underline{e}_\theta & \text{bên trong hình cầu}\\
+				\underline{0} & \text{bên ngoài hình cầu}
+			\end{cases},
+	\end{aligned}
+\end{equation}
+
+Phương trình (\ref{eq:vortex_only}) được biến đổi thành :
+$$
+\frac{D\omega_\theta}{Dt}=\omega_\theta\frac{v_r}{r}.
+$$
+Đạo hàm vế phải của nó :
+$$
+\frac{D}{Dt}\left(\frac{\omega_\theta}{r}\right)=\frac{1}{r}\frac{D\omega_\theta}{Dt}+\omega_\theta\frac{D}{Dt}\left(\frac{1}{r}\right)=\frac{1}{r}\frac{\omega_\theta v_r}{r}-\frac{\omega_\theta}{r^2}v_r=0.
+$$
+
+\subsection{Cân bằng đối lưu-khuếch tán trong dòng chảy xoáy}
+
+
+\section{Lưu chất trong chuyển động xoay}
+Áp dụng công thức biến đổi gia tốc giữa hai hệ quy chiếu trong trường hợp gốc tọa độ là cố định và vận tốc xoay của hệ quy chiếu xoay là cố định, ta có :
+\begin{equation}
+	\begin{aligned}
+		\frac{D\underline{u}}{Dt}=-\frac{1}{\rho}\underline{\nabla}p-\underline{\nabla}\varphi+\nu\Delta\underline{u}-2\underline{\Omega}\wedge\underline{u}+\underline{\nabla}\left(\frac{1}{2}\left(\underline{\Omega}\wedge\underline{r}\right)^2\right).
+	\end{aligned}
+\end{equation}
+
+\subsubsection{Hiệu ứng của lực ly tâm trong một lưu chất xoay}
+
+Lực ly tâm có thể cảm ứng nên một dòng chảy : ví dụ trường hợp giọt chất lỏng nằm trên đĩa quay. Áp dụng quan trọng cuả nó được thể hiện trong một bơm ly tâm, mà trong đó lưu chất được phun trên một trục và chuyển động về phía cực và sau đó thoát ra trên mặt mũi cánh do sự xoay của bánh công tác ly tâm. Hiệu ứng ly tâm cũng cực kỳ quan trọng trong sự hình thành của lốc xoáy và bão.
+
+Đầu tiên, chúng ta bỏ qua dòng chảy được sinh ra do hiệu ứng ly tâm. Ví dụ, giả sử một thùng chứa nước quay với tốc độ không đổi: sau một thời gian đủ dài, chất lỏng nhận vận tốc góc của thành nếu không có nguồn nào tạo ra dòng chảy liên quan. Trong trường hợp này, hiệu ứng ly tâm chỉ tạo ra thêm một gradient áp suất phụ thêm vào theo phương bán kính.
+
+\subsubsection{Chuyển động của xoáy}
+Lấy rota, chúng ta được :
+\begin{equation}
+	\begin{aligned}
+		\frac{D\underline{\omega}}{Dt}=\nu\Delta\underline{\omega}+\left(\left(\underline{\omega}+2\underline{\Omega}\right)\cdot\underline{\nabla}\right)\underline{u}.
+	\end{aligned}
+\end{equation}
+
+Bây giờ ta sẽ vô thứ nguyên hóa, nó :
+
+
+
+
+
+\end{document} 

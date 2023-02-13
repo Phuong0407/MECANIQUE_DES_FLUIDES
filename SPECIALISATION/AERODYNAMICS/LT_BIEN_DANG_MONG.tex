@@ -1,0 +1,350 @@
+\documentclass[KHI_DONG_HOC.tex]{subfiles}
+
+\usepackage{stackengine}
+\usepackage{caption}
+\usepackage{framed}
+
+\begin{document}
+\chapter{LÝ THUYẾT BIÊN DẠNG CÁNH MỎNG}
+
+	Sau khi đã khảo sát đầy đủ các đặc tính của lưu chất, bây giờ chúng ta sẽ đi áp dụng nó cho lĩnh vực hàng không không gian. Theo như những triển khai từ trước, ở chương này, chúng ta sẽ áp dụng các tính toán đã biết từ trước để phát triển nên lý thuyết biên dạng - nền tảng cho toàn bộ ngành hàng không.
+
+	Đầu tiên, các phần ... sẽ được sử dụng để nhắc lại những nền tảng lý thuyết để làm cơ sở cho các tính toán : Dòng chảy thế, động lực học của xoáy, mô hình hóa dòng chuyển động bằng các phương pháp có bản chất là tiếp cận số.
+
+	Sau đó, các đặc tính hình học của biên dạng sẽ được giới thiệu song song với các lý thuyết đi kèm để tính toán các đặc tính khí động. Sở dĩ phải có từng lý thuyết đi kèm là do các hành vi phức tạp của lưu chất mà việc thao tác với nó là không dễ (hiện tại con người vẫn chưa hiểu đủ nhiều về phương trình Navier-Stokes), và do yêu cầu về đặc tính động lực học của biên dạng cho từng trường hợp sử dụng là quá đa dạng, khắc khe và hơn hết là khác biệt nhau, do đó một sự phát triển lý thuyết phổ quát là quá phức tạp, tốn nhiều công sức và hơn hết là không đủ cho các ứng dụng thực tế. Do đó, ở đây, ta chấp nhận với nhau là sẽ thực hiện các nghiên cứu hướng đối tượng thay vì một lý thuyết phổ quát.
+
+	Sau khi giới thiệu các lý thuyết, các phương pháp tiếp cận số bằng máy tính cũng như sự hiện chỉnh các lý thuyết cũng sẽ được đề cập.
+
+\newpage
+
+\section{Giới thiệu}
+
+	Như đã phân tích trong phần lưu chất lý tưởng, lực tác dụng lên cố thể chuyển động trong lưu chất đứng yên có thể hoàn toàn tìm được từ dòng chuyển động thế của lưu chất lý tưởng. Tuy nhiên, việc chỉ áp dụng các hành vi của lưu chất lý tưởng không giúp chúng ta giải thích được hoàn toàn nguồn gốc của lực mà lưu chất tác dụng lên cố thể - ta đang nói đến \bfit{Nghịch lý D'Alambert} : \textit{khi một cố thể chuyển động đều trong lưu chất lý tưởng thì không có lực cản sinh ra}.
+	
+	Như vậy, một sự áp dụng hoàn toàn các hành vi của lưu chất lý tưởng để khảo sát biên dạng cánh là quá nguy hiểm. Do đó, chúng ta sẽ hiệu chỉnh một số khía cạnh lý thuyết để tính đến các đặc tính của lưu chất thực trong khuôn khổ mô hình hóa dòng chuyển động lý tưởng. Mặc dù nghe hơi khó hiểu, nhưng chúng tôi sẽ giới thiệu đầy đủ 
+	
+\section{Dữ liệu thực nghiệm}
+
+	Việc áp dụng dòng chuyển động thế để mô tả lực nâng trên cánh rất thành công. Tuy nhiên, câu chuyện không đơn giản đối với lực cản, thực tế là việc áp dụng 
+
+\subsection{Lực nâng đối với một lưu chất lý tưởng}
+
+	Lực nâng không thể nào được tạo ra bên trong một lưu chất lý tưởng, khi có một cố thể chuyển động đều bên trong nó, mà không có lưu số được tạo ra. Để minh họa cho kết luận này, ta hãy xem xét hiện tượng Magnus thông qua một ví dụ kinh điển sau:\\
+
+	\noindent{\textbf{Khảo sát hiệu ứng Magnus :}} Xét một lưu chất lý tưởng không nén được, chuyển động thường đều có vận tốc $\vec v = {v_0}{\vec e _x}$ ở xa một hình trụ bất động, trục $(Oz)$ và có bán kính $R$.\\
+
+	    \leftskip=1cm
+	    \noindent{1) Trường vận tốc của lưu chất trong trường hợp này là gì ? Hãy đưa ra các lập luận chi tiết để dẫn ra biểu thức của nó.}
+	    
+		    \leftskip=0cm
+		    {Bây giờ cũng xét bài toán này, với một sự khác biệt là, hình trụ lúc này xoay với vận tốc góc $\vec \omega = {\omega}{\vec e _z}$.}
+		    
+		    \leftskip=1cm
+		    \noindent{2) Trường vận tốc mới này có gì khác ? Có thể mô tả nó bằng một sự chồng chập của dòng chuyển động đã thiết lập ở câu 1) với một số hạng bổ sung hay không ? Đưa ra biểu thức mới này.\\}
+		    3) Xác định lực tác dụng lên khối hình trụ trên đơn vị dài.\\
+		    4) Tính lưu số của dòng chuyển động trên một đường cong kín bất kỳ bao lấy hình trụ quay này. Rút ra kết luận.\\
+		
+		\leftskip=0pt
+
+	\noindent{Từ ví dụ này, chúng ta rút ra một kết luận quan trọng :} \bfit{Sự tạo thành lực nâng luôn luôn đi kèm với một lưu số trong lưu chất.} Đây là một kết quả cực kỳ quan trọng và được biết đến dưới cái tên \bfit{Định lý Kutta-Joukowski} :\\
+	
+		\leftskip=1cm
+		\rightskip=1cm
+			
+			\noindent{\emph{Lực nâng trên một đơn vị chiều dài tác dụng lên một hình trụ bên phải có tiết diện ngang bất kỳ bằng $\displaystyle\rho_{\infty}V_{\infty}\Gamma$ (với $\Gamma$ là lưu số của dòng chuyển động xung quanh hình trụ) và vuông góc với phương của  $\displaystyle V_{\infty }.$}}
+			
+		\leftskip=0cm
+		\rightskip=0cm
+
+
+\subsection{Sự hình thành xoáy xung quanh một biên dạng cánh}
+
+Chúng ta không thể giải thích được sự hình thành của xoáy của một dòng chuyển động xung quanh một biên dạng cánh nếu không tính đến đặc tính nhớt của lưu chất. Bây giờ chúng ta sẽ mô tả dòng chuyển động của không khí xung quanh một biên dạng cánh theo sự tiến triển của thời gian :
+\begin{enumerate}
+	\item{Giai đoạn không xoáy :} Đây là giai đoạn ở thời điểm $t=0$ đến thời điểm $t=0^+$. Trong giai đoạn này, áp dụng định lý Kelvin và định lý Lagrange, dòng chuyển động bắt buộc phải là không xoay và không vòng.
+	\item{Giai đoạn hình thành lớp biên :} Nếu lưu chất là không nhớt, cấu trúc dòng chuyển động như vậy sẽ được duy trì mãi mãi theo thời gian. Tuy nhiên do lưu chất là nhớt, điều kiện biên về vận tốc của dòng chuyển động làm hình thành một lớp biên mỏng ở gần bề mặt biên dạng. Chính bên trong lớp biên này, xoáy được hình thành và cuộc dọc theo bề mặt biên dạng.
+	\item{Giai đoạn hình thành xoáy tự do :} Trên vùng lưu chất nằm giữa điểm dừng và cạnh sau của biên dạng, có một dốc áp suất nghịch vì vậy vận tốc ở đó giảm từ vô cực xuống không. Do đó có hiện tượng tách rời lớp biên mà nó hình thành một xoáy tự do. Các cuộn xoáy tự do này cuộn theo hình xoắn ốc và tạo thành một xoáy ở gần cạnh sau của biên dạng mà ta gọi là \bfit{xoáy đuôi}.
+	\item{Giai đoạn dừng :} Dòng chuyển động trở nên dừng khi xoáy đuôi này ở hạ lưu và xa vô cực.
+\end{enumerate}
+
+\begin{description}
+	\item{Chú ý :} Trong bốn giai đoạn được mô tả ở bên trên, chỉ có giai đoạn thứ tư là dòng chuyển động thiết lập sự dừng, ba giai đoạn đầu là các giai đoạn quá độ. Hiển nhiên, trong các nghiên cứu, chúng ta sẽ chỉ tính toán ở giai đoạn trường vận tốc là "dừng" (mặc dù có thể chuyển động rối, nhưng chúng ta vẫn xem dòng chuyển động là dừng), nhưng một sự thấu hiển những gì thực sự diển ra ở giai đoạn chưa dừng là hữu ích trước khi thực hiện những sự mô hình hóa dòng chuyển động.
+\end{description}
+
+\section{Mô hình hoá dòng chuyển động}
+
+Ta có thể xem cố thể như một vùng gián đoạn trường vận tốc của lưu chất mà đối với thể tích , ta có thể thực hiện phép phân tích Helmholtz. Thực vậy, xét một thể tích kiểm soát $\mathscr{V}$ xung quanh một cố thể mà ta xem xét trường vận tốc $\underline{u}(\underline{x})$ là liên tục, trừ tại các vị trí nằm trong biên dạng cánh (không có vận tốc của lưu chất ở các điểm này, trừ các điểm trên bề mặt, tại đó có sự tiếp tuyến của vận tốc lưu chất và vận tốc của cố thể). Như vậy, phép phân tích Helmholtz cho ta :
+\begin{equation}
+	\begin{aligned}
+		\underline{u}(\underline{x})=-\underline{\nabla}\Phi(\underline{x})+\underline{\nabla}\wedge\underline{\Omega}(\underline{x}).
+	\end{aligned}
+\end{equation}
+trong đó
+\begin{equation}
+	\begin{aligned}
+		\Phi(\underline{x})=\frac{1}{4\pi}\int_\mathscr{V} \frac{\underline{\nabla}'\cdot\underline{u}(\underline{x}')}{|\underline{x}-\underline{x}'|}d\tau'-\frac{1}{4\pi}\oint_{\partial\mathscr{V}} \frac{\underline{u}(\underline{x}')}{|\underline{x}-\underline{x}'|}\cdot\underline{n}'dS',
+	\end{aligned}
+\end{equation}
+và
+\begin{equation}
+	\begin{aligned}
+		\underline{\Omega}(\underline{x})=\frac{1}{4\pi}\int_\mathscr{V} \frac{\underline{\nabla}'\wedge\underline{u}(\underline{x}')}{|\underline{x}-\underline{x}'|}d\tau'+\frac{1}{4\pi}\oint_{\partial\mathscr{V}} \frac{\underline{u}(\underline{x}')}{|\underline{x}-\underline{x}'|}\wedge\underline{n}'dS',
+	\end{aligned}
+\end{equation}
+Chú ý rằng $\underline{\nabla}'$ được tính cho $\underline{x}'$, không phải cho $\underline{x}$.
+
+trong đó nếu gọi miền không liên tục của không gian là một miền $\Omega$ liên thông và compact, có biên $\partial\Omega$ :
+
+
+Sự phân tích này dẫn chúng ta đến hai phương pháp mô hình hóa dòng chuyển động quan trọng :
+\begin{itemize}
+	\item Phương pháp tấm nguồn.
+	\item Phương pháp tấm xoáy.
+\end{itemize}
+
+Chúng ta sẽ mô hình hóa dòng chuyển động xung quanh một biên dạng cánh bằng cách chồng chập một dòng chuyển động thế bao gồm hai thành phần là một dòng chuyển động đều (với vận tốc $U_\infty$) và dòng lưỡng cực (xung quanh một cố thể) và một dòng chuyển động xoáy để mô tả hiệu ứng lực nâng trên biên dạng cánh.
+
+Sở dĩ ta dám thực hiện sự mô hình hóa này \emph{một cách tiên nghiệm} là bởi vì trong các trường hợp thực tế, số Reynolds $Re$ là rất lớn. Do đó, theo những gì đã phát triển trong lý thuyết lớp biên, lớp biên nơi thể hiện tính nhớt có độ dày không đánh kể. Phần còn lại của trường vận tốc chiếm phần lớn khối lượng mà ta xấp xỉ bằng mô hình lưu chất lý tưởng.
+
+\subsection{Sự mô hình hóa dòng chuyển động không tạo lực nâng qua cố thể hai chiều - phương pháp tấm nguồn}
+
+Xét một cố thể được đặt trong một dòng chuyển động của lưu chất mà trường vận tốc dòng chuyển động được mô tả hai chiều. Điều này ngụ ý rằng vật được xét có dạng hình trụ mà diện tích mặt cắt ngang là bất kỳ. Ta sử dụng kí hiệu $\mathcal{S}$ là mặt cắt ngang và $\mathcal{C}$ là đường bao của mặt cắt ngang này.
+
+Có một dòng chuyển động đồng nhất với vận tốc dòng tự do là $\underline{U}_\infty$ chuyển động qua vật thể. Để mô tả dòng chuyển động thế này, chúng ta đặt một phân bố các đường nguồn có cường độ $\lambda(s)$ trên một đơn vị chiều dài dọc theo $\mathcal{C}$ và $s$ là tọa độ cong tương ứng của điểm trên $\mathcal{C}$.
+
+Xét điểm $M$ nằm trên đường bao của cố thể có vị trí $\underline{r}'$. Thế vận tốc do đường nguồn tại điểm này sinh ra tại điểm $P$ có vị trí $\underline{r}$ được viết :
+\[
+d\Phi(\underline{r})=\frac{\lambda(s)ds}{2\pi}\ln|\underline{r}-\underline{r}'|.
+\]
+Tính đến tất cả các điểm trên bề mặt cố thể, ta có :
+\begin{equation}
+	\begin{aligned}
+		\Phi(\underline{r})=\oint_\mathcal{S} \frac{\lambda(s)}{2\pi}\ln|\underline{r}-\underline{r}'|ds.
+	\end{aligned}
+\end{equation}
+
+	Điều kiện Kutta nói rằng, một dòng chuyển động là tồn tại được nếu và chỉ nếu điểm dừng là nằm tại cạnh sau biên dạng cánh.
+
+\subsection{Sự mô hình hóa dòng chuyển động tạo lực nâng qua một cố thể hai chiều - phương pháp tấm xoáy}\label{Vortex_sheet}
+
+	Xét một cố thể được đặt trong một dòng chuyển động của lưu chất mà trường vận tốc dòng chuyển động được mô tả hai chiều. Điều này ngụ ý rằng vật được xét có dạng hình trụ mà diện tích mặt cắt ngang là bất kỳ. Ta sử dụng kí hiệu $\mathcal{S}$ là mặt cắt ngang và $\mathcal{C}$ là đường bao của mặt cắt ngang này.
+
+	Có một dòng chuyển động đồng nhất với vận tốc dòng tự do là $\underline{u}_\infty$ chuyển động qua vật thể. Để mô tả dòng chuyển động thế này, chúng ta đặt một phân bố các đường nguồn có cường độ $\lambda(s)$ trên một đơn vị chiều dài dọc theo $\mathcal{C}$ và $s$ là tọa độ cong tương ứng của điểm trên $\mathcal{C}$.
+
+	Xét điểm $M$ nằm trên đường bao của cố thể có vị trí $\underline{r}'$. Thế vận tốc do đường nguồn tại điểm này sinh ra tại điểm $P$ có vị trí $\underline{r}$ được viết :
+		\[
+			d\Phi(\underline{r})=-\dfrac{\gamma(s)ds}{2\pi}\theta
+		\]
+	Tính đến tất cả các điểm trên bề mặt cố thể, ta có :
+		\begin{equation}
+			\begin{aligned}
+				\Phi(\underline{r})=-\oint_\mathcal{S}\dfrac{\gamma(s)}{2\pi}\theta ds.
+			\end{aligned}
+		\end{equation}
+	mà lưu số của dòng chuyển động này được tính :
+		\begin{equation}
+			\begin{aligned}
+				\Gamma=\oint_\mathcal{S}\gamma(s)ds.
+			\end{aligned}
+		\end{equation}
+
+\section{Lý thuyết biên dạng cánh mỏng tổng quát}
+\subsection{Hình học của biên dạng cánh}
+	
+	Bây giờ ta sẽ nêu ra các giả thiết làm nền tảng cho việc nghiên cứu biên dạng mỏng. Khi nói đến biên dạng mỏng, ta muốn ám chỉ đến việc bỏ qua bề dày của biên dạng cánh, từ đó ta áp đặt các giả thiết sau:
+		\begin{itemize}
+			\item Đường trung bình chỉ lệch một lượng nhỏ so với dây cung cánh.
+			\item Độ dày tối đa của biên dạng cánh nhỏ so với độ dài dây cung cánh.
+			\item Góc tới của biên dạng là không quá lớn.
+		\end{itemize}
+	%Ta sẽ đánh giá sơ bộ các giả thiết này. Hai giả thiết đầu tiên là hoàn toàn hợp lý vì nó là các điều kiện chủ quan. Đối với giả thiết cuối cùng, ta cũng sẽ đưa 
+	
+	Biên dạng có thê được hoàn toàn xác định bởi ba đại lượng hình học, đó là đường trung bình, phân bố độ dày của mặt trên và mặt dưới cánh. Bề mặt trên của biên dạng cánh bởi kí hiệu chỉ số $+$, và bề mặt bên dưới, kí hiệu bởi chỉ số $-$. Từ bảng bên dưới:
+	\begin{center}
+		\begin{tabular}{||c|c|c||}
+			\hline
+			Đặc trưng hình học & Định nghĩa & Kí hiệu \\
+			\hline
+			\hline
+			Đường trung bình & $y = C(x)$ & $\mathcal C$ \\
+			\hline
+			Phân bố độ dày ở mặt trên & $y = T^+(x)\ge0$ & $\mathcal T^+$ \\ 
+			\hline
+			Phân bố độ dày ở mặt trên & $y = T^-(x)\ge0$ & $\mathcal T^-$ \\
+			\hline
+		\end{tabular}
+		\captionof{table}{Các kí hiệu hình học được sử dụng trong khảo sát khí động của biên dạng.}
+	\end{center}
+	Bề mặt biên dạng, được kí hiệu bởi $A$ có thể được biểu diển theo công thức:
+		\begin{itemize}
+			\item Mặt trên : $y = A^+(x) = C(x)+T^+(x)$.
+			\item Mặt dưới : $y = A^-(x) = C(x)-T^-(x)$.
+		\end{itemize}
+	Nếu như biên dạng cánh được đặt nghiêng một góc $\alpha$, là góc tới của biên dạng, phương trình đường cong biên dạng có thể được viết:
+	\begin{itemize}
+		\item Mặt trên : $y = A^+(x) = C(x)+T^+(x)+\alpha(L-x)$.
+		\item Mặt dưới : $y = A^-(x) = C(x)-T^-(x)+\alpha(L-x)$.
+	\end{itemize}
+	mà ta kí hiệu bởi
+	\begin{align}
+		\mathcal A = \{(x,y)\in\mathbb R^2,\ y = A(x)\}.
+	\end{align}
+	
+\subsection{Sự áp dụng dòng chảy thế}
+
+	Đối với biên dạng cánh này, dòng chuyển động thỏa mãn hai phương trình,
+	\begin{align}
+		\begin{cases}
+			\Delta\Phi=0&\forall(x,y)\in\mathbb R^2\\
+			\dfrac{\partial\Phi}{\partial x}\dfrac{dA}{dx}-\dfrac{\partial\Phi}{\partial y} = 0&\forall(x,y)\in\mathcal A
+		\end{cases}
+	\end{align}
+	Ta nhắc lại, phương trình đầu tiên thể hiện điều kiện của một dòng chuyển động thế và điều kiện thứ hai là điều kiện biên của dòng chuyển động trên bề mặt biên dạng cánh. Tiếp theo, ta sẽ sử dụng thêm một điều kiện biên đó là thế vận tốc là của dòng chuyển động đều ở vô cực (cả hai phía thượng nguồn và hạ nguồn so với biên dạng):
+	\begin{align}
+		\mathop {\lim }\limits_{x \to  \pm \infty } \Phi \left( {x,y} \right) = {U_\infty }x
+	\end{align}
+	Rõ ràng là bài toán tìm thế ban đầu có thể rút gọn thành bài toán tìm một thế đơn giản hơn, $\Phi_1(x,y)$, như sau :
+	\begin{align}
+		\Phi_1(x,y) = \Phi(x,y) -  {U_\infty }x.
+	\end{align}
+	Mà thế này thỏa mãn các phương trình:
+	\begin{align}
+		\begin{cases}
+			\Delta\Phi_1=0&\forall(x,y)\in\mathbb R^2\\
+			U_\infty\dfrac{dA}{dx}+\dfrac{\partial\Phi_1}{\partial y} = 0&\forall(x,y)\in\mathcal A\\
+			{\Phi _1}\left( {x,y} \right)\mathop  \sim \limits_{x \to  \pm \infty } o\left( {\left| x \right|} \right)&\forall  y\in\mathbb R
+		\end{cases}
+	\end{align}
+	Phương trình thứ hai thu được bằng cách gần đúng biểu thức ở gần bậc nhất của đạo hàm vận tốc.
+	
+	\subsection{Tính toán lực nâng}
+	
+	Áp dụng định lý Kutta-Joukowski cho một hình trụ có tâm tại $O$, trục song song với sải cánh và có bán kính rất lớn. Theo những gì đã được đề cập ở \S\ \ref{Vortex_sheet}, ta có thể đặt tấm xoáy có cường độ xoáy $\gamma(s)$ dọc theo bề mặt biên dạng cánh và tính toán lưu số của nó :
+	\begin{align}
+		\Gamma=\int_\mathcal{A}\gamma(s)ds.
+	\end{align}
+	Bên trong hình trụ có bán kính rất lớn này, vì giả thiết biên dạng mỏng, ta có thể xấp xỉ biên dạng cánh như là một đường cong tập trung ở đường trung bình có độ dày không đáng kể. Như vậy phân bố lưu số thu gọn lại thành hai họ đường cong phân bố ở "phía trên" và phía "dưới"
+	\begin{align}
+		\gamma(s)=\gamma(x,y)|_{y\rightarrow \mathcal C}
+	\end{align}
+	Lưu số trên cạnh hình trụ này trên đơn vị chiều dài hình trụ này được tính:
+	
+
+	\begin{figure}[h!]
+		\centering
+		\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+		\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.75,xscale=0.75]
+			%uncomment if require: \path (0,508); %set diagram left start at 0, and has height of 508
+			
+			%Shape: Circle [id:dp4540460657972909] 
+			\draw   (101.62,254.1) .. controls (101.62,122.6) and (208.22,16) .. (339.72,16) .. controls (471.22,16) and (577.82,122.6) .. (577.82,254.1) .. controls (577.82,385.6) and (471.22,492.2) .. (339.72,492.2) .. controls (208.22,492.2) and (101.62,385.6) .. (101.62,254.1) -- cycle ;
+			%Curve Lines [id:da6727245269641124] 
+			\draw    (288,231.2) .. controls (320,219.2) and (362,227.2) .. (400,258.2) ;
+			%Shape: Arc [id:dp10000946917293607] 
+			\draw  [draw opacity=0] (291.59,237.93) .. controls (290.52,238.5) and (289.3,238.82) .. (288,238.82) .. controls (283.79,238.82) and (280.38,235.41) .. (280.38,231.2) .. controls (280.38,226.99) and (283.79,223.57) .. (288,223.57) .. controls (289.65,223.57) and (291.18,224.1) .. (292.43,224.99) -- (288,231.2) -- cycle ; \draw    (291.59,237.93) .. controls (290.52,238.5) and (289.3,238.82) .. (288,238.82) .. controls (283.79,238.82) and (280.38,235.41) .. (280.38,231.2) .. controls (280.38,226.99) and (283.79,223.57) .. (288,223.57) .. controls (288.6,223.57) and (289.17,223.64) .. (289.73,223.77) ; \draw [shift={(292.43,224.99)}, rotate = 169.82] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp6909185800012168] 
+			\draw  [draw opacity=0] (398.65,265.71) .. controls (397.46,265.49) and (396.3,264.99) .. (395.28,264.19) .. controls (391.97,261.58) and (391.4,256.79) .. (394.01,253.48) .. controls (396.62,250.17) and (401.41,249.6) .. (404.72,252.21) .. controls (406.02,253.23) and (406.89,254.59) .. (407.32,256.07) -- (400,258.2) -- cycle ; \draw    (398.65,265.71) .. controls (397.46,265.49) and (396.3,264.99) .. (395.28,264.19) .. controls (391.97,261.58) and (391.4,256.79) .. (394.01,253.48) .. controls (396.62,250.17) and (401.41,249.6) .. (404.72,252.21) .. controls (405.19,252.58) and (405.6,252.99) .. (405.96,253.44) ; \draw [shift={(407.32,256.07)}, rotate = 208.06] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp18113266035833697] 
+			\draw  [draw opacity=0] (335.71,232.33) .. controls (334.58,232.76) and (333.33,232.93) .. (332.04,232.76) .. controls (327.86,232.23) and (324.91,228.42) .. (325.44,224.24) .. controls (325.97,220.06) and (329.78,217.11) .. (333.96,217.64) .. controls (335.6,217.84) and (337.05,218.56) .. (338.18,219.6) -- (333,225.2) -- cycle ; \draw    (335.71,232.33) .. controls (334.58,232.76) and (333.33,232.93) .. (332.04,232.76) .. controls (327.86,232.23) and (324.91,228.42) .. (325.44,224.24) .. controls (325.97,220.06) and (329.78,217.11) .. (333.96,217.64) .. controls (334.55,217.71) and (335.12,217.85) .. (335.65,218.05) ; \draw [shift={(338.18,219.6)}, rotate = 177.05] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp43388456164214473] 
+			\draw  [draw opacity=0] (321.59,231.93) .. controls (320.52,232.5) and (319.3,232.82) .. (318,232.82) .. controls (313.79,232.82) and (310.38,229.41) .. (310.38,225.2) .. controls (310.38,220.99) and (313.79,217.57) .. (318,217.57) .. controls (319.65,217.57) and (321.18,218.1) .. (322.43,218.99) -- (318,225.2) -- cycle ; \draw    (321.59,231.93) .. controls (320.52,232.5) and (319.3,232.82) .. (318,232.82) .. controls (313.79,232.82) and (310.38,229.41) .. (310.38,225.2) .. controls (310.38,220.99) and (313.79,217.57) .. (318,217.57) .. controls (318.6,217.57) and (319.17,217.64) .. (319.73,217.77) ; \draw [shift={(322.43,218.99)}, rotate = 169.82] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp2710922156009006] 
+			\draw  [draw opacity=0] (306.59,232.93) .. controls (305.52,233.5) and (304.3,233.82) .. (303,233.82) .. controls (298.79,233.82) and (295.38,230.41) .. (295.38,226.2) .. controls (295.38,221.99) and (298.79,218.57) .. (303,218.57) .. controls (304.65,218.57) and (306.18,219.1) .. (307.43,219.99) -- (303,226.2) -- cycle ; \draw    (306.59,232.93) .. controls (305.52,233.5) and (304.3,233.82) .. (303,233.82) .. controls (298.79,233.82) and (295.38,230.41) .. (295.38,226.2) .. controls (295.38,221.99) and (298.79,218.57) .. (303,218.57) .. controls (303.6,218.57) and (304.17,218.64) .. (304.73,218.77) ; \draw [shift={(307.43,219.99)}, rotate = 169.82] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp036446023803911265] 
+			\draw  [draw opacity=0] (349.78,235.62) .. controls (348.6,235.9) and (347.33,235.91) .. (346.08,235.58) .. controls (342,234.52) and (339.56,230.35) .. (340.62,226.28) .. controls (341.68,222.2) and (345.85,219.76) .. (349.92,220.82) .. controls (351.52,221.24) and (352.87,222.13) .. (353.85,223.31) -- (348,228.2) -- cycle ; \draw    (349.78,235.62) .. controls (348.6,235.9) and (347.33,235.91) .. (346.08,235.58) .. controls (342,234.52) and (339.56,230.35) .. (340.62,226.28) .. controls (341.68,222.2) and (345.85,219.76) .. (349.92,220.82) .. controls (350.5,220.97) and (351.04,221.18) .. (351.55,221.45) ; \draw [shift={(353.85,223.31)}, rotate = 184.43] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp5917763386342814] 
+			\draw  [draw opacity=0] (363.72,241.79) .. controls (362.51,241.91) and (361.26,241.74) .. (360.06,241.24) .. controls (356.17,239.61) and (354.34,235.15) .. (355.96,231.26) .. controls (357.59,227.37) and (362.05,225.54) .. (365.94,227.16) .. controls (367.47,227.8) and (368.67,228.88) .. (369.48,230.18) -- (363,234.2) -- cycle ; \draw    (363.72,241.79) .. controls (362.51,241.91) and (361.26,241.74) .. (360.06,241.24) .. controls (356.17,239.61) and (354.34,235.15) .. (355.96,231.26) .. controls (357.59,227.37) and (362.05,225.54) .. (365.94,227.16) .. controls (366.49,227.39) and (367,227.68) .. (367.46,228.01) ; \draw [shift={(369.48,230.18)}, rotate = 192.5] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp4890386496392849] 
+			\draw  [draw opacity=0] (388.49,255.81) .. controls (387.28,255.73) and (386.07,255.36) .. (384.97,254.67) .. controls (381.4,252.45) and (380.3,247.75) .. (382.53,244.17) .. controls (384.75,240.6) and (389.45,239.5) .. (393.03,241.73) .. controls (394.43,242.6) and (395.45,243.85) .. (396.04,245.27) -- (389,248.2) -- cycle ; \draw    (388.49,255.81) .. controls (387.28,255.73) and (386.07,255.36) .. (384.97,254.67) .. controls (381.4,252.45) and (380.3,247.75) .. (382.53,244.17) .. controls (384.75,240.6) and (389.45,239.5) .. (393.03,241.73) .. controls (393.53,242.04) and (393.99,242.4) .. (394.39,242.81) ; \draw [shift={(396.04,245.27)}, rotate = 201.71] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+			%Shape: Arc [id:dp08573243887012616] 
+			\draw  [draw opacity=0] (376.59,248.8) .. controls (375.38,248.9) and (374.13,248.7) .. (372.94,248.18) .. controls (369.08,246.49) and (367.33,242) .. (369.02,238.14) .. controls (370.71,234.28) and (375.2,232.53) .. (379.06,234.22) .. controls (380.58,234.88) and (381.77,235.98) .. (382.55,237.3) -- (376,241.2) -- cycle ; \draw    (376.59,248.8) .. controls (375.38,248.9) and (374.13,248.7) .. (372.94,248.18) .. controls (369.08,246.49) and (367.33,242) .. (369.02,238.14) .. controls (370.71,234.28) and (375.2,232.53) .. (379.06,234.22) .. controls (379.61,234.46) and (380.11,234.75) .. (380.57,235.09) ; \draw [shift={(382.55,237.3)}, rotate = 193.49] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ; 
+		\end{tikzpicture}
+		\caption{Hình trụ có bán kính rất lớn so với độ dài dây cung cánh. Trong hình trụ này, ta có thể đơn giản xấp xỉ một biên dạng bởi đường trung bình của biên dạng. Phương pháp tấm xoáy được áp dụng tại đường trung bình.}
+	\end{figure}
+	
+	
+	
+	Định luật Bernoulli áp dụng dọc theo bề mặt cánh cho phép ta viết :
+	\begin{align}
+		p_\infty + \dfrac{1}{2}\rho_\infty\left(U_\infty + \dfrac{\partial\Phi_2}{\partial x}\right)^2
+	\end{align}
+
+	Vì biên dạng cánh là mỏng, ta có thể giả sử độ dày của biên dạng là rất nhỏ so với độ dài dây cung cánh.
+
+	Việc mô hình hóa chỉ tính đến lực nâng cho phép ta chỉ cần tính đến các dòng chuyển động tạo lực nâng, tức là sử dụng các tấm xoáy để mô tả dòng chuyển động. Ta có thể đặt các tấm xoáy $\gamma(s)$ (tọa độ cong $s$ thể hiện tọa độ của đường cong biên dạng cánh). Vận tốc tại một điểm bất kỳ bên trong hình trụ được tính theo công thức:
+	\begin{align}
+		\dfrac{\partial\Phi_1}{\partial y} = \oint_\mathcal{C} \dfrac{\gamma(s)}{2\pi}\dfrac{y_A-y}{(x-x_A)^2+(y-y_A)^2}ds
+	\end{align}
+	Với các khuôn khổ hình học được xấp xỉ bên trên, ta có thể xấp xỉ $s\approx x$ ta có thể viết:
+	% \begin{align}
+	% 	\dfrac{\partial\Phi_1}{\partial y} = \oint_\mathcal{C} \dfrac{\gamma(x_A)}{2\pi}\dfrac{1}{x-x_A}dx_A
+	% \end{align}
+	
+	% 	Tuy nhiên để đơn giản hơn, chúng ta sẽ tách tích phân trên thành tích phân ở mặt trên và mặt dưới của biên dạng, ở đây ta viết đơn giản tích phân ở một mặt thành một tích phân duy nhất, 
+	% 		\begin{align}
+	% 			\underline u^+ = \int_{\mathcal{C}^+} \dfrac{\gamma(x)}{2\pi}\dfrac{(y_A-y)\underline e_x+(x-x_A)\underline e_y}{(x-x_A)^2+(y-y_A)^2}ds
+	% 		\end{align}
+	% 	mà khi sử dụng định nghĩa của tọa độ cong,..., ta có:
+	% 		\begin{align}
+	% 			\underline u^+ = \int_{\mathcal{C}^+} \dfrac{\gamma(x)}{2\pi}\dfrac{(y_A-y)\underline e_x+(x-x_A)\underline e_y}{(x-x_A)^2+(y-y_A)^2}\sqrt{1+\left(f_+'(x_A)\right)^2}dx_A
+	% 		\end{align}
+	% 	mà vận tốc bề mặt thu được bằng một phép tính giới hạn:
+	% 		\begin{align}
+	% 			\underline u^+_A = \mathop {\lim }\limits_{\left( {x,y} \right) \downarrow \left( {{x_A},{y_A}} \right)}\int_{\mathcal{C}^+} \dfrac{\gamma(x)}{2\pi}\dfrac{-(y-y_A)\underline e_x+(x-x_A)\underline e_y}{(x-x_A)^2+(y-y_A)^2}\sqrt{1+\left(f_+'(x_A)\right)^2}dx_A
+	% 		\end{align}
+
+
+
+
+	% \[{U_\infty }\frac{{df}}{{dx}} + \frac{1}{{2\pi }}\left( {\int_0^{x - \delta } {\frac{{\gamma \left( {x_A} \right)}}{{x - x_A}}dx_A}  + \int_{x + \delta }^L {\frac{{\gamma \left( {x_A} \right)}}{{x - x_A}}dx_A} } \right) = 0\]
+
+	\begin{align}
+		{U_\infty }\frac{{df}}{{dx}} + \frac{1}{{2\pi }}\left( {\int_0^{x - \delta } {\frac{{\gamma \left( {x_A} \right)}}{{x - x_A}}dx_A}  + \int_{x + \delta }^L {\frac{{\gamma \left( {x_A} \right)}}{{x - x_A}}dx_A} } \right) = 0
+	\end{align}
+	Khi nghiên cứu nghiệm của bài toán này, ta có:
+	\begin{align}
+		\gamma(x)=\dfrac{1}{\sqrt{x(L-x)}}\left(C+2\dfrac{U_\infty}{\pi}\int_0^L{\dfrac{df}{dt}\sqrt{t(L-t)}\dfrac{dt}{x-t}}\right).
+	\end{align}
+	Trong nghiệm này, còn một hằng số chưa xác định, đó là hằng số $C$. Việc xác định hằng số này được thực hiện bằng điều kiện Kutta.
+	
+	Để tính toán điều kiện này, ta thấy vận tốc tiếp tuyến được tính theo cường độ xoáy bởi:
+	\begin{align}
+		u_\pm(x_A,y_A)=\mp\dfrac{\gamma(x_A)}{2}
+	\end{align}
+	do đó điều kiện Kutta cho ta:
+	\begin{align}
+		\gamma(c)=0
+	\end{align}
+	với điều kiện này, ta có thể tìm hằng số $C$ và thay vào nó ta tính được lực nâng theo công thức:
+	\begin{align}
+		L=\rho_\infty U_\infty\int_0^c\gamma(x)dx
+	\end{align}
+
+	\subsection{Tính đến bề dày}
+	
+\section{Tiếp cận bằng tính toán số}
+	\subsection{Tính toán lực nâng}
+
+	Để thực hiện tính toán lực nâng bằng phương pháp số, ta sử dụng lại phương trình 
+
+	Ở đây, 
+	\begin{align}
+		\dfrac{df}{dx}=\dfrac{dC}{dx}-\alpha={A_0} + \sum\limits_{n = 1}^{ + \infty } {{A_n}\cos n\theta }-\alpha.
+	\end{align}
+	thay lại vào phương trình trên, ta có
+
+
+
+
+
+
+\section{Hiệu chỉnh lực nâng bằng cánh tà}
+
+
+
+
+
+
+
+
+\end{document}

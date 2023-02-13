@@ -1,0 +1,66 @@
+\documentclass[CO_LUU_CHAT.tex]{subfiles}
+\begin{document}
+
+\appendix
+	
+\chapter{TOÁN HỌC CỦA PHƯƠNG TRÌNH NAVIER-STOKES}
+\newpage
+
+\section{Phát biểu bài toán}
+
+Ở đây chúng ta chỉ đơn giản liệt kê lại dạng của phương trình Navier-Stokes cho lưu chất không nén được :
+
+\begin{equation}
+	\begin{aligned}
+		\frac{\partial\underline{u}}{\partial t}+\left(\underline{u}\cdot\underline{\nabla}\right)\underline{u}=-\frac{1}{\rho}\underline{\nabla}p+\nu\Delta\underline{u}+\underline{f}_{\text{vol}}.
+	\end{aligned}
+\end{equation}
+
+Nếu muốn nghiên cứu tập trung vào độ xoáy của lưu chất, chúng ta sử dụng phương trình động học xoáy thu được bằng cách lấy rota hai vế phương trình trên :
+\begin{equation}
+	\begin{aligned}
+		\frac{\partial\underline{\omega}}{\partial t}+\left(\underline{u}\cdot\underline{\nabla}\right)\underline{\omega}=\left(\underline{\omega}\cdot\underline{\nabla}\right)\underline{u}+\nu\Delta\underline{\omega}+\underline{\nabla}\wedge\underline{f}_{\text{vol}}.
+	\end{aligned}
+\end{equation}
+
+\section{Không gian hàm}
+
+Chúng ta kí hiệu không gian các hàm vecteur bình phương khả tích trong một miền $\Omega\subset\mathbb{R}^n$ bởi $\mathcal{L}^2(\Omega)^n$ và sử dụng độ đo Lebesgue $d\underline{x}=dx_1\dots dx_n$. Tích vô hướng được định nghĩa :
+\[
+\left\langle {\underline{u},\underline{v}} \right\rangle  = \int_\Omega  {\underline{u}\left( {\underline x } \right)\cdot\underline{v}\left( {\underline x } \right)d\underline x }
+\]
+
+Đầu tiên chúng ta giới thiệu bất đẳng thức Cauchy-Schwarz :
+\[
+\forall\left(\underline{u},\underline{v}\right)\in\mathcal{L}^2(\Omega)^n,\quad|\left\langle\underline{u},\underline{v}\right\rangle|\le\|\underline{u}\|\|\underline{v}\|.
+\]
+
+
+
+
+\section{Năng lượng và Enstrophy}
+
+Đầu tiên chúng ta chuẩn hóa khối lượng riêng của một lưu chất không nén được bởi $\rho=1$, từ đó định nghĩa động năng của một trường vận tốc $\underline{u}\left(\underline{x}\right)$ trong miền $\Omega$ bởi :
+\begin{equation}
+	\begin{aligned}
+		\mathscr{E}\left(\underline{u}\right)=\frac{1}{2}\int_\Omega \|\underline{u}\left(\underline{x}\right)\|^2d\tau;
+	\end{aligned}
+\end{equation}
+và enstrophy được định nghĩa bởi :
+\begin{equation}
+	\begin{aligned}
+		E\left(\underline{u}\right) = \sum\limits_i\int_\Omega\left\|\nabla  \underline{u}\right\|d\tau
+	\end{aligned}
+\end{equation}
+
+Ta thấy rằng từ những điều đã dẫn xuất ở trên rằng enstrophy thể hiện tốc độ mất mát động năng của lưu chất.
+
+\section{Phân tích Helmholtz-Leray của trường vecteur}
+
+
+
+
+
+
+
+\end{document}

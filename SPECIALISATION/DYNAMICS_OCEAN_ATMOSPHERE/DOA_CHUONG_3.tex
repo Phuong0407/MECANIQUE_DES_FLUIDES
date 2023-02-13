@@ -1,0 +1,84 @@
+\documentclass[DONG_HOC_KHI_QUYEN.tex]{subfiles}
+
+\begin{document}
+\chapter{GIỚI THIỆU VỀ DÒNG CHẢY ĐỊA-VẬT LÝ}
+Động lực học của chất lưu địa-vật lý rất đặc biệt và không tuân theo những sự tưởng tượng. Nó được vận hành thông qua các hiệu ứng vật lý mà chúng ta sẽ nghiên cứu trong chương hiện tại : sự phân tầng khối lượng, nó là kết quả của trọng lực; sự xoay của hành tinh; và hình học của các lớp cầu mỏng.
+\section{Cân bằng và lực}
+\subsection{Cân bằng thủy tĩnh}
+Cân bằng thủy tĩnh là một tham chiếu hằng trong địa vật lý. Thực tế, như chúng ta đã thấy nó trong các chương trước, vận tốc thẳng đứng luôn luôn là rất yếu, và quan hệ cân bằng thủy tĩnh luôn luôn được xác nhận với một độ chính xác tốt. Do đó, dòng chảy liên tục tìm kiếm lại trạng thái cân bằng thủy tĩnh, duy nhất một vị trí trong đó trạng thái nghỉ là khả dĩ.
+
+Trong chương trước, chúng ta đã chia áp suất thành một áp suất tham chiếu mà nó thỏa mãn \emph{qua định nghĩa} cân bằng thủy tĩnh :
+\begin{equation}
+    \begin{aligned}
+        \frac{{\partial {p_z}}}{{\partial z}} =  - {\rho _r}g,
+    \end{aligned}
+\end{equation}
+và áp suất dao động $p$. Đối với khí quyển hoặc đối với đại dương ở trạng thái nghỉ, phân bố đứng của dao động áp suất thỏa mãn phương trình thủy tĩnh :
+\begin{equation}
+    \begin{aligned}
+        \frac{{\partial {p}}}{{\partial z}} =  - {\rho _r}g(s-s_r).
+    \end{aligned}
+\end{equation}
+
+Cân bằng này hoàn toàn được xác định thông qua sự phân bố dọc của entropy $s(z)$, và điều kiện giới hạn tương ứng.
+\subsection{Sự ổn định tĩnh}
+
+\section{Cân bằng geostrophique}
+Một trong cấc hệ quả của cân bằng tĩnh là vận tốc gần như là vận tốc ngang. Do đó chúng ta nghiên cứu kỹ thành phần nằm ngang trong (...). Chúng ta thấy rắng, số hạng chiếm ưu thế là số hạng lực Coriolis $-2\underline{\Omega}\wedge\underline{U}_H$ và gradient áp suất $\displaystyle\frac{1}{\rho_r}\underline{\nabla}_H p$.
+
+Thông thường thì sẽ có sự cân bằng gân như hoàn hảo của hai số hạng này. Vận tốc thu được lúc cân bằng này được gọi là \bfit{vận tốc géophysique}. Khi gọi $\phi$ là vĩ độ, chú ý đến sự nhỏ của vận tốc hướng vuông góc, chúng ta có thể tìm được vận tốc géophysique:
+\begin{equation}
+    \begin{aligned}
+        \underline{U}_g = \frac{1}{2\Omega\sin\phi}\underline{k}\wedge\frac{1}{\rho_r}\underline{\nabla}_H p.
+    \end{aligned}
+\end{equation}
+Lúc này áp suất đóng vai trò như một hàm dòng cho vận tốc này\footnote{Ta đã biết đối với một dòng chảy phẳng không xoay, vận tốc có thể thu được từ một hàm dòng. Cụ thể hơn, }. Trong dòng chảy của khí quyển và đại dương, dòng chảy géophysique xấp xỉ tốt các dòng chảy ngang thực, ít nhất là các các giá trị trung bình trong một thời gian đủ dài. Trong thực tế, chúng ta sẽ hiệu chỉnh dòng chảy này một cách chính xác hơn trong chương 4.
+
+Các cân bằng địa vật lý thể hiện một đặc tính quan trọng sau : dòng chảy xoay sao cho áp suất là cực tiểu (ta gọi là xoáy thuận). Ngược lại, chúng ta có xoáy thuận.
+
+Lấy đạo hàm theo độ cao của vận tốc géophysique, chúng ta có :
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial\underline{U}_g}{\partial z} = \frac{1}{2\Omega\sin\phi}\underline{k}\wedge\gamma\underline{\nabla}_H s.
+    \end{aligned}
+\end{equation}
+chúng ta gọi quan hệ này là \bfit{quan hệ gió nhiệt}. Hệ thức này chứng tỏ là, khi dòng chảy nằm trong cân bằng géophysique, gradient đứng của dòng chảy biến đổi theo gradient của entropy.
+\section{Động lực học moment động lượng}
+Chúng ta định nghĩa moment động lượng tuyệt đối của một phần tử lưu chất theo trục cực (có vecteur đơn vị là $\underline{K}$) :
+\begin{equation}
+    \begin{aligned}
+        m_a(M,t)=\rho_r\underline{K}\cdot(\underline{OM}\wedge\underline{U}_a(M,t)).
+    \end{aligned}
+\end{equation}
+
+Từ phương trình chuyển động trong hệ quy chiếu tuyệt đối, khi kết hợp với việc moment của trọng lực là triệt tiêu, chúng ta thu được phương trình vận động sau của moment động lượng trong xấp xỉ Boussinesq :
+\begin{equation}
+    \begin{aligned}
+        \frac{{D{m_a}}}{{dt}} = K \cdot \left( {\underline {OM}  \wedge \nabla \left( { - p\deuxtenseur{I} + \deuxtenseur{T}} \right)} \right)
+    \end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

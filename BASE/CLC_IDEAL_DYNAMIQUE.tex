@@ -1,0 +1,592 @@
+\documentclass[CO_LUU_CHAT.tex]{subfiles}
+\begin{document}
+\chapter{ĐỘNG LỰC HỌC CỦA LƯU CHẤT LÝ TƯỞNG}
+
+\newpage
+\section{Lực tác dụng lên lưu chất}
+\subsection{Các lực bề mặt}
+
+	Bên trong lòng chất lỏng, chúng ta tưởng tượng có một mặt kín bao lấy một vùng chất lỏng. Rõ ràng là ở mức độ trung mô, các hạt chất lỏng bên ngoài mặt kín này tác dụng các lực lên các hạt lưu chất ở bên trong mặt kín này.
+
+	Xét một phần tử diện tích $dS$ của mặt tưởng tượng $\Sigma$ bên trên. Lực của các hạt lưu chất bên ngoài tác dụng lên các hạt lưu chất bên trong tại vị trí $dS$ được kí hiệu là $\underline{F}$ mà chúng ta có thể phân tích thành một thành phần pháp tuyến $\underline{F}_N$ và một thành phần tiếp tuyến $\underline{F}_T$.
+
+	Đối với một lưu chất lý tưởng, chỉ có lực pháp tuyến là hiện diện, thành phần tiếp tuyến được xem như là triệt tiêu. Lực pháp tuyến trong lưu chất được gây ra bởi áp suất bên trong lòng lưu chất :
+		\begin{equation}
+			\begin{aligned}
+				\underline{F}_N(M,t)=-p(M,t)\underline{n}dS
+			\end{aligned}
+		\end{equation}
+	trong đó $\underline{n}$ là pháp tuyến hướng ra ngoài khỏi bề mặt kín.
+
+	Tuy nhiên, chúng ta cần bỏ qua sức căng bề mặt ở đây để kết luận rằng áp suất bên trong lòng lưu chất là liên tục. Thực vậy, lực căng bề mặt chỉ tồn tại trong bề mặt phân cách giữa hai lưu chất tiếp xúc nhau hoặc giữa lưu chất với thành rắn. Chúng ta không thể bỏ qua lực căn bề mặt trong các hệ có kích thước nhỏ, ống mao dẫn chẳng hạn.
+	
+\subsection{Đương lượng thể tích và đương lượng khối lượng}
+
+	Để thực hiện các nghiên cứu về sau, chúng ta tính toán đương lượng thể tích và đương lượng khối lượng của các lực, đặc biệt là các lực bề mặt.
+
+	Đương lượng thể tích $\underline{f}_{\text{vol}}$ của một lực $\underline{F}$ nào đó tác dụng lên một phần tử lưu chất có khối lượng $dm$ với thể tích $d\tau$ được định nghĩa như sau :
+		\begin{equation}
+			\begin{aligned}
+				\underline{F}=\underline{f}_{\text{vol}}d\tau.
+			\end{aligned}
+		\end{equation}
+	Đương lượng khối lượng $\underline{f}_{\text{m}}$ được định nghĩa như sau :
+		\begin{equation}
+			\begin{aligned}
+				\underline{F}=\underline{f}_{\text{m}}dm.
+			\end{aligned}
+		\end{equation}
+
+	Đối với áp lực, xét một thể tích nguyên tố $d\Omega$ mà bề mặt của nó được kí hiệu là $\partial\Omega$ trong lòng lưu chất, áp lực tác dụng lên thể tích này được tính theo áp suất $p(M,t)$ trên bề mặt được tính như sau :
+		\[
+			d\underline F_p  = \int_{\partial \Omega } { - p\left( {M,t} \right)\underline n dS}  = \int_{d\Omega } { - \underline \nabla  p\left( {M,t} \right)d\tau }.
+		\]
+	Trong đó, $M$ trong tích phân đầu tiên là các điểm trên bề mặt $\partial\Omega$ và $\underline{n}$ là vecteur pháp tuyến đơn vị hướng ra ngoài bề mặt. Trong tích phân thứ hai, $M$ là điểm nằm bên trong thể tích $d\Omega$. Để đi từ tích phân thứ nhất sang tích phân thứ hai, chúng ta đã sử dụng định lý Gauss-Ostrogradsky.
+
+	Khi cho thể tích $d\Omega$ tiến tới gần không, trên thể tích vi mô này, chúng ta giả sử $-\underline\nabla p\left(M,t\right)$ biến đổi nhỏ và do đó ta có thể bỏ qua sự biến đổi của nó, và do đó, đương lượng thể tích của áp lực là :
+		\begin{equation}
+			\begin{aligned}
+				\boxed{
+					\underline{f}_{\text{p,vol}}=-\underline\nabla p.
+				}
+			\end{aligned}
+		\end{equation}
+	Nếu tính đến đương lượng khối lượng của áp lực, chúng ta có :
+		\begin{equation}
+			\begin{aligned}
+				\boxed{
+					\underline{f}_{\text{p,m}}=-\frac{\underline\nabla p}{\rho}.
+				}
+			\end{aligned}
+		\end{equation}
+
+	Một phép tính đơn giản với trọng lực cho ta đương lượng thể tích và đương lượng khối lượng của nó lần lượt là :
+		\begin{equation}
+			\begin{aligned}
+				\underline{f}_{\text{gravity,vol}}=\rho\underline{g},\quad\underline{f}_{\text{gravity,m}}=\underline{g}.
+			\end{aligned}
+		\end{equation}
+
+\section{Phương trình Euler}
+
+	Chúng ta áp dụng định luật II Newton cho một phần tử lưu chất có khối lượng $dm$, trong đó phần tử lưu chất này chịu một hợp lực được tính trên một đơn vị thể tích mà chúng ta kí hiệu mật độ thể tích của nó là $\underline{f}_{\text{total}}$ :
+		\begin{equation}
+			\begin{aligned}
+				dm\frac{D\underline{u}}{Dt}=\underline{f}_{\text{total}}d\tau.
+			\end{aligned}
+		\end{equation}
+
+Trong các trường hợp thông thường, chỉ có lực áp suất là lực bề mặt tác dụng lên phần tử lưu chất, lực thể tích có thể là trọng lực trong trường hợp thường gặp hoặc lực điện từ (trong trường hợp từ-thủy động lực học), lúc này ta có thể viết :
+\begin{equation}
+	\begin{aligned}
+		f_{\text{total}}=-\underline{\nabla}p+\underline{f}_{\text{vol}}.
+	\end{aligned}
+\end{equation}
+
+Khi đó ta có thể viết lại phương trình Euler một cách tường minh hơn :
+\begin{equation}
+	\begin{aligned}
+		\rho\frac{D\underline{u}}{Dt}=-\underline{\nabla}p+\underline{f}_{\text{vol}}.
+	\end{aligned}
+\end{equation}
+
+Tiếp theo chúng ta khai triển dạng tường minh của gia tốc để có hai dạng phương trình Euler được sử dụng trong thực tế :
+\begin{equation}\label{eq:euler_convection}
+	\begin{aligned}
+		\boxed{
+		\rho\left(\frac{\partial\underline{u}}{\partial t}+\left(\underline{u}\cdot\underline{\nabla}\right)\underline{u}\right)=-\underline{\nabla}p+\underline{f}_{\text{vol}}}.
+	\end{aligned}
+\end{equation}
+\begin{equation}\label{eq:euler_rotation}
+	\begin{aligned}
+		\boxed{
+		\rho\left(\frac{\partial\underline{u}}{\partial t}+\underline{\nabla}\left(\frac{\underline{u}^2}{2}\right)+2\underline{\omega}\wedge\underline{u}\right)=-\underline{\nabla}p+\underline{f}_{\text{vol}}}.
+	\end{aligned}
+\end{equation}
+
+\section{Hệ thức Bernoulli}
+Chúng ta bắt đầu bằng việc sử dụng phương trình (\ref{eq:euler_rotation}) của phương trình Euler :
+$$
+\rho\left(\frac{\partial\underline{u}}{\partial t}+\underline{\nabla}\left(\frac{\underline{u}^2}{2}\right)+2\omega\wedge\underline{u}\right)=-\underline{\nabla}p+\underline{f}_{\text{vol}}
+$$
+
+Như vậy, chúng ta có thể loại bỏ đi số hạng quay (tức là số hạng $2\underline{\omega}\wedge\underline{u}$) bằng việc nhân vô hướng cả hai vế của phương trình trên với một vi phân độ dời $d\underline{\ell}$ dọc theo một đường dòng nào đó (và luôn luôn ở trên đường dòng này), tức là :
+\begin{equation}\label{eq:bernoulli_differentiel}
+	\begin{aligned}
+		\rho\left(\frac{\partial\underline{u}}{\partial t}+\underline{\nabla}\left(\frac{\underline{u}^2}{2}\right)+2\omega\wedge\underline{u}+\frac{\underline{\nabla}p}{\rho}-\frac{\underline{f}_{\text{vol}}}{\rho}\right)\cdot d\underline{\ell}=\underline{0}.
+	\end{aligned}
+\end{equation}
+trong đó chúng ta đã chuyển các số hạng của vế phải của (\ref{eq:euler_rotation}) sang trái rồi nhân với $d\underline{\ell}$. Phương trình như vậy vẫn chưa thực sự tường minh cho các áp dụng đơn giản. Để có thể đơn giản hơn, chúng ta có thể áp đặt thêm giả thiết bổ sung. Đầu tiên, chúng tôi muốn sử dụng các giả thiết sau :
+\begin{enumerate}
+	\item \emph{Lưu chất là không nén được hoặc là chảy khuynh áp} : Nếu khối lượng riêng của lưu chất là không thể nén được, chúng ta có :
+	$$
+	\frac{\underline{\nabla}p}{\rho}=\underline{\nabla}\left(\frac{p}{\rho}\right);
+	$$
+	Đối với lưu chất chuyển động khuynh áp, tồn tại một hàm $g$ sao cho $\rho=g(P)$, do đó tồn tại một thế vô hướng $\varphi$ sao cho :
+	$$
+	\frac{\underline{\nabla}p}{\rho}=\underline{\nabla}\varphi(p).
+	$$
+	\item \emph{Giả thiết dòng chảy không xoay} : Đối với dòng chảy không xoay, chúng ta có trong toàn bộ lưu chất :
+	$$
+	2\underline{\omega}=\underline{\nabla}\wedge\underline{u}=\underline{0}
+	$$
+	\item \emph{Giả thiết dòng chảy dừng} : Đối với dòng chảy dừng, chúng ta có :
+	$$\frac{\partial\underline{u}}{\partial t}=\underline{0},$$
+	trong toàn bộ lưu chất và tại mọi thời điểm khảo sát kể từ thời điểm ban đầu.
+	\item \emph{Giả thiết dòng chảy dừng và không xoay}.
+\end{enumerate}
+
+Trong bốn giả thiết này, giả thiết số 1 là giả thiết nền tảng áp dụng cho mọi lưu chất được khảo sát trong chương này. Các giả thiết còn lại được áp dụng tùy trường hợp cần khảo sát. Hơn nữa, chúng ta chỉ khảo sát trường hợp lực thể tích là một lực thế, tức là tồn tại một thế vô hướng $\mathscr{V}$ sao cho :
+$$
+	\underline{f}_{\text{vol}}=-\underline{\nabla}\mathscr{V}.
+$$
+
+Thực hiện tích phân trên một đường dòng giữa hai điểm $A$ và $B$ chúng ta thu được các kết quả sau :
+\begin{center}
+	\begin{tabular}{|p{3.5cm}|p{6cm}|p{6cm}|}
+		\hline
+		Các giả thiết được áp dụng & Dòng chảy hướng áp & Dòng chảy không nén được\\
+		\hline
+		Dòng chảy không xoáy
+		$\underline{u}=\underline{\nabla}\phi$
+		&
+		\shortstack{\\$\displaystyle\left[\frac{\partial\phi}{\partial t}+\frac{v^2}{2}+\mathscr{V}+\varphi(p)\right]=\text{const}$}
+		
+		trong toàn bộ lưu chất
+		&
+		$\displaystyle\left[\frac{\partial\phi}{\partial t}+\frac{v^2}{2}+\mathscr{V}+\frac{p}{\rho}\right]=\text{const}$
+
+		trên toàn bộ lưu chất\\
+		\hline
+		Dòng chảy dừng
+		&
+		\shortstack{\\$\displaystyle\frac{v^2}{2}+\mathscr{V}+\varphi(p)=\text{const}$}
+
+		dọc theo một đường dòng
+		&
+
+		$\displaystyle\frac{v^2}{2}+\mathscr{V}+\frac{p}{\rho}=\text{const}$
+		
+		dọc theo một đường dòng
+		\\
+		\hline
+		Dòng chảy dừng và không xoáy
+		&
+		\shortstack{\\$\displaystyle\frac{v^2}{2}+\mathscr{V}+\varphi(p)=\text{const}$}
+		
+		trong toàn bộ lưu chất
+		&
+		$\displaystyle\frac{v^2}{2}+\mathscr{V}+\frac{p}{\rho}=\text{const}$
+		
+		trong toàn bộ lưu chất\\
+		\hline
+	\end{tabular}
+\end{center}
+
+Dạng đơn giản nhất của phương trình Bernoulli được sử dụng với các giả thiết mạnh mẽ sau : lưu chất là không nén được, dòng chảy là không xoáy và dừng. Trong trường hợp này, chúng ta có thể viết rằng :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\rho\frac{\underline{u}^2}{2}+p+\rho\mathscr{V}=\text{const}
+		}.
+	\end{aligned}
+\end{equation}
+Số hạng đầu tiên trong biểu thức trên được gọi là áp suất động, số hạng thứ hai là áp suất tĩnh và tổng của hai số hạng này là áp suất tổng cộng.
+
+\chapter{CÁC NGHIỆM CỦA DÒNG CHẢY LÝ TƯỞNG}
+
+\newpage
+
+\section{Dòng chảy trong lưu chất không nén được}
+Lấy rota hai vế của phương trình (\ref{eq:euler_rotation}), chú ý rằng lực thể tích là một lực thế, do đó :
+\begin{equation}\label{eq:only_velocity}
+	\begin{aligned}
+		\boxed{
+			\frac{\partial}{\partial t}\left(\underline{\nabla}\wedge\underline{u}\right)=\underline{\nabla}\wedge\left(\underline{u}\wedge\left(\underline{\nabla}\wedge\underline{u}\right)\right)
+		}.
+	\end{aligned}
+\end{equation}
+Phương trình này là hữu ích, vì nó chỉ còn có thành phần vận tốc.
+
+\subsubsection{Dòng chảy phẳng}
+Nếu dòng chảy là \emph{phẳng}, tức là dòng chảy có vận tốc chỉ phụ thuộc vào hai tọa độ $x$ và $y$. Lúc này chúng ta liên hệ vận tốc này với một \emph{hàm dòng} $\psi(x,y,t)$ :
+\begin{equation}\label{eq:flux_func_def}
+	\begin{aligned}
+		\underline{u}\left(x,y,t\right)=\underline{\nabla}\wedge\psi(x,y,t)\underline{e}_z=\underline{\nabla}\psi(x,y,t)\wedge\underline{e}_z.
+	\end{aligned}
+\end{equation}
+trong đó $\underline{e}_z$ là vecteur đơn vị vuông góc với mặt phẳng của dòng chảy phẳng.
+
+Thay thế phương trình định nghĩa (\ref{eq:flux_func_def}) vào phương trình (\ref{eq:only_velocity}), chúng ta có :
+\begin{equation}\label{eq:flux_func_eq}
+	\begin{aligned}
+		\boxed{
+			\frac{{\partial \Delta \psi }}{{\partial t}} - \frac{{\partial \psi }}{{\partial x}}\frac{{\partial \Delta \psi }}{{\partial y}} + \frac{{\partial \psi }}{{\partial y}}\frac{{\partial \Delta \psi }}{{\partial x}} = 0
+		}.
+	\end{aligned}
+\end{equation}
+\begin{proof}
+Để đơn giản, chúng ta bỏ qua kí hiệu tọa độ và thời gian của hàm dòng và viết nó đơn giản thành $\psi$. Đầu tiên chúng ta biến đổi rota của vận tốc :
+\[
+\begin{aligned}	
+	\displaystyle\underline \nabla \wedge \underline u  &= \underline \nabla   \wedge \left( {\underline \nabla  \psi \wedge {{\underline e }_z}} \right) = \underbrace {\underline \nabla  \psi\underline \nabla   \cdot {{\underline e }_z}}_{ = \underline 0 } - \underbrace {\left( {\underline \nabla  \psi \cdot \underline \nabla  } \right){{\underline e }_z}}_{ = \underline 0 } - {\underline e _z}\underline \nabla   \cdot \left( {\underline \nabla  \psi} \right) + \underbrace {\left( {{{\underline e }_z} \cdot \underline \nabla  } \right)\underline \nabla  \psi }_{ = \underline 0 }=  - \Delta \psi {\underline e _z}
+\end{aligned}
+\]
+Hai số hạng đầu tiên bằng không là hiển nhiên, đối với số hạng cuối cùng bằng không, nó bằng không là vì chúng ta đang nghiên cứu dòng chảy phẳng.
+
+Sử dụng công thức này để biến đổi vế phải của (\ref{eq:only_velocity}) :
+\[
+\begin{aligned}
+\underline \nabla   \wedge \left( {\underline u  \wedge \left( {\underline \nabla   \wedge \underline u } \right)} \right) &= \underline \nabla   \wedge \left( {\underline u  \wedge \left( { - \Delta \psi {{\underline e }_z}} \right)} \right) = \underline \nabla   \wedge \left( {\Delta \psi {{\underline e }_z} \wedge \left( {\underline \nabla  \psi  \wedge {{\underline e }_z}} \right)} \right)\\
+&= \underline \nabla   \wedge \left( {\Delta \psi \underline \nabla  \psi  - {{\underline e }_z}\underbrace {\left( {{{\underline e }_z} \cdot \underline \nabla  \psi } \right)}_{ = \underline 0 }} \right) = \underline \nabla   \wedge \left( {\Delta \psi \underline \nabla  \psi } \right)\\
+& = \Delta \psi \underbrace {\underline \nabla   \wedge \underline \nabla  \psi }_{ = \underline 0 } + \underline \nabla  \left( {\Delta \psi } \right) \wedge \underline \nabla  \psi  = \underline \nabla  \left( {\Delta \psi } \right) \wedge \underline \nabla  \psi
+\end{aligned}
+\]
+Tóm lại, chúng ta có công thức :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\frac{{\partial \Delta \psi }}{{\partial t}} = \underline \nabla  \psi  \wedge \underline \nabla  \left( {\Delta \psi } \right)
+		}.
+	\end{aligned}
+\end{equation}
+
+Khai triển công thức này trong hệ tọa độ Descartes hai chiều của dòng chảy phẳng, chúng ta thu được công thức (\ref{eq:flux_func_eq}).
+\end{proof}
+
+Do đó chúng ta có thể tìm được hàm dòng của dòng chảy. Với dòng chảy này, đường dòng được tìm bởi điều kiện\footnote{Kết luận này được để lại để quý độc giả kiểm tra, xem như một bài tập nhỏ.} :
+\begin{equation}
+	\begin{aligned}
+		\psi=\text{const}.
+	\end{aligned}
+\end{equation}
+
+
+\section{Dòng chảy thế của lưu chất không nén được}
+Đối với một dòng chảy không xoáy, tồn tại một vô hướng $\phi$ sao cho $\underline{u}=\underline{\nabla}\phi$. Một lưu chất không nén được có $\rho=\text{const}$, do đó khi áp dụng phương trình liên tục, chúng ta có $\underline{\nabla}\cdot\underline{u}=0$. Kết hợp hai điều kiện này, chúng ta có :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\Delta\phi=0
+		}.
+	\end{aligned}
+\end{equation}
+Phương trình này gọi là phương trình Laplace. Trong số các tính chất của phương trình này, \emph{tính tuyến tính} là cực kỳ quan trọng mà ta sẽ sử dụng chúng để chồng chập các dòng chảy cơ bản để tạo nên các dòng chảy phức tạp hơn, thứ mà có thể mô tả một cách tiệm cận với các dòng chảy trong thực tế. Do đó đầu tiên chúng ta sẽ nghiên cứu các nghiệm cơ bản của dòng chảy thế.
+\subsection{Tổng quan về các nghiệm dòng chảy thế}
+Đầu tiên chúng ta sẽ nghiên cứu trường hợp dòng chảy hai chiều, tức là các dòng chảy phẳng. Rõ ràng với một dòng chảy phẳng, ta có thể liên hệ trường vận tốc với hàm dòng thế $\phi$ và hàm dòng $\psi$ :
+$$
+u_x=\frac{\partial\phi}{\partial x}=\frac{\partial\psi}{\partial y}\ \text{và}\ 
+u_y=\frac{\partial\phi}{\partial y}=-\frac{\partial\psi}{\partial x}
+$$
+
+Trong giải tích phức, ta đã quen thuộc điều kiện này với điều kiện khả tích Cauchy-Riemanne - điều kiện khả vi cho các hàm biến phức, do đó nếu đặt biến phức $z=x+iy$, chúng ta có một hàm giải tích :
+$$
+\begin{aligned}
+	f\colon\ \mathbb{R}^2\ \longrightarrow&\qquad\quad\ \ \ \mathbb{C}\\
+	(z,t)\longmapsto&\ \phi(x,y,t)+i\psi(x,y,t)
+\end{aligned}
+$$
+với đạo hàm :
+$$
+\frac{df}{dz}=u_x-iu_y.
+$$
+
+Kết quả là chúng ta có thể sử dụng các phép biến đổi bảo giác để nghiên cứu nghiệm của phương trình Laplace. Chúng ta chỉ quan tâm đến các nghiệm lũy thừa, tức là các nghiệm có dạng :
+\begin{equation}\label{eq:pow_law_conformal}
+	\begin{aligned}
+		\boxed{
+			f(z,t)=A(t)z^n
+		}.
+	\end{aligned}
+\end{equation}
+
+\subsubsection{Dòng chảy đồng nhất}
+Nghiệm thuần nhất ứng với trường hợp $n=1$ trong (\ref{eq:pow_law_conformal}), hàm thế vận tốc và hàm dòng do đó tương ứng là :
+\begin{equation}
+	\begin{aligned}
+		\phi(x,y,t)=A(t)x\ \text{và}\ \psi(x,y,t)=A(t)y.
+	\end{aligned}
+\end{equation}
+Khi lấy thế vận tốc của trường, ta có :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\underline{u}(x,y,t)=A(t)\underline{e}_x
+		}.
+	\end{aligned}
+\end{equation}
+Đây là một dòng chảy đồng nhất, và các đường dòng là song song với trục $Ox$.
+\subsubsection{Dòng chảy trong nhị diện vuông hoặc gần điểm dừng}
+Nghiệm này ứng với trường hợp $n=2$ trong (\ref{eq:pow_law_conformal}), hàm thế vận tốc và hàm dòng do đó tương ứng là :
+\begin{equation}
+	\begin{aligned}
+		\phi(x,y,t)=A(t)(x^2-y^2)\ \text{và}\ \psi(x,y,t)=2A(t)xy.
+	\end{aligned}
+\end{equation}
+Khi lấy thế vận tốc của trường, ta có :
+\begin{equation}
+	\begin{aligned}
+		\underline{u}(x,y,t)=2A(t)x\underline{e}_x-2A(t)y\underline{e}_y
+	\end{aligned}
+\end{equation}
+
+Chúng ta sẽ thấy làm thế nào mà việc sử dụng các nghiệm lũy thừa để mô tả dòng chảy xung quanh một nhị diện với một góc $\alpha$ bất kỳ.
+\subsubsection{Lưỡng cực thủy động}
+Nghiệm này ứng với trường hợp $n=-1$ trong (\ref{eq:pow_law_conformal}), hàm thế vận tốc và hàm dòng do đó tương ứng trong tọa độ trụ :
+\begin{equation}
+	\begin{aligned}
+		\phi(r,\theta,t)=\frac{A(t)}{r}\cos\theta\ \text{và}\ \psi(r,\theta,t)=-\frac{A(t)}{r}\sin\theta.
+	\end{aligned}
+\end{equation}
+Khi lấy thế vận tốc của trường, ta có :
+\begin{equation}
+	\begin{aligned}
+		\underline{u}(r,\theta,t)=-\frac{A(t)}{r^2}\cos\theta\underline{e}_r-\frac{A(t)}{r^2}\sin\theta\underline{e}_\theta
+	\end{aligned}
+\end{equation}
+Tương tự như trong tĩnh điện, chúng ta sẽ liên kết nó với dòng chảy của nguồn và giếng. Do vậy mà chúng ta sẽ nghiên cứu dòng chảy giếng và nguồn.
+\subsubsection{Xoáy tự do}
+Chúng ta xét thế vận tốc phức như sau :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			f(z)=\frac{\Gamma(t)}{2\pi i}\ln z
+		}.
+	\end{aligned}
+\end{equation}
+
+Khai triển ra, hàm thế vận tốc và hàm dòng trong tọa độ trụ :
+\begin{equation}
+	\begin{aligned}
+		\phi(r,\theta,t)=\frac{\Gamma(t)}{2\pi}\theta\ \text{và}\ \psi(r,\theta,t)=\frac{\Gamma(t)}{2\pi}\ln r.
+	\end{aligned}
+\end{equation}
+
+Rõ ràng là nghiệm này không xác định tại $r=0$, chúng ta sẽ cố gắng mô tả cho dòng chảy xảy ra ở gốc tọa độ. Trước hết, trường vận tốc được tính :
+\begin{equation}
+	\begin{aligned}
+		\underline{u}(r,\theta,t)=\frac{\Gamma(t)}{2\pi r}\underline{e}_\theta.
+	\end{aligned}
+\end{equation}
+Tiếp theo, chúng ta lấy rota của trường vận tốc :
+$$
+\underline{\nabla}\wedge\underline{u}=\underline{\nabla}\wedge\left(\frac{\Gamma(t)}{2\pi r}\underline{e}_\theta\right)=\frac{\Gamma(t)}{2\pi}\underline{\nabla}\wedge\left(\frac{1}{r}\underline{e}_\theta\right)=\underline{0}.
+$$
+Trường này là một trường trực xuyên tâm, nhưng có độ xoáy đồng nhất không, do đó nó không thực sự là một trường xoáy. Do đó ta gọi nó là trường \emph{xoáy tự do}.
+\subsubsection{Dòng chảy giếng hoặc nguồn hai chiều}
+Chúng ta xét thế vận tốc phức như sau :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			f(z)=\frac{Q(t)}{2\pi}\ln z
+		}.
+	\end{aligned}
+\end{equation}
+
+Khai triển ra, hàm thế vận tốc và hàm dòng trong tọa độ trụ :
+\begin{equation}
+	\begin{aligned}
+		\phi(r,\theta,t)=\frac{Q(t)}{2\pi}\ln r\ \text{và}\ \psi(r,\theta,t)=\frac{Q(t)}{2\pi}\theta.
+	\end{aligned}
+\end{equation}
+trong đó chúng ta đã sử dụng tọa độ trụ. Nghiệm này sẽ chỉ tồn tại khi $r\ne 0$, tại $r=0$ nghiệm không xác định và chúng ta sẽ mô hình hóa dòng chảy ở điểm $r=0$. Vận tốc được tìm từ thế vận tốc :
+\begin{equation}
+	\begin{aligned}
+		\underline{u}(r,\theta,t)=\frac{Q(t)}{2\pi r}\underline{e}_r
+	\end{aligned}
+\end{equation}
+Lấy tích phân mặt trên một hình trụ có trục $Oz$ bán kính R, chiều cao trụ là H tính từ mặt phẳng $Oxy$ (mà chúng ta kí hiệu là mặt $\Sigma$):
+$$
+\varoiint_{\Sigma}
+{\underline u  \cdot \underline n dS}  = \int_{z = 0}^H {\frac{{Q\left( t \right)}}{2\pi R}2\pi Rdz}  = Q\left( t \right)H.
+$$
+Rõ ràng là đại lượng này là một lưu lượng thể tích theo định nghĩa của tích phân đầu tiên bên trái, do đó ta kết luận, ở gốc tọa độ, có một đường phát xạ mà lưu lượng thể tích trên một đơn vị dài là $Q(t)$. Vị trí của đường phát xạ này là rõ ràng, bởi vì khi lấy dive hai vế của trường vận tốc khi $r\ne 0$, chúng ta có :
+$$
+\underline{\nabla}\cdot\underline{u}=\frac{Q(t)}{2\pi r}\underline{\nabla}\cdot\left(\frac{\underline{e}_r}{r}\right)=0.
+$$
+Dive này bằng không ở mọi nơi trừ tại gốc, điều này cho phép chúng ta định vị đường phát xạ tại vị trí $r=0$. Nếu $Q(t)>0$ chúng ta có một dòng chảy có nguồn, ngược lại chúng ta có một dòng chảy có giếng.
+\subsection{Sự áp dụng tính chất tuyến tính của phương trình Laplace}
+Chúng ta sẽ nghiên cứu sự chồng chập nghiệm của các dòng chảy cơ bản để tạo nên một dòng chảy thế phức tạp hơn qua các ví dụ. Các ví dụ này một mặt giúp cho quý độc giả hiểu được cách chồng chập nghiệm và mặt khác giúp chúng ta có được ý niệm về việc sử dụng các dòng chảy này vào trong dòng chảy qua các cố thể phức tạp, ví dụ như biên dạng cánh máy bay.
+\subsubsection{Lưỡng cực thủy động}
+Xét hai dòng chảy, một dòng chảy nguồn với cường độ nguồn $Q(t)>0$ đặt tại vị trí $(d,0)$ và một dòng chảy giếng với cường độ giếng $-Q(t)<0$ đặt tại vị trí $(-d,0)$. Chúng ta sẽ tìm lại thế vận tốc, đầu tiên, trường vận tốc của dòng nguồn và dòng giếng lần lượt là :
+$$
+\underline{u}_1(r,\theta,t)=\frac{Q(t)}{2\pi r}\underline{e}_{r_1}\ \text{và}\ \underline{u}_2(r,\theta,t)=-\frac{Q(t)}{2\pi r}\underline{e}_{r_2}
+$$
+Tuy nhiên, sự khai triển biểu thức này là quá tinh tế, chúng ta sẽ không dại gì mà làm thế, thay vào đó chúng ta sẽ thay thế việc sử dụng trường vận tốc bằng việc sử dụng thế vận tốc, do đó, thế vận tốc của dòng chảy là :
+$$
+\phi(r,\theta,t)=\phi_1(r,\theta,t)+\phi_2(r,\theta,t)=\frac{Q(t)}{2\pi}\ln\left(\frac{r_1}{r_2}\right).
+$$
+Sử dụng hệ tọa độ cực và kết hợp với hình vẽ, ta có :
+$$
+\begin{aligned}
+	\frac{r_1}{r_2} &= \sqrt {\frac{r^2+d^2-2rd\cos\theta}{r^2 + d^2 + 2rd\cos \theta }}\approx\sqrt{\frac{r^2 - 2rd\cos\theta}{r^2 + 2rd\cos \theta}}
+	\displaystyle=\sqrt{\frac{1-2\frac{d}{r}\cos\theta}{1+2\frac{d}{r}\cos \theta }}\approx 1-2\frac{d}{r}\cos\theta
+\end{aligned}
+$$
+Do đó thế vận tốc lúc này :
+$$
+\phi(r,\theta,t)=\frac{Q(t)}{2\pi}\ln\left(1-2\frac{d}{r}\cos\theta\right)\approx\frac{Q(t)d}{\pi r}\cos\theta.
+$$
+Nếu đặt $A(t)=Q(t)d/\pi$, ta tìm lại được thế vận tốc của lưỡng cực thủy động đã được đề cập bên trên. Trong các phép biến đổi bên trên, dấu $\approx$ đại diện cho phép khai triển Taylor ở lân cận không.
+\subsubsection{Vận tốc của dòng chảy qua một hình trụ}
+Xét một dòng chảy đồng nhất có vận tốc $\underline{u}=u\underline{e}_x$, chảy quanh một hình trụ có bán kính $R$, hình trụ này đặt theo trục $\underline{e}_z$, để bài toán trở nên đơn giản, chúng ta sẽ giả thiết rằng hình trụ là dài vô hạn theo phương $z$ và lưu chất chiếm toàn bộ không gian.
+
+
+
+\subsection{Lực cản qua một cố thể}
+Chúng ta xét một dòng chảy thế được tạo ra bởi việc nhúng một cố thể vào lưu chất không có mặt thoáng (tức là chiếm toàn bộ không gian) và cho cố thể này chuyển động bên trong lưu chất với vận tốc $\underline{w}$. Rõ ràng, lưu chất là đứng yên ở vô cùng. Dòng chảy thế này có thế vận tốc thỏa :
+$$
+\Delta\phi=0\ \text{và $\phi=0$ ở vô cùng.}
+$$
+
+Chúng ta biết rằng $1/r$ là một nghiệm của phương trình Laplace và nó triệt tiêu ở vô cùng, do đó chúng ta sẽ chọn nó để làm nghiệm của dòng chảy trong trường hợp này. Hiển nhiên là các nghiệm bậc cao hơn của $1/r$ đều thỏa, do đó ta có thể xét nghiệm thế vận tốc :
+$$
+\phi=\frac{a}{r}+\underline{A}\cdot\underline{\nabla}\left(\frac{1}{r}\right)+\dots
+$$
+trong đó gốc tọa độ được lấy tại một điểm trong cố thể. Hệ tọa độ cầu mà chúng ta xét chuyển động cùng với cố thể, tuy nhiên chúng ta sẽ chỉ xét tại một thời điểm nào đó.
+
+sai(Rõ ràng là trong toàn bộ không gian, không có số hạng nguồn cũng như số hạng giếng), do đó hằng số $a=0$, như vậy :
+$$
+\phi=\left(\underline{A}\cdot\underline{\nabla}\right)\frac{1}{r}+\dots=-\frac{\underline{A}\cdot\underline{e}_r}{r^2}+\dots
+$$
+trường vận tốc được tìm từ thế vận tốc :
+$$
+\underline{u}=\frac{3\left(\underline{A}\cdot\underline{e}_r\right)\underline{e}_r-\underline{A}}{r^3}
+$$
+Bây giờ chúng ta sẽ tính hằng số $\underline{A}$. Chúng ta biết rằng $\underline{A}$ phụ thuộc vào hình dạng và vận tốc chuyển động của cố thể.
+
+Chúng ta sẽ cân bằng năng lượng, xét một hình cầu tưởng tượng có bán kính $R$, có tâm tại gốc tọa độ bên trên. Động năng của lưu chất trong hình cầu tưởng tượng này được tính (khi bỏ qua thừa số $1/2\rho$) :
+$$
+\begin{aligned}
+	\mathscr{E}_K&=\frac{1}{2}\iiint \underline{u}^2d\tau=\frac{1}{2}\iiint \underline{w}^2d\tau+\frac{1}{2}\iiint \left(\underline{u}-\underline{w}\right)\cdot\left(\underline{u}+\underline{w}\right)d\tau\\
+	&=\frac{1}{2}\underline{w}^2\left(\frac{4}{3}\pi R^3-V_0\right)+\frac{1}{2}\iiint \underline{\nabla}\left(\phi+\underline{w}\cdot\underline{r}\right)\cdot\left(\underline{u}-\underline{w}\right)d\tau
+\end{aligned}
+$$
+Chúng ta biết rằng $\underline{\nabla}\cdot\left(\underline{u}-\underline{w}\right)=0$, do đó :
+$$
+\begin{aligned}
+	\underline{\nabla}\cdot\left(\left(\phi+\underline{w}\cdot\underline{r}\right)\left(\underline{u}-\underline{w}\right)\right)&=\left(\phi+\underline{w}\cdot\underline{r}\right)\underbrace{\underline{\nabla}\cdot\left(\underline{u}-\underline{w}\right)}_{=0}+\left(\underline{u}-\underline{w}\right)\underline{\nabla}\left(\phi+\underline{w}\cdot\underline{r}\right)\\
+	&=\left(\underline{u}-\underline{w}\right)\underline{\nabla}\left(\phi+\underline{w}\cdot\underline{r}\right).
+\end{aligned}
+$$
+Thay lại hệ thức này vào trong biểu thức động năng bên trên, ta có :
+$$
+\begin{aligned}
+	\mathscr{E}_K&=\frac{1}{2}\underline{w}^2\left(\frac{4}{3}\pi R^3-V_0\right)+\frac{1}{2}\iiint\underline{\nabla}\left(\phi+\underline{w}\cdot\underline{r}\right)\cdot\left(\underline{u}-\underline{w}\right)d\tau\\
+	&=\frac{1}{2}\underline{w}^2\left(\frac{4}{3}\pi R^3-V_0\right)+\frac{1}{2}\iiint\underline{\nabla}\cdot\left(\left(\phi+\underline{w}\cdot\underline{r}\right)\left(\underline{u}-\underline{w}\right)\right)d\tau\\
+	&=\frac{1}{2}\underline{w}^2\left(\frac{4}{3}\pi R^3-V_0\right)+\frac{1}{2}\oiint\left(\underline{u}-\underline{w}\right)\left(\phi+\underline{w}\cdot\underline{r}\right)d\underline{S}.
+\end{aligned}
+$$
+Tích phân mặt này được tính trên hai mặt, mặt tiếp xúc với cố thể và mặt tưởng tượng có bán kính $R$. Trên mặt tiếp xúc với cố thể :
+$$
+\iint\left(\underline{u}-\underline{w}\right)\left(\phi+\underline{w}\cdot\underline{r}\right)d\underline{S}=0
+$$
+Bởi vì trên bề mặt cố thể, $\left(\underline{u}-\underline{w}\right)d\underline{S}=\underline{0}$ (do điều kiện biên về vận tốc pháp tuyến) do đó, nếu kí hiệu $\mathscr{S}$ là mặt tưởng tượng, ta có :
+$$
+\begin{aligned}
+	\mathscr{E}_K&=\frac{1}{2}\underline{w}^2\left(\frac{4}{3}\pi R^3-V_0\right)+\frac{1}{2}\iint_{\mathscr{S}}\left(\underline{u}-\underline{w}\right)\left(\phi+\underline{w}\cdot\underline{r}\right)d\underline{S}.
+\end{aligned}
+$$
+Thay lại phương trình của thế vận tốc và của trường vận tốc, tích phân thứ hai được tính :
+$$
+\begin{aligned}
+	\iint_{\mathscr{S}}\left(\underline{u}-\underline{w}\right)\left(\phi+\underline{w}\cdot\underline{r}\right)d\underline{S}&=\iint_{\mathscr{S}}\left[3\left(\underline{A}\cdot\underline{e}_r\right)\left(\underline{w}\cdot\underline{e}_r\right)-\left(\underline{w}\cdot\underline{e}_r\right)^2R^3\right]
+	d\Omega\\
+	&=4\pi\left(\underline{A}\cdot\underline{e}_r\right)-\frac{4}{3}\pi R^3\underline{w}^2.
+\end{aligned}
+$$
+Trong đó $\Omega$ là kí hiệu cho góc đặc. Thay thế lại vào trong biểu thức tính động năng, rồi nhân với $1/2\rho$ ta có :
+$$
+\mathscr{E}_K=\frac{1}{2}\rho\left(4\pi\left(\underline{A}\cdot\underline{w}\right)-V_o\underline{w}^2\right).
+$$
+
+Trong thể tích tưởng tượng này, biến thiên năng lượng liên hệ với biến thiên động lượng bởi công thức : $d\mathscr{E}_K=\underline{w}\cdot d\underline{P}$, do đó động lượng của thể tích tưởng tượng này được tính :
+\begin{equation}
+	\begin{aligned}
+		\underline{p}=\frac{1}{2}\rho\left(4\pi\underline{A}-V_o\underline{w}\right).
+	\end{aligned}
+\end{equation}
+Đạo hàm động lượng này theo thời gian, ta tính được lực tác dụng lên cố thể :
+\begin{equation}
+	\begin{aligned}
+		\boxed{
+			\underline{F}=-\frac{1}{2}\rho\left(4\pi\dot{\underline{A}}-V_o\dot{\underline{w}}\right)
+		}.
+	\end{aligned}
+\end{equation}
+
+Nếu cố thể là chuyển động đều $(\underline{w}=\underline{0})$, lực tác dụng lên cố thể bị triệt tiêu, điều này được phát triển thành \bfit{nghịch lý D'Alambert}. Tuy nhiên ta biết điều này là không đúng những gì quan sát được trong thực tế, do đó sau này chúng ta sẽ trở lại giải quyết nghịch lý này khi nghiên cứu về lưu chất nhớt.
+
+\section{Sóng trọng lực}
+
+\subsection{Sóng lừng}
+
+Trong trường trọng lực, mặt thoáng của chất lưu ở trạng thái cân bằng là một mặt phẳng. Chúng ta sẽ nghiên cứu hình dạng của mặt thoáng trong trường hợp mà mặt thoáng bị nhiễu loạn bởi một tác nhân từ bên ngoài. Để cho vấn đề đơn giản, chúng ta chỉ khảo sát trong trường hợp các nhiễu loạn này là nhỏ.
+
+Trong giả thiết nhiễu loạn nhỏ, chúng ta bỏ qua số hạng đối lưu $\left(\underline{u}\cdot\underline{\nabla}\right)\underline{u}$ trước số hạng $\partial\underline{u}/\partial t$ trong phương trình (\ref{eq:euler_convection}). Như vậy, ta có thể đơn giản phương trình này thành :
+\begin{equation}\label{eq:euler_convection_wave}
+	\begin{aligned}
+		\rho\frac{\partial\underline{u}}{\partial t}=-\underline{\nabla}p+\rho\underline{g},
+	\end{aligned}
+\end{equation}
+trong đó lực thể tích chỉ có trọng lực $\underline{f}_{\text{vol}}=\rho\underline{g}$.
+
+Chúng ta sẽ biện luận về sự bỏ qua này, nếu kí hiệu độ lớn đặc trưng của biên độ của sóng là $a$, cở biến đổi đặc trưng về thời gian của nó là $\tau$, cở biến đổi về không gian của sóng liên kết với là $\lambda$, thì để có thể bỏ qua số hạng đối lưu nếu như :
+$$
+\left(\frac{a}{\tau}\right)^2\frac{1}{\lambda}\gg\frac{a}{\tau^2},\ \text{hay là}\ \lambda\gg a.
+$$
+
+Chúng ta hạn chế trong các dòng chảy đơn giản :
+\begin{itemize}
+	\item lưu chất là không nén được,
+	\item dòng chảy là thế.
+\end{itemize}
+
+Như vậy, từ phương trình Bernoulli, ta tìm được bất biến cho dòng chảy :
+\begin{equation}\label{eq:invariant_wave_grav}
+	\begin{aligned}
+		\rho\frac{\partial\phi}{\partial t}+\rho gz+p=A
+	\end{aligned}
+\end{equation}
+trong đó $A$ là một hằng số.
+
+Bây giờ ta đặt hệ trục tọa độ Descartes $(O,\underline{e}_x, \underline{e}_y,\underline{e}_z)$ trong đó $\underline{e}_z$ hướng theo phương thẳng đứng.
+
+Với giả thiết được chấp nhận bên trên, nếu gọi $\zeta$ là hàm số mô tả độ chênh lệch giữa mặt thoáng của lưu chất lúc bị nhiễu loạn so với mặt thoáng lúc lưu chất cân bằng (tức là $z=\zeta(x,y,t)$).
+
+Mặt thoáng của lưu chất luôn luôn tiếp xúc với không khí với áp suất hằng, bằng cách định nghĩa lại thế vận tốc, ta có thể viết :
+
+\begin{equation}
+	\begin{aligned}
+		\left(\frac{\partial\phi}{\partial t}\right)_{z=\zeta}+g\zeta=0.
+	\end{aligned}
+\end{equation}
+Bởi vì $u_z=\partial\phi/\partial z$, ta có từ hệ thức ngay bên trên này :
+
+\begin{equation}
+	\begin{aligned}
+		\left(g\frac{\partial\phi}{\partial z}+\frac{\partial^2\phi}{\partial t^2}\right)_{z=\zeta}=0.
+	\end{aligned}
+\end{equation}
+
+Nếu các nhiễu loạn là nhỏ, ta có thể xấp xỉ $\zeta$ bởi $0$ và do đó hệ phương trình vận động của sóng trọng lực là :
+\begin{equation}
+	\begin{aligned}
+		\left\{ {\begin{array}{*{20}{l}}
+				{\Delta \phi  = 0}\\
+				\\
+				\displaystyle{{{\left( {g\frac{{\partial \phi }}{{\partial z}} + \frac{{{\partial ^2}\phi }}{{\partial {t^2}}}} \right)}_{z = 0}} = 0}
+		\end{array}} \right.
+	\end{aligned}
+\end{equation}
+
+\subsection{Sóng dài}
+
+
+\subsection{Sóng nội}
+
+
+
+
+
+\end{document}

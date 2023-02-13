@@ -1,0 +1,135 @@
+\documentclass[DONG_CHAY_NEN_DUOC.tex]{subfiles}
+
+\begin{document}
+
+\chapter{CÁC ĐỊNH LUẬT BẢO TOÀN}
+
+	Chương này giới thiệu các khuôn khổ toán học được sử dụng để mô hình hóa dòng chảy nén được. Ở đây không có bất kỳ một thực thể vật lý nào được giới thiệu thêm và chúng ta sẽ không làm gì với vật lý ở chương này.
+
+\section{Phương trình khuếch tán một chiều}
+
+Cho một hàm số
+\[
+	\begin{aligned}
+		u\colon(\mathbb R^+)^2 &\longrightarrow\mathbb R\\
+		(t,x)&\longmapsto u(t,x)		
+	\end{aligned}
+\]
+(trong đó biến số ở vị trí thứ nhất của hàm được gọi là biến thời gian và biến còn lại là biến không gian) thỏa mãn phương trình vi phân sau:
+\begin{align}\label{eq:convect_pde}
+	\begin{cases}
+		\partial_tu+c\partial_xu=0\\
+		u(0,x)=u^0(x)
+	\end{cases}
+\end{align}
+Hàm $u^0\colon\mathbb R^+\longrightarrow\mathbb R$ là một hàm đủ chính quy, được gọi là điều kiện đầu. $c$ là một hằng số có bản chất là vận tốc.
+
+Để giải phương trình này, ta sẽ sử dụng phương pháp \bfit{đường cong đặc trưng}. Ta gọi đường cong đặc trưng là một cung tham số hóa:
+\begin{equation}
+\begin{aligned}
+	X\colon\mathbb R&\longrightarrow\mathbb R^2\\
+	s&\longmapsto \left(t(s),x(s)\right)
+\end{aligned}
+\end{equation}
+mà với nó, ta sẽ cố gắng biến đổi phương trình (\ref{eq:convect_pde}) thành một phương trình vi phân toàn phần và lấy tích phân. Thay nó vào phương trình (\ref{eq:convect_pde}), ta có:
+\[
+	\begin{aligned}
+		\dfrac{du}{ds}\left(t(s),x(s)\right)=\dfrac{\partial u}{\partial t}\left(t(s),x(s)\right)t'(s)+\dfrac{\partial u}{\partial x}\left(t(s),x(s)\right)x'(s)
+	\end{aligned}
+\]
+Bây giờ chọn $x=x_0+cs$ và $t=t_0+s$ thì ta có:
+\[
+\begin{aligned}
+	\dfrac{du}{ds}\left(t(s),x(s)\right)=0
+\end{aligned}
+\]
+Do đó, nếu chọn đường cong đặc trưng $X = (s+t_0,x_0+cs)$ thì ta đơn giản được phương trình thành:
+\begin{align}
+	\dfrac{du}{ds}\left(t(s),x(s)\right)=0
+\end{align}
+Do đó, nghiệm của phương trình khuếch tán này là
+\begin{align}
+	u(t,x)=u^0(x-ct)
+\end{align}
+
+Điều này dẫn ta đến một đặc tính quan trọng của đường cong đặc trưng sẽ được sử dụng về sau:\\
+
+\leftskip=1cm
+\rightskip=1cm
+	\noindent{\emph{Nghiệm của phương trình khuếch tán là hằng số dọc theo đường cong đặc trưng của phương trình vi phân.}}\\
+	
+\leftskip=0pt
+\rightskip=0pt
+
+Bây giờ, nếu một điểm $A$ nào đó  với tọa độ $x_A$ nhận thấy có một đường cong đặc trưng đi qua nó ở thời điểm $t_A$, tức là nó quan sát thấy đường cong $x=x_A-c(t-t_A)$. Ta có thể chia làm hai trường hợp, tùy thuộc vào sự cắt của đường cong này với trục $x$. Nếu đường cong này cắt trục tung tại điểm $x=x_A$, điều kiện biên $u^0(x)$ là không đủ để xác định nghiệm của bài toán và ta cần thêm một điều kiện biên có dạng $u(t,0)=u^1(t)$. Tuy nhiên, phải có điều kiện tương thích giữa hai hàm điều kiện đầu nếu muốn nghiệm là chính quy.
+
+Từ đây ta thấy có một số kết luận quan trọng sau:
+\begin{itemize}
+	\item Mọi thông tin về điều kiện đầu đều được vận chuyển đối lưu đi dọc theo đường cong đặc trưng, kể cả những sự gián đoạn trong điều kiện đầu.
+	
+\end{itemize}
+
+\section{Phương trình phi tuyến}
+
+Cho một hàm số
+\[
+\begin{aligned}
+	u\colon(\mathbb R^+)^2 &\longrightarrow\mathbb R\\
+	(t,x)&\longmapsto u(t,x)		
+\end{aligned}
+\]
+(trong đó biến số ở vị trí thứ nhất của hàm được gọi là biến thời gian và biến còn lại là biến không gian) thỏa mãn phương trình vi phân sau:
+\begin{align}
+	\partial_tu+u\partial_xu=0
+\end{align}
+
+Ta sẽ tìm một đường cong đặc trưng cho bài toán này. Gọi đường cong đặc trưng đó là:
+\begin{equation}
+	\begin{aligned}
+		X\colon\mathbb R&\longrightarrow\mathbb R^2\\
+		s&\longmapsto (t(s),x(s))
+	\end{aligned}
+\end{equation}
+Thay đường cong này vào phương trình bên trên, ta có:
+\[
+	\begin{aligned}
+		& t = t_0+s\\
+		& \dfrac{dx}{ds}\left(t(s),x(s)\right )=u(\left(t(s),x(s)\right)\\
+	\end{aligned}
+\]
+Mà dọc theo đường cong đặc trưng này, giá trị của $u$ là không đổi. Do đó, nếu ban đầu đường cong đặc trưng đi qua điểm $(t,x)=(0,\zeta)$ thì đường cong đặc trưng có thể được tính theo công thức:
+\[
+\begin{aligned}
+	& t = s\\
+	& x = \zeta + u^0(\zeta)t
+\end{aligned}
+\]
+Như vậy, đường cong đặc trưng trong trường hợp này là một đường thẳng có phương trình:
+\[
+	\begin{aligned}
+		\boxed{x = \zeta + u^0(\zeta)t}.
+	\end{aligned}
+\]
+
+Nếu điều kiện đầu của bài toán có dạng:
+\begin{align}
+	\begin{cases}
+		u^0(x)=\begin{cases}
+			0 &\ \forall x\in(-\infty,-1)\\
+			1+x\\
+			1-x			
+		\end{cases}
+	\end{cases}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

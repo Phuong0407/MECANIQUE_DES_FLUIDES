@@ -1,0 +1,127 @@
+\documentclass[KHI_DONG_HOC.tex]{subfiles}
+
+\begin{document}
+\chapter{MỞ ĐẦU VỀ KHÍ ĐỘNG LỰC HỌC}
+
+\section{Các khái niệm cơ bản}
+\subsection{Hình học của biên dạng}
+Biên dạng của cánh máy bay là hình dạng của mặt cắt cánh máy bay bởi mặt phẳng song song với đường trung tâm của máy bay.
+
+Ta hãy vẽ một đường tròn lớn hơn biên dạng và hoàn toàn chứa biên dạng bên trong. Lúc này khi ta thu nhỏ bán kính của đường tròn lại sao cho đường tròn này chỉ tiếp xúc với hai điểm của biên dạng. Hai điểm đó thuộc về lần lượt cạnh trước và cạnh sau. Đường kính của đường tròn này được gọi là dây cung cánh và kí hiệu là $c$.
+
+Điểm giao của cạnh trước được dùng như gốc tọa độ của hệ trong đó trục $x$ nối điểm ở cạnh trước với điểm cạnh sau, và trục $y$ vuông góc với trục $x$.
+
+Nếu trong chế độ chảy hạ âm, ta dùng cánh máy bay có cạnh trước được làm tròn (do đó được tạo thành bởi một đường cong phẳng có bán kính cong xác định). Độ dày của biên dạng tăng trơn tru và sau đó giảm dần về phía sau đuôi biên dạng. Đối với cạnh sau của cánh, nó có thể nhọn, có bán kính cong nhỏ hoặc bị cắt cùng.
+\subsubsection{Đường trung bình}
+Quỹ tích của tất cả các điểm cách mặt trên và mặt dưới cùng một khoảng cách được gọi là đường trung bình của biên dạng.
+\subsubsection{Sự phân bố độ dày}
+Khi đã có đường trung bình, khoảng cách từ nó đến mặt trên và mặt dưới có thể được đo ở bất kỳ giá trị nào của $x$. Những khoảng cách này, theo định nghĩa của đường trung bình, là bằng nhau. Kết quả là một hình dạng đối xứng, được gọi là phân bố độ dày. Một tham số quan trọng của sự phân bố độ dày là độ dày tối đa $t$, khi được biểu thị dưới dạng tỉ số đối với dây cung cánh, thường được biểu thị dưới dạng phần trăm.
+\subsection{Hình dạng cánh}
+\textbf{Bình diện cánh} là hình dạng của cánh khi nhìn máy bay từ trên xuống.
+
+\textbf{Sải cánh} là khoảng cách giữa hai đuôi cánh.
+
+\textbf{Tỉ lệ côn} là tỉ lệ độ dày dây cung cánh ở đuôi và gốc cánh.
+
+\textbf{Diện tích cánh} Có hai khái niệm liên quan đến diện tích đó là diện tích tổng, $S_G$, trong đó có tính đến cả phần gắn vào thân máy bay. Diện tích cánh bị phơi ra là $S_N$.
+
+\textbf{Dây cung trung bình} là độ dài trung bình của dây cung cánh, được tính dọc theo chiều dài sải cánh. Có hai loại dây cung cánh trung bình là dây cung cánh trung bình tiêu chuẩn :
+\[\overline c  = \frac{{\int_{ - b/2}^{b/2} {cdy} }}{{\int_{ - b/2}^{b/2} {dy} }}\]
+và dây cung cánh trung bình khí động học :
+\[{\overline c _A} = \frac{{\int_{ - b/2}^{b/2} {{c^2}dy} }}{{\int_{ - b/2}^{b/2} {cdy} }}\]
+
+
+\textbf{Tỉ lệ hình dạng} đo mức độ hẹp của bình diện cánh, nó được kí hiệu là $AR$
+$$
+	AR = \frac{\text{sải cánh}^2}{\text{diện tích}} = \frac{b^2}{S}
+$$
+
+\textbf{Góc quét} là góc trên hình chiếu bằng, giữa đường vẽ từ đường sải cánh và góc giữa đường cạnh trước hoặc đường cạnh sau.
+
+\textbf{Góc nhị diện} Nếu một chiếc máy bay được quan sát từ phía trước, người ta sẽ thấy rằng các cánh nói chung là không nằm trong một mặt phẳng mà tạo với mặt phẳng nằm ngang một góc được gọi là góc $\Gamma$.
+
+\textbf{Góc tới, góc xoắn} Góc tới $\alpha$ là góc giữa dây cung cánh so với hướng bay hoặc là góc so với dòng khí tự do. Nếu góc tới của tất cả các tiết diện không giống nhau, cánh bị xoắn. Nếu góc tới là tăng từ gốc đến ngọn, ta gọi là \emph{wash-in}, ngược lại ta gọi là \emph{wash-out}.
+
+\section{Cơ bản về khí động học}
+\subsection{Lực và moment khí động}
+Không khí khi đi qua cánh máy bay, nó bị lệch hướng khỏi hướng chuyển động ban đầu của nó dẫn đến sự biến đổi vận tốc không khí. Phương trình Bernoulli dẫn đến sự biến đổi áp suất ở mặt trên và mặt dưới cánh. Không khí dẫn đến ma sát làm cản trở dòng chuyển động của không khí, do đó chúng tạo ra lực và moment khí động trên cánh máy bay.
+
+Chúng ta phân tích các lực và moment khí động này được phân tích theo ba phương vuông góc với nhau (trong chế độ bay bằng):
+\begin{itemize}
+	\item \textbf{Lực nâng, $L$} là thành phần lực hướng lên bên trên và vuông góc với hướng chuyển động của máy bay, hoặc theo hệ quy chiếu máy bay, hoặc của dòng khí không nhiễu loạn.
+	\item \textbf{Lực cản, $D$} là thành phần lực có cùng phương và ngược chiều chuyển động của máy bay hoặc với hướng chuyển động của dòng khí không nhiễu loạn.
+	\item \textbf{Lực bên, $Y$} là thành phần lực khí động vuông góc với cả lực nâng và lực cản - tức là hướng dọc theo chiều dài sải cánh.
+	\item \textbf{Moment ngóc chúc (pitching moment), $M$} là thành phần moment hướng vuông góc với mặt phẳng tạo bởi lực nâng và lực cản. Nó được định hướng dương nếu nó có xu hướng làm tăng góc tới.
+	\item \textbf{Moment xoay (rolling moment), $L_R$} là moment có xu hướng làm cho máy bay xoay xung quanh hướng bay, nó được định hướng dương nếu nó hạ đuôi cánh bên phải.
+	\item \textbf{Moment đảo (yawing moment), $N$} là moment có xu hướng làm cho máy bay xoay xung quanh hướng lực nâng, nó được định hướng dương nếu nó xoay mũi cánh bên phải ngược chiều kim đồng hồ.
+\end{itemize}
+\subsection{Hệ số lực và moment}
+Chúng là các hệ số vô thứ nguyên, bằng cách chia lực cho một đại lượng tương đương với lực, tức là $\rho V^2S$. Như vậy, lực khí động được định nghĩa như sau :
+\begin{equation}
+	\begin{aligned}
+		C_F = \frac{F}{\frac{1}{2}\rho V^2S}
+	\end{aligned}
+\end{equation}
+
+Do đó chúng ta có hai hệ số lực là hệ số lực nâng $C_L$ và hệ số lực cản $C_D$. Hệ số moment ngóc chúc được định nghĩa theo cách tương tự :
+\begin{equation}
+	\begin{aligned}
+		C_M = \frac{M}{\frac{1}{2}\rho V^2S \overline c}
+	\end{aligned}
+\end{equation}
+\subsection{Phân bố áp suất trên biên dạng}
+Áp suất phân bố không đều trên bề mặt cánh. Chúng ta thường chỉ làm việc với hệ số phân bố áp suất, trong đó sử dụng $p_{\infty}$, là áp suất ở xa máy bay và ở phía trước máy bay. Như vậy, hệ số áp suất :
+\[{C_p} = \frac{{p - {p_\infty }}}{{\frac{1}{2}\rho {V^2}}}\]
+
+Từ các phân bố áp suất được vẽ ở các góc tới khác nhau, chúng ta thu được các kết luận sau :
+\begin{itemize}
+	\item Áp suất thấp ở mặt trên trở nên nhỏ hơn và phủ lấy một phần rộng lớn hơn cho đến khi, ở góc tới lớn, nó lấn vào một phần nhỏ của phần trước của mặt trên.
+	\item Điểm tù hãm di chuyển dần dần về phía sau ở mặt dưới, và áp suất tăng ở mặt dưới phủ lấy một phần lớn hơn. Sự giảm áp suất ở mặt dưới là về cả độ lớn và độ phủ.
+\end{itemize}
+
+Do đó chúng ta thu được một kết luận quan trọng sau :
+\textbf{
+	\begin{itemize}
+		\item Tại góc tới nhỏ, sự chênh lệch áp suất sẽ tạo nên lực nâng, do áp suất ở mặt trên cánh nhỏ hơn áp suất ở mặt dưới cánh.
+		\item Tại góc tới lớn, sự chênh lệch áp suất sẽ tạo nên lực nâng, trong đó một phần là do áp suất ở mặt trên nhỏ hơn ở mặt dưới và một phần là do áp suất tăng ở mặt dưới.
+	\end{itemize}
+}
+Nếu góc tới lớn, xung quanh 18 đến 20 độ, áp suất giảm ở mặt trên bị mất đi và chỉ còn một phần lực nâng do ấp suất tăng ở mặt dưới.
+\subsection{Moment ngóc chúc}
+Moment ngóc chúc có thể được tính từ sự phân bố áp suất và ma sát nhớt trên bề mặt cánh hoặc đo trực tiếp từ thực nghiệm.
+
+\subsubsection{Tâm khí động}
+Có một điểm đặc biệt trên dây cung cánh mà moment ngóc chúc không phụ thuộc vào hệ số lực nâng, điểm đó được gọi là tâm khí động.
+
+Đối với tấm phẳng trong khuôn khổ không nhớt không nén được, tâm khí động về mặt lý thuyết là nằm ở một phần tư dây cung tính từ cạnh trước. Tính nhớt cũng như độ cong làm cho tâm khí động dịch đôi chút về phía trước, trong khi tính nén được của lưu chất có xu hướng làm cho nó dịch về phía sau. Do đó đối với một máy bay siêu thanh, tâm khí động được định hướng ở một nữa dây cung về mặt lý thuyết.
+\subsubsection{Tâm áp suất}
+Tâm áp suất là điểm mà tại đó hệ số moment ngóc chúc bị triệt tiêu. Tại điểm này, chỉ có lực nâng và lực cản. Tâm khí động thì cố định đối với một biên dạng cánh, còn tâm áp suất thì thay đổi tùy theo phân bố lực nâng và có thể không nằm trong biên dạng cánh.
+\subsection{Các loại lực cản}
+Đầu tiên cần lưu ý rằng, lực cản có thể đến từ hai nguồn đó là ma sát nhớt và áp suất trên bề mặt cánh.
+\subsubsection{Tổng lực cản}
+Lực cản tổng được định nghĩa như là sự giảm động lượng theo hướng dòng chảy không bị nhiễu loạn bên ngoài máy bay. Sự thay đổi động lượng được tính từ phía trước vật cản và phía sau vật thể ở khoảng cách rất xa.
+
+Có nhiều nguồn đóng góp cho tổng lực cản. Chúng ta chia chúng ra sơ bộ thành :
+\subsubsection{Lực cản da}
+Được sinh ra từ ứng suất cắt nằm trên bề mặt vì sự nhớt của lưu chất tiếp tuyến với mỗi điểm trên bề mặt. Lực nhớt này là không tồn tại trong một dòng chảy không nhớt.
+
+Thực hiện chiếu lực này lên phương của dòng chảy không bị nhiễu loạn ở ngoài vật thể và tích phân dọc theo toàn bề mặt để tính được tác động tổng của lực cản da.
+\subsubsection{Lực cản áp suất}
+Được sinh ra từ thành phần được chiếu lên hướng của dòng chảy không bị nhiễu loạn ở bên ngoài vật thể của phân bố áp suất trên bề mặt. Bằng cách lấy tích phân dọc theo bề mặt, chúng ta tính được tác động tổng của lực cản áp suất.
+
+Có một vài nguyên nhân dẫn đến sự tồn tại của phân bố áp suất trên bề mặt :
+\begin{itemize}
+	\item Lực cản cảm sinh : tồn tại do sự có mặt của lực nâng. Lực cản này không phụ thuộc vào sự tồn tại của ma sát nhớt, chúng ta sẽ nghiên cứu kỹ hơn về sau.
+	\item Lực cản sóng : chỉ tồn tại trong miền dòng chảy siêu thanh, hình thành do sự tồn tại của sóng xung kích.
+	\item Lực cản hình dạng : gây ra do sự khác biệt về sự phân bố áp suất trên bề mặt vật cản. Đối với một dòng chảy không nhớt. Đối với trường hợp lý tưởng, hệ số áp suất là +1 tại đuôi cánh, tuy nhiên, trong thực tế, ở đuôi cánh thì bề dày của độ dời lớp biên là hữu hạn do đó vận tốc không giảm xuống 0 và hệ số áp suất là nhỏ hơn +1. Áp suất tương đối cao ở mũi cánh có xu hướng đẩy nó về phía sau. Vùng áp suất hút kéo dài tới điểm có độ dày tối đa, tác động tạo ra lực đẩy kéo biên dạng về phía trước. Vùng áp suất hút ở phía hạ lưu của điểm có độ dày tối đa tạo ra lực hãm trên biên dạng, trong khi vùng áp suất tương đối cao xung quanh mép sau tạo ra lực đẩy. Trong một dòng chảy không nhớt, những yếu tố này triệt tiêu lẫn nhau và tạo ra lực cản bằng không. Đối với một dòng chảy thực, sự triệt tiêu này không xảy ra và chúng ta có lực cản hình dạng.
+	\item Lực cản lớp biên : là tổng của lực cản da và lực cản hình dạng.
+\end{itemize}
+\subsubsection{So sánh lực cản của các kiểu vật thể khác nhau}
+Đối với một đĩa phẳng, lực cản hoàn toàn là lực cản da. Lực cản hình dạng bằng không.
+
+Đối với một hình trụ tròn, lực cản của dòng chảy đi qua mặt xung quanh của hình trụ phần lớn là do lực cản hình dạng và một phần nhỏ từ lực cản da.
+
+Đối với cố thể lưu tuyến, lực cản hình dạng là khá nhỏ. 
+\subsubsection{Wake}
+Đằng sau mọi vật chuyển động trong không khí là một wake. Lực cản tổng thể của một vật thể xuất hiện như là sự mất đi động lượng và sự tăng năng lượng trong wake. Sự mất động lượng được biểu hiện bởi sự giảm vận tốc trung bình và sự tăng năng lượng biểu hiện ở sự xuất hiện của xoáy.
+\end{document}

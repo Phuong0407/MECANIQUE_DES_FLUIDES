@@ -1,0 +1,110 @@
+\documentclass[KHI_DONG_HOC.tex]{subfiles}
+
+\begin{document}
+\chapter{DÒNG CHẢY NHỚT VÀ LÝ THUYẾT LỚP BIÊN}
+\section{Giới thiệu}
+Trong khí động lực học, nhiệm vụ của chúng ta là xác định lực nâng, lực cản và các moment. Để làm được việc này, chúng ta cần phải xác định được phân bố áp suất và phân bố ma sát trượt trên bề mặt biên dạnh cánh. Chúng ta chọn trục $x$ dọc theo hướng của dòng chảy không nhiễu loạn, và trục $y$ vuông góc với trục $x$.
+
+Đối với một lưu chất không nhớt, không nén được, phương trình Navier-Stokes ba chiều có thứ nguyên cho ta :
+\begin{equation}
+	\begin{aligned}
+		u{'_{t'}} + u'u{'_{x'}} + v'u{'_{y'}} + w'u'{ _{z'}} =  - \frac{1}{\rho }p{'_{x'}} + \nu\left( {u{'_{x'x'}} + u{'_{y'y'}} + u{'_{z'z'}}} \right)
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		v{'_{t'}} + u'v{'_{x'}} + v'v{'_{y'}} + w'v'{ _{z'}} =  - \frac{1}{\rho }p{'_{y'}} + \nu\left( {v{'_{x'x'}} + v{'_{y'y'}} + v{'_{z'z'}}} \right)
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		w{'_{t'}} + u'w{'_{x'}} + v'w{'_{y'}} + w'w'{ _{z'}} =  - \frac{1}{\rho }p{'_{z'}} + \nu\left( {w{'_{x'x'}} + w{'_{y'y'}} + w{'_{z'z'}}} \right)
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		u{'_{x'}} + v{'_{y'}} + w{'_{z'}} = 0
+	\end{aligned}
+\end{equation}
+trong đó dấu phẩy, (') chỉ cho các đại lượng có thứ nguyên. Chúng ta sẽ sử dụng thanh đo cho phương trình Navier-Stokes (NSE) để thể hiện dữ liệu thực nghiệm. Chúng ta sẽ chia tất cả các thành phần của vận tốc cho $U$, vận tốc của dòng tự do, tât cả các khoảng cách cho $L$, kích thước thang đo. Đặt $u=u'/U$, $v=v'/U$, $w=w'/U$, $x=x'/L$, $y=y'/L$, $z=z'/L$, $t=t'U/L$, và $p=p'/\rho U^2$. Như vậy, ta có thể viết lại NSE :
+\begin{equation}
+	\begin{aligned}
+		{u_t} + u{u_x} + v{u_y} + w{u_z}_{} =  - {p_x} + \text{Re}^{-1}\left( {{u_{xx}} + {u_{yy}} + {u_{zz}}} \right)
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		{v_t} + u{v_x} + v{v_y} + w{v_z}_{} =  - {p_y} + \text{Re}^{-1}\left( {{v_{xx}} + {v_{yy}} + {v_{zz}}} \right)
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		{w_t} + u{w_x} + v{w_y} + w{w_z}_{} =  - {p_z} + \text{Re}^{-1}\left( {{w_{xx}} + {w_{yy}} + {w_{zz}}}\right)
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		{u_x} + {v_y} + {w_z} = 0
+	\end{aligned}
+\end{equation}
+trong đó $\text{Re}=UL/v$ là số Reynold tính theo độ dài tỉ lệ theo hướng dòng chảy. Như vậy, hệ số lực cản là một hàm của số Reynold :
+\begin{equation}
+	\begin{aligned}
+		{C_D} = f\left( {{{{\mathop{\rm Re}\nolimits} }_L}} \right)
+	\end{aligned}
+\end{equation}
+
+Chúng ta sẽ nghiên cứu dữ liệu lực nhớt cho một tấm phẳng chịu một dòng tự do có vận tốc $U$ song song với bề mặt tấm phẳng. Trên một bề mặt, từ cạnh trước đến cạnh sau, nếu đủ dài, chúng ta sẽ thu được ba vùng ứng với ba chế dộ chảy khác nhau : chế độ chảy tầng, chế độ chuyển tiếp và chế độ chảy rối. Chúng ta có thể xem xét vùng nào có chế độ chảy nào bằng cánh tính số Reynold. Đối với tấm phẳng, số Reynold tới hạn ứng với sự chuyển tiếp từ chế độ chảy tầng sang chế độ chảy chuyển tiếp là :
+\begin{equation}
+	\begin{aligned}
+		\text{Re}_{\text{tới hạn, tầng-chuyển tiếp}} = 3\times 10^5.
+	\end{aligned}
+\end{equation}
+Đối với sự chuyển từ chế độ chảy chuyển tiếp sang chế độ chảy rối, số Reynold tới hạn :
+\begin{equation}
+	\begin{aligned}
+		\text{Re}_{\text{tới hạn, chuyển tiếp-rối}} = 3\times 10^6.
+	\end{aligned}
+\end{equation}
+\section{Lý thuyết lớp biên}
+Chúng ta sẽ đơn giản hóa NSE cho trường hợp lớp biên để thu được phương trình lớp biên của Prandtl. Với các giả thiết như vậy, các số hạng trong NSE có dạng : $u_x \sim U/L$, $u_y \sim U/\delta$, $u_{xx} \sim U/L^2$, $u_{yy} \sim U/\delta^2$, $(u_x + u_y) \sim U/L + v/\delta$. Do đó $v \sim U/\delta/L$ và $u_{xx} \ll u_{yy}$. NSE được đơn giản thành :
+\begin{equation}
+	\begin{aligned}
+		{u_t} + {u_{x}} + v{u_y} =  - {p_x} + {{\mathop{\rm Re}\nolimits} ^{ - 1}}{u_{yy}}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		{u_x} + {u_y} = 0
+	\end{aligned}
+\end{equation}
+
+Dọc theo lớp biên, $p_y=0$ và do đó $p=p(x)$ là hàm của duy nhất biến $x$ và có thể được xác định từ bên ngoài dòng chảy bằnh các phương pháp dòng chảy thế.
+\subsection{Nghiệm Blasius}
+Đối với tấm phẳng, $p_x=0$. Đối với dòng chảy tầng ổn định, $u_t=0$. Do đó lớp biên tầng dọc theo tấm phẳng được mô tả bởi hệ phương trình :
+\begin{equation}
+	\begin{aligned}
+		{u_{x}} + v{u_y} =  - {p_x} + {{\mathop{\rm Re}\nolimits} ^{ - 1}}{u_{yy}}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		{u_x} + {u_y} = 0
+	\end{aligned}
+\end{equation}
+
+Do đó tốc độ dòng tự do vô thứ nguyên và chiều dài tổng vô thứ nguyên của tấm lần lượt là $U=1$ và $L=1$. Hệ phương trình này chịu điều kiện biên như sau :
+\[\begin{array}{l}
+	u = 1,x = 0,\qquad\forall y\\
+	u = v = 0,\qquad 0 < x < 1,\qquad y = 0\qquad (\text{không trượt})\\
+	{u_y} = 0,\qquad 0 < x < 1,\qquad y = \delta /L \qquad (\text{không có lực cắt})
+	\end{array}\]
+
+
+
+
+
+
+
+
+\end{document}

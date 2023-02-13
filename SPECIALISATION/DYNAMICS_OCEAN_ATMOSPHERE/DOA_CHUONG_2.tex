@@ -1,0 +1,185 @@
+\documentclass[DONG_HOC_KHI_QUYEN.tex]{subfiles}
+
+\begin{document}
+\chapter{PHƯƠNG TRÌNH CƠ SỞ}
+
+Trong chương này, chúng ta sẽ đề cập một cách ngắn gọn các giả thiết cơ sở của những nghiên cứu , và đặt mình trong khuôn khổ đơn giản hơn, trong đó lưu chất gần như-không nén, mà chúng ta gọi là \textit{xấp xỉ Boussinesq}.
+
+\section{Đạo hàm hạt}
+Chúng ta nhắc lại đơn giản, đạo hàm hạt (hay là đạo hàm đối lưu) của một đại lượng vật lý bất kỳ $b$ (vô hướng, vecteur, tenseur có hạng bất kỳ) :
+\begin{equation}
+	\begin{aligned}
+		\frac{Db}{Dt} := \frac{\partial b}{\partial t} + \nabla b \cdot \textbf{U}
+	\end{aligned}
+\end{equation}
+Trong đó $\textbf{U}$ là vận tốc của dòng chuyển động, và $\nabla b$ là gradient không gian (đương nhiên là phải phù hợp với dạng của đại lượng, vô hướng, vecteur, tenseur).
+
+\section{Bảo toàn khối lượng}
+Chúng tôi chỉ nêu ra phương trình (nó là một dạng được suy ra từ phép tính đạo hàm hạt):
+\begin{subequations}
+	\begin{align}
+		&\frac{D\rho}{Dt} + \rho(\nabla \cdot \textbf{U}) =0\\
+		&\frac{\partial \rho}{\partial t} + \nabla (\rho \cdot \textbf{U}) =0
+	\end{align}
+\end{subequations}
+
+Nếu lưu chất là không nén được, do đó, ta phải có :
+\begin{equation}
+	\begin{aligned}
+		\nabla \cdot \textbf{U} = 0
+	\end{aligned}
+\end{equation}
+
+Do đó, trong quyển sách này, chúng ta sẽ giới hạn trong xấp xỉ này. Giả thiết này là dể dành được chấp nhận đối với trường hợp dòng chảy trong đại dương. Đối với dòng chuyển động trong khí quyển, xấp xỉ này là đúng với các cao độ thấp, đối với các cao độ cao, khối lượng riêng giảm theo hàm mũ. Và chúng ta chỉ giới hạn trong tầng đối lưu, nơi tập trung phần lớn khối lượng của khí quyển.
+
+Tuy nhiên, chỉ khi áp dụng tính nén được thì ta mới giải thích được sự lan truyền âm thanh, nói một cách đơn giản, sự lan truyền âm thanh thực chất là sự lan truyền áp suất dư một cách đoạn nhiệt. Sự nén được là do sự \textit{phân tầng tỉ trọng, stratification en densité}.\\
+
+\noindent{\textbf{Sự bảo toàn thành phần vi lượng}}
+
+Chúng ta luôn luôn phải tính đến sự tồn tại của hơi nước trong không khí và muối trong nước biển. Chúng ta gọi \textit{tỉ lệ trộn} là tỉ số sau đây :
+\begin{equation}
+	\begin{aligned}
+		r_i = \frac{\rho_i}{\rho_0}
+	\end{aligned}
+\end{equation}
+Trong đó $\rho_0$ là khối lượng riêng của nước hoặc không khí tinh khiết. Do đó sự bảo toàn các thành phần vi lượng cho ta :
+\begin{equation}
+	\begin{aligned}
+		\frac{Dr_i}{Dt} = S_i + \nabla k_i \nabla r_i
+	\end{aligned}
+\end{equation}
+Trong đó vế phải phải chứa số hạng giếng/nguồn và một số hạng đối lưu.
+\section{Bảo toàn năng lượng}
+
+Chúng ta sẽ kí hiệu $e$ là nội năng riêng của lưu chất. Đối với không khí khô, ta đơn giản có $e \simeq C_vT$ (với $C_v = 717  \unit{\joule\per\kilogram\per\kelvin}$), đối với không khí ẩm, biểu thức của $e$ phải tính đến tác động của độ ẩm. Đối với không khí ở biển, ta có $e \simeq C_lT$ (với $C_v = 4180  \unit{\joule\per\kilogram\per\kelvin}$).
+
+Do đó phương trình nội năng thể hiện nguyên lý một nhiệt động lực học : đối với một hạt lưu chất chuyển động, sự thay đổi trong nội năng là tổng của công của lực áp suất và sự trao đổi nhiệt :
+\begin{equation}
+	\begin{aligned}
+		\frac{De}{Dt} = -\frac{p}{\rho}\nabla \cdot \textbf{U} + F_e
+	\end{aligned}
+\end{equation}
+Trong đó lượng nhiệt trao đổi trên đơn vị khối lượng $F_e$ phải tính đến lực nhớt $\textbf{T} : \textbf{U}$ và divergence của thông lượng Snhiệt $\textbf{Q}$, và divergence của thông lượng bức xạ : 
+\begin{equation}
+	\begin{aligned}
+		F_e = \frac{1}{\rho} (\textbf{T} : \textbf{U} - \nabla \cdot \textbf{Q} - \nabla \cdot \textbf{R}).
+	\end{aligned}
+\end{equation}
+
+Hai số hạng đầu tiên là không đáng kể đối với số hạng thứ ba. Các hiện tượng đoạn nhiệt, như là sự toả nhiệt qua sự ngưng tụ của mây, có thể được xem xét (xem chương 7).
+
+Sử dụng phương trình (2.3), chúng ta biến đổi phương trình nội năng thành :
+\begin{equation}
+	\begin{aligned}
+		\frac{De}{Dt} =  - p \frac{D\frac{1}{\rho}}{Dt}+F_e.
+	\end{aligned}
+\end{equation}
+
+Sử dụng đại lượng entropy riêng $s$ của lưu chất, chúng ta có hệ thức cơ bản $Tds = de +pd\Big(  \frac{1}{\rho} \Big)$, hệ thức (2.6) trở thành :
+\begin{equation}
+	\begin{aligned}
+		\frac{Ds}{Dt} =  \frac{F_e}{T}.
+	\end{aligned}
+\end{equation}
+
+Do đó, nếu không có các nguồn nhiệt và các nguồn suy hao do lực nhớt (giả thiết đoạn nhiệt), entropy riêng của một hạt được bảo toàn trong quá trình chuyển động.
+
+Đối với các ứng dụng thực tế, chúng tôi thích sử dụng một khái niệm liên quan, nhưng cụ thể hơn, đó là \textit{thế nhiệt độ}. Nó được định nghĩa như là nhiệt độ đạt được của một phần tử lưu chất khi mà nó được vận chuyển đến một vị trí, thông qua một phép dịch chuyển đoạn nhiệt, với áp suất tham chiếu $p_0 = 1000\text{ } \unit{\hecto\pascal}$ (ở lân cận áp suất mặt biển). Đối với một khí lý tưởng, chúng ta tính đến mối quan hệ :
+\begin{equation}
+	\begin{aligned}
+		s = Cp\ln T - R\ln p + cte,
+	\end{aligned}
+\end{equation}
+Do đó, chúng ta tìm được quan hệ :
+\begin{equation}
+	\begin{aligned}
+		\theta = T \Big( \frac{p}{p_0} \Big)^{-\frac{R}{C_p}}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		s = C_p\ln\theta + cte.
+	\end{aligned}
+\end{equation}
+\section{Phương trình trạng thái của lưu chất}
+Đối với không khí, chúng ta sẽ giả sử là khí lý tưởng :
+\begin{equation}
+	\begin{aligned}
+		p = \rho RT.
+	\end{aligned}
+\end{equation}
+giả thiết này là hợp lý trong gần đúng thứ nhất trong đó chúng ta bỏ qua hiệu ứng của áp suất không khí. Đối với hỗn hợp không khí và hơi nước, chúng ta cần tính đến tỉ lệ trộn của hơi nước trong không khí.
+
+Đối với đại dương, chúng ta sẽ giả thiết là nó không nén được, tỷ trọng phụ thuộc vào nhiệt độ $T$ và độ mặn $r_s$. Ở các độ sâu không lớn, chúng ta có dạng tuyến tính :
+\begin{equation}
+	\begin{aligned}
+		\rho = \rho_0 \Big( 1- A(T-T_0) +B(r_s - r_{s0})\Big)
+	\end{aligned}
+\end{equation}
+trong đó $\rho_0 = 1028 \si{\kilogram\per\cubic\meter}$, $T_0 = 283 \si{\kelvin}$, $r_{s0} = 35 \si{\gram\per\kilogram}$, $A = 1.7 \cdot 10^{-4} \si{\per\kelvin}$ (hệ số giản đẳng nhiệt) và $B = 7.6\cdot 10^{-4} \si{\per\gram\per\kilogram}$ (hệ số rút gọn của muối).
+
+Trong toàn bộ tác phẩm, chúng ta sẽ bỏ qua tác động của hơi nước trong không khí và của muối trong đại dương. Do đó chúng ta có thể xử lý đồng thời hai chất lưu với một phương trình trạng thái tổng quát hơn. Tất cả các hàm nhiệt động có thể được xét như là hàm cho trước của biến entropie và áp suất. Chúng ta có thể thấy ở bên trên rằng khối lượng riêng phụ thuộc vào entropy (do xấp xỉ Boussinesq), một phép khai triển Taylor cho ta :\\
+\begin{equation}
+	\begin{aligned}
+		\rho  \simeq {\rho _r} + {\left. {\frac{{\partial \rho }}{{\partial s}}} \right|_p}\left( {{\rho _r},{s_r}} \right)\left( {s - {s_r}} \right)
+	\end{aligned}
+\end{equation}
+trong đó chúng ta bỏ qua sự dao động trong áp suất. Chúng ta có thể tính tường minh cho không khí :
+\begin{equation}
+	\begin{aligned}
+		{\left. {\frac{{\partial \rho }}{{\partial s}}} \right|_p} =  - \frac{{{\rho _r}}}{{{C_p}}}
+	\end{aligned}
+\end{equation}
+Đối với đại dương, chúng ta có :
+\begin{equation}
+	\begin{aligned}
+		{\left. {\frac{{\partial \rho }}{{\partial s}}} \right|_p} =  - \frac{{{\rho _r}AT}}{{{C_l}}}
+	\end{aligned}
+\end{equation}
+
+\section{Bảo toàn đại lượng chuyển động}
+\subsection{Hệ tọa độ tuyệt đối}
+Trong hệ quy chiếu tuyệt đối, chúng ta gọi $\textbf{U}_a$ là vận tốc trong hệ tọa độ này. Lực thể tích duy nhất là trọng lực. Phương trình chuyển động của lưu chất :
+\begin{equation}
+	\begin{aligned}
+		{\left( {\frac{D}{{Dt}}} \right)_a}{\textbf{U}_a} =  - \nabla {\Phi _a} - \frac{1}{\rho }\nabla p + \textbf{F}
+	\end{aligned}
+\end{equation}
+trong đó $\Phi_a$ là thế trọng trường, $p$ là áp suất, và $\textbf{F}$ là lực nhớt, chúng ta sẽ biểu diển như sau :
+\begin{equation}
+	\begin{aligned}
+		\textbf{F} = \frac{1}{\rho }\nabla  \cdot \Big( {2\mu \left( {\nabla \textbf{U} + {}^t\nabla \textbf{U}} \right)} \Big)
+	\end{aligned}
+\end{equation}
+
+Nếu chúng ta giả thiết lực nhớt là có thể bỏ qua (trừ tại gần các vật cản). Chúng ta có thể áp dụng giả thiết lưu chất lý tưởng $\textbf{T} = 0$.
+\subsection{Hệ quy chiếu gắn với hành tinh}
+Việc sử dụng hệ quy chiếu tuyệt đối đôi khi là không hợp lý, do đó chúng ta sử dụng một hệ quy chiếu thực tế và hữu dụng hơn, đó là hệ quy chiếu gắn với hành tinh (ta gọi tắt là hệ quy chiếu hành tinh, hqcht), do đó nó xoay với vận tốc góc $\Omega$, với chuẩn $\Abs{\Omega}=2\pi/\qty{86164}{\second} = \qty{7.29e-5}{\per\second}$, được định hướng theo trục cực $\bf K$. Phép biến đổi hệ tọa độ được thực hiện qua hệ thức :
+\begin{equation}\label{CHANGE_ROF}
+	\begin{aligned}
+		{\left( {\frac{D}{{Dt}}} \right)_a} = \frac{D}{{Dt}} + \Omega  \wedge
+	\end{aligned}
+\end{equation}
+
+Khi áp dụng hệ thức (\ref{CHANGE_ROF}), nó trở thành :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
