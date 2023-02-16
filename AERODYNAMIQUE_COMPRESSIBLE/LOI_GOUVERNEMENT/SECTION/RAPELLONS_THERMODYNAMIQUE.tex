@@ -1,11 +1,14 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
 Xét miền $\Omega$ có biên $\partial\Omega$ là đủ chính quy được lấp đầy bởi một lưu chất nén được.
 \subsection{Cân bằng năng lượng tổng quát}
     Nguyên lý thứ nhất của nhiệt động lực học phát biểu rằng, năng lượng của lưu chất được bảo toàn. Năng lượng của lưu chất bao gồm nội năng và động năng, mà khi xem xét sự biến đổi, phải bằng tổng lượng nhiệt và lượng công mà lưu chất trao đổi (cho và nhận), như vậy nếu kí hiệu $e$ là nội năng riêng của lưu chất, phương trình cân bằng năng lượng được viết:
         \[
             \dfrac{D}{Dt}\iiint_\mathscr{V}\rho\left(e+\dfrac{\underline{u}^2}{2}\right)d\tau=\dot{W}+\dot{Q}.
-        \]
+            \]
     Nhiệt mà lưu chất trao đổi bao gồm lượng nhiệt mà bản thân lưu chất sinh ra và không có nguồn gốc cơ học vĩ mô, chẳng hạn khi có sự xuất hiện của một phản ứng hóa học và thông qua sự truyền nhiệt với môi trường bên ngoài. Công mà lưu chất trao đổi bao gồm công do các tác động cơ ngoại sinh ra và công do chính các tác động cơ nội bên trong lưu chất. Do đó, nếu gọi $q$ là tốc độ sinh nhiệt riêng của lưu chất và $\underline{j}_{th}$ là vecteur mật độ dòng nhiệt (theo quy ước, luôn luôn hướng ra khỏi $\Omega$), sự trao đổi nhiệt có thể được viết:
-        \[
+    \[
             \begin{aligned}
                 \dot{Q}&=\iiint_\mathscr{V}\rho qd\tau+\oiint_\mathscr{S} -\underline{j}_{th}d\underline{S},\\
                 \dot{W}&=\iiint_\mathscr{V}\underline{\underline{\sigma}}:\underline{\underline{D}}d\tau+\iiint_\mathscr{V}\rho \underline{g}\cdot\underline{u}d\tau
@@ -27,23 +30,24 @@ Xét miền $\Omega$ có biên $\partial\Omega$ là đủ chính quy được l�
     Bây giờ ta áp dụng các khái niệm đã biết của nguyên lý thứ hai nhiệt động lực học cho khối lưu chất. Nếu gọi $s$ là entropy riêng của lưu chất, thế thì entropy của toàn bộ khối lưu chất được viết 
         \[
             S=\iiint_\mathscr{V}\rho sd\tau.
-        \]
-    Entropy liên hệ trực tiếp đến thông tin của hệ thống, do đó nó không thể bị phá hủy, điều đó chứng tỏ phải có sự cân bằng entropy. Sự biến thiên entropy của lưu chất có thể do sự cung cấp của môi trường bên ngoài và sự biến đổi của tự bản thân lưu chất, nếu gọi $\underline{\Phi}_S$ là vecteur thông lượng entropy sinh ra do tương tác với môi trường bên ngoài (được quy ước hướng ra ngoài $\Omega$) và $q_s$ là tốc độ sinh ra entropy riêng bên trong bản thân lưu chất, ta có:
-        \[
-            \Delta S=\iiint_\mathscr{V}\rho q_sd\tau+\oiint_\mathscr{S}-\underline{\Phi}_Sd\underline{S}.
-        \]
+            \]
+            Entropy liên hệ trực tiếp đến thông tin của hệ thống, do đó nó không thể bị phá hủy, điều đó chứng tỏ phải có sự cân bằng entropy. Sự biến thiên entropy của lưu chất có thể do sự cung cấp của môi trường bên ngoài và sự biến đổi của tự bản thân lưu chất, nếu gọi $\underline{\Phi}_S$ là vecteur thông lượng entropy sinh ra do tương tác với môi trường bên ngoài (được quy ước hướng ra ngoài $\Omega$) và $q_s$ là tốc độ sinh ra entropy riêng bên trong bản thân lưu chất, ta có:
+            \[
+                \Delta S=\iiint_\mathscr{V}\rho q_sd\tau+\oiint_\mathscr{S}-\underline{\Phi}_Sd\underline{S}.
+                \]
     Như vậy entropy nội sinh của lưu chất được tính :
-        \begin{align}
-            S_{\text{ns}}=\dot{S}-\Delta S=\dfrac{D}{Dt}\iiint_\mathscr{V} \rho sd\tau-\iiint_\mathscr{V}\rho q_sd\tau+\oiint_\mathscr{S}\underline{\Phi}_Sd\underline{S}.
+    \begin{align}
+        S_{\text{ns}}=\dot{S}-\Delta S=\dfrac{D}{Dt}\iiint_\mathscr{V} \rho sd\tau-\iiint_\mathscr{V}\rho q_sd\tau+\oiint_\mathscr{S}\underline{\Phi}_Sd\underline{S}.
         \end{align}
-    Theo nguyên lý thứ hai nhiệt động lực học, $S_{\text{ns}}\ge0$, do đó khi sử dụng định lý Gauss-Odtrogradsky, ta có bất đẳng thức entropy cục bộ:
+        Theo nguyên lý thứ hai nhiệt động lực học, $S_{\text{ns}}\ge0$, do đó khi sử dụng định lý Gauss-Odtrogradsky, ta có bất đẳng thức entropy cục bộ:
         \begin{align}
             \dfrac{D}{Dt}(\rho s)-\rho q_s+\underline{\nabla}\cdot\underline{\Phi}_S\ge 0.
         \end{align}
     Sử dụng các mật độ trao đổi nhiệt trong phần trên, ta có:
-        \begin{align}
-            \boxed{
-                \dfrac{D(\rho s)}{Dt} - \rho\dfrac{q}{T} + \underline{\nabla}\cdot\left(\dfrac{\underline{j}_{th}}{T}\right)\ge 0
+    \begin{align}
+        \boxed{
+            \dfrac{D(\rho s)}{Dt} - \rho\dfrac{q}{T} + \underline{\nabla}\cdot\left(\dfrac{\underline{j}_{th}}{T}\right)\ge 0
             }.
         \end{align}
     Đây là một bất đẳng thức quan trọng và được gọi là \bi{bất đẳng thức Claussius-Duhem}, bởi vì, mọi hành vi của lưu chất mà không thỏa mãn bất đẳng thức này đều không được phép xảy ra.
+\end{document}

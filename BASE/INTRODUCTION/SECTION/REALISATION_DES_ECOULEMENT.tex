@@ -1,0 +1,41 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
+    Sau khi đã đề cập đến hai hình thức luận để mô tả sự chuyển động của lưu chất, ta sẽ tiến hành mô tả các hệ đường cong liên kết với các vận tốc đã được mô tả. Mục tiêu của chúng ta là sẽ hình ảnh hóa các vận tốc cho.
+	\subsubsection{Quỹ đạo hạt}
+		Đúng như tên gọi của nó, sự mô tả hạt bằng quỹ đạo hạt là một cách mô tả trong hình thức luận Lagrange. Theo đó, quỹ đạo của mỗi hạt mà trong hình thái $\kappa_0$ nó có vị trí $\underline{X}$ sẽ được mô tả bởi:
+			\begin{align}
+				\underline{x}=\underline{\phi}\left(\underline{X},t\right).
+			\end{align}
+	\subsubsection{Đường dòng}
+		Hình dạng của trường, như mọi khi, vẫn được thể hiện thông qua các đường sức trường. Như vậy, ở một thời điểm $t_1$ nào đó cố định, các đường dòng sẽ thể hiện trong hình thức luận Euler các sức trường. Chúng là các đường tiếp tuyến với trường vận tốc. Khi đó, gọi $\underline{dx}$ là vecteur độ dời vô cùng bé dọc theo đường dòng, ta có:
+			\begin{align}
+				\underline{dx}\wedge\underline{u}\left(\underline{x},t_1\right)=\underline{0}.
+			\end{align}
+	\subsubsection{Đường phát xạ - tiếp cận thực nghiệm}
+		Khi muốn nghiên cứu chuyển động của một lưu chất, lý tưởng nhất là ta có thể đánh dấu từng hạt để nghiên cứu quỹ đạo của nó hoặc hiện thực hóa các đường dòng của nó ở một thời điểm nào đó. Tuy nhiên điều này là không khả thi, đặc biệt là khi nghiên cứu chuyển động của lưu chất quanh một cố thể.
+		
+		Để có thể giải quyết được vấn đề này, ta sẽ dùng đến chất đánh dấu. Tại những điểm riêng biệt của lưu chất, ta thêm vào một ít chất đánh dấu để chúng được lưu chất kéo theo (lưu ý là càng ít làm nhiễu loạn dòng lưu chất càng tốt). Như vậy, tại một điểm cố định trong không gian ở một thời điểm cho trước, tất cả các hạt đi qua điểm này đều được đánh dấu và theo dõi. Quỹ đạo được chất đánh dấu vạch ra được gọi là \bi{đường phát xạ}. Do đó:
+			\begin{quotation}
+				\noindent{\emph{Các đường phát xạ ở thời điểm $t_1$ nào đó là tập hợp các điểm trong không gian bị các hạt lưu chất chiếm mà trước đây các hạt này cùng đi qua một điểm $M_0$ nào đó đã biết.}}
+			\end{quotation}
+		Nếu ở thời điểm $t'$ nào đó ($t_0\le t'\le t_1$), có một hạt lưu chất đi qua điểm $M_0$ (với $\underline{X}_0=\underline{OM_0}$), thì phương trình quỹ đạo của hạt này thỏa:
+			\begin{align}
+				\underline{X}_0=\underline{\phi}\left(\underline{X},t'\right),
+			\end{align}
+trong đó $\underline{X}$ là vị trí ban đầu của hạt lưu chất này mà nó được tính bởi:
+			\begin{align}
+				\underline{X}=\underline{\phi}^{-1}\left(\underline{X}_0,t'\right).
+			\end{align}
+Ở thời điểm $t_1$, vị trí của hạt này được tính bởi:
+			\begin{align}
+				\underline{x}=\underline{\phi}\left(\underline{\phi}^{-1}\left(\underline{X}_0,t'\right),t_1\right)
+			\end{align}
+		Do đó đường phát xạ là tập hợp các đường cong có phương trình:
+			\begin{align}\label{eq:Equation_line_demission}
+				\boxed{\underline{x}=\underline{\phi}\left(\underline{\phi}^{-1}\left(\underline{X}_0,t'\right),t_1\right)\quad(t_0\le t'\le t_1)}.
+			\end{align}
+		\begin{description}
+			\item[Chú ý:] Trong công thức (\ref{eq:Equation_line_demission}), chúng ta đã sử dụng định nghĩa hàm nghịch đảo của quỹ đạo $\underline{\phi}$. Điều này ngụ ý rằng $\underline{\phi}$ phải là song ánh và ta đã làm rõ điều này trong phần đề cập về giả thiết liên tục [.......]. Điều này một lần nữa nhấn mạnh lại khuôn khổ môi trường liên tục của chúng ta.
+		\end{description}
+\end{document}

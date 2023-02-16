@@ -1,6 +1,7 @@
 %================================================Page layout setting=================================================
 \usepackage[paperwidth=19cm,paperheight=27cm,inner=1.8cm,outer=1.8cm,top=2cm,bottom=2cm,heightrounded=true]{geometry}
 \usepackage{pifont,framed,enumitem,enumerate,scrextend,indentfirst,titlesec,subfiles}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
 \usepackage[hidelinks]{hyperref}
 \usepackage[atend]{bookmark}
 \usepackage[labelfont=bf]{caption}
@@ -14,9 +15,15 @@
 
 %=============================================Scientific typeset setting=============================================
 \usepackage{amsfonts,amsthm,amsmath,mathtools,amssymb,mathrsfs,bbm,esint,stmaryrd}
+\usepackage[scr=boondox,cal=esstix]{mathalpha}
 \usepackage{physics,siunitx}
 
+\usepackage{tikz,graphicx}
+
+
+
 \changefontsizes{13pt}
+\setcounter{secnumdepth}{4}
 
 %==========================================Reduced formulas used frequently==========================================
 \newcommand{\bi}[1]{\emph{\textbf{#1}}}
@@ -36,3 +43,4 @@
 \newtheorem{theoreme}{Định lý}[chapter]
 \theoremstyle{bfnote}
 \newtheorem{desmonstration}{Chứng minh}[chapter]
+

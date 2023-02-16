@@ -1,0 +1,37 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
+	Xét một hệ lưu chất trong hình thái hiện tại $\kappa_t$. Việc thu thập "toàn bộ"\footnote{Toàn bộ ở đây là một con số khổng lồ nếu không muốn nói là không thể trong thực tế. Khi sử dụng từ này, chúng tôi muốn nhấn mạnh đến khả năng về mặt lý thuyết và qua đó sử dụng tư duy phổ quát cho sự nghiên cứu.} thông tin về các đại lượng cơ học của hệ trong thời điểm $t$ ở mỗi điểm $\underline{x}$ trong không gian sẽ tương ứng với cách mô tả Euler.
+	
+	Theo cách tiếp cận này, ta không phân biệt từng hạt lưu chất với nhau mà chuyển trọng tâm chú ý sang các điểm trong không gian mà các điểm này là cố định, hiển nhiên là độc lập với thời gian. Lúc này ta không thể tìm được quỹ đạo của các hạt vì ta không còn phân biệt được các hạt lưu chất nữa và các đại lượng liên kết lúc này không còn gắn với duy nhất một hạt lưu chất nữa mà sẽ gắn với điểm đang xét. Do đó để mô tả lưu chất trong hình thức luận Euler, ta sẽ đưa vào một công cụ toán học quan trọng là \bi{trường vecteur} (hoặc là các trường tenseur, hoặc bất kỳ cấu trúc đại số nào đó gắn với từng điểm của không gian).
+
+	Trước khi hình thức hóa hình thức luận Euler, ta sẽ đi vào khái niệm trường vecteur.
+\subsubsection{Trường vecteur}
+	Trường vecteur được định nghĩa sau đây sẽ hoàn toàn toán học và mang một chủ nghĩa hình thức nặng nề, tuy nhiên, quý độc giả sẽ dần dà nhận ra được tác dụng của chúng. Ta định nghĩa:
+		\begin{quotation}
+			\noindent{\emph{Cho một tập hợp $\mathscr{E}$ được gọi là không gian nền. Một trường vecteur là không gian vecteur $E$ đẳng cấu với $\mathbb{R}^3$ sao cho tồn tại một ánh xạ $\mathscr{V}$ được định nghĩa như sau:
+				\[
+		            \begin{aligned}
+                        \mathscr{V}\colon\mathscr{E}&\longrightarrow E\\
+                                            P&\longmapsto\mathcal{V}(P)
+                    \end{aligned}
+                \]
+				Ta gọi ánh xạ $\mathscr{V}$ là \textbf{ánh xạ vecteur liên kết} và $\mathscr{V}(P)$ là một vecteur. Một trường vecteur như thế là một cặp $(\mathscr{E},E)$.}}
+		\end{quotation}
+	Trong trường hợp không sợ hiểu lầm, ta có thể bỏ qua kí hiệu tập nền $\mathscr{E}$ và kí hiệu trường vecteur bởi $E$.	
+	\begin{description}
+		\item[Nhận xét 1:] Nói cho đơn giản, một trường vecteur là một   không gian vecteur mà mỗi vecteur được liên kết với một điểm của không gian nền. Ở đây, vecteur có và phải luôn luôn có một điểm đặt xác định.
+		\item[Nhận xét 2:] Định nghĩa này có thể được mở rộng ra cho một trường tenseur hoặc một trường vô hướng nào đó bất kỳ (bằng cách thay đổi định nghĩa của không gian vecteur $E$).
+	\end{description}
+\subsubsection{Vận tốc trong hình thức luận Euler}
+	Như đã đề cập, ta có thể định nghĩa trường vận tốc tại mọi điểm của không gian trong hình thái $\kappa_t$ bởi:
+		\begin{align}
+			\underline{u}=\underline{u}(\underline{x},t).
+		\end{align}
+trong đó không có bất kỳ liên hệ nào giữa $\underline{x}$ và $t$.
+
+	Ta có thể nhận thấy rằng, việc chồng chất các mô tả Euler ở vô hạn các thời điểm rất gần nhau $t$ và $t+dt$ liên tiếp, ta sẽ thu được hình ảnh của sự mô tả Lagrange.
+		% \begin{description}
+		% 	\item[Chú ý (về mặt kí hiệu):] Trong kí hiệu nàyu
+		% \end{description}
+\end{document}

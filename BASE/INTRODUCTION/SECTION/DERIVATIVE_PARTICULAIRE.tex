@@ -1,0 +1,114 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
+	Sau khi đã nêu ra sự khó khăn của việc khảo sát các đại lượng vật lý bằng hình thức luận Euler, ta thấy được điều ngược lại xảy ra đối với hình thức luận Lagrange. Tuy nhiên, hình thức luận Lagragne lại rất khó triển khai trong thực tế. Do đó bây giờ ta sẽ liên kết hai hình thức luận này lại với nhau để khảo sát sự biến thiên theo thời gian của đại lượng vật lý $\mathscr{B}$.
+
+	Đầu tiên, ta sẽ cố định tại một vị trí $\underline{x}$ trong không gian và thực hiện đo đại lượng vật lý này ở thời điểm $t$, thu được:
+		\begin{align}
+			\mathscr{B}=\mathscr{b}\left(\underline{x},t\right)
+		\end{align}
+	Ta hãy tưởng tượng có một người khác đang đi theo hạt lưu chất nào đó mà ở thời điểm $t$, hạt lưu chất và cả người này đến tại vị trí $\underline{x}$. Người này đo được giá trị:
+		\begin{align}
+			\mathscr{B}=\mathscr{B}\left(\underline{X},t\right).
+		\end{align}
+	Ở thời điểm gặp nhau, hai người đồng ý với nhau rằng họ cùng đo được một giá trị cho đại lượng $\mathscr{B}$. Sau đó họ đi xa khỏi nhau,. Sau một khoảng thời gian vô cùng nhỏ $\delta t$, người trên hạt lưu chất sẽ dời đi một lượng $\underline{u}\left(\underline{x},t\right)\delta t$. Như vậy, người này đo được giá trị là:
+		\begin{align}
+			\mathscr{B}=\mathscr{B}\left(\underline{X},t+\delta t\right).
+		\end{align}
+	Ở vị trí mới này, giá trị đại lượng này được một người cố định ở đó đo được:
+		\begin{align}
+			\mathscr{B}=\mathscr{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right).
+		\end{align}
+	Sự biến thiên của đại lượng này theo thời gian sẽ được tính bởi:
+		\begin{align}\label{eq:Derivative_particulaire_def}
+			\boxed{\dfrac{D\mathscr{B}}{Dt}=\lim\limits_{\delta t\rightarrow 0}\dfrac{1}{\delta t}\left(\mathscr{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)-\mathscr{b}\left(\underline{x},t\right)\right)}.
+		\end{align}
+	\subsubsection{Tính toán cho đại lượng điểm}
+		Đại lượng điểm, tức là các đại lượng xác định tại mỗi điểm trong không gian. Nói cách khác, đó chính là các trường, bao gồm các trường vô hướng, vecteur và tenseur. Bây giờ triển khai định nghĩa (\ref{eq:Derivative_particulaire_def}), ta có:
+			\[
+				\begin{aligned}
+					\dfrac{D\mathscr{B}}{Dt}&=\lim\limits _{\delta t\rightarrow0}\dfrac{1}{\delta t}\left(\mathscr{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)-\mathscr{b}\left(\underline{x},t\right)\right)\\
+					&=\lim\limits_{\delta t\rightarrow0}\dfrac{1}{\delta t}\left[\left(\mathscr{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)-\mathscr{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t\right)\right)\right.\\
+					&\qquad\qquad\quad\left.+\left(\mathscr{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t\right)-\mathscr{b}\left(\underline{x},t\right)\right)\right]\\
+					&=\lim\limits _{\delta t\rightarrow0}\dfrac{\partial\mathscr{b}}{\partial t}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t\right)+\dfrac{\partial\mathscr{b}}{\partial\underline{x}}\left(\underline{x},t\right)\cdot\underline{u}\left(\underline{x},t\right)\\
+					&=\dfrac{\partial\mathscr{b}}{\partial t}\left(\underline{x},t\right)+\underline{\nabla}\mathscr{b}\left(\underline{x},t\right)\cdot\underline{u}\left(\underline{x},t\right)
+				\end{aligned}
+			\]
+
+		Đối với đại lượng vô hướng, phép đạo hàm này được diển giải thành:
+			\begin{align}
+				\boxed{\dfrac{D\mathscr{B}}{Dt}=\dfrac{\partial\mathscr{b}}{\partial t}\left(\underline{x},t\right)+\underline{\nabla\mathscr{b}}\left(\underline{x},t\right)\cdot\underline{u}\left(\underline{x},t\right)},
+			\end{align}
+		trong đó ta đã đưa kí hiệu $\mathscr{b}$ vào bên trong dấu vecteur thành $\underline{\nabla\mathscr{b}}$ để nhấn mạnh rằng gphép lấy gradient cho ta một vecteur.
+
+		Đối với một đại lượng vecteur, phép đạo hàm này được diển giải thành:
+			\begin{align}
+				\boxed{\dfrac{D\underline{\mathscr{B}}}{Dt}=\dfrac{\partial\underline{\mathscr{b}}}{\partial t}\left(\underline{x},t\right)+\underline{\underline{\nabla\cdot\mathscr{b}}}\left(\underline{x},t\right)\cdot\underline{u}\left(\underline{x},t\right)},
+			\end{align}
+		trong đó ta đã đưa kí hiệu $\mathscr{b}$ vào bên trong dấu tenseur  hạng hai để nhấn mạnh rằng phép lấy gradient cho ta một tenseur hạng hai.
+
+		Đối với một đại lượng tenseur hạng hai, phép đạo hàm này được diển giải thành:
+			\begin{align}
+				\boxed{\dfrac{D\underline{\underline{\mathscr{B}}}}{Dt}=\dfrac{\partial\underline{\underline{\mathscr{b}}}}{\partial t}\left(\underline{x},t\right)+\underline{\underline{\underline{\nabla\cdot\mathscr{b}}}}\left(\underline{x},t\right)\cdot\underline{u}\left(\underline{x},t\right)},
+			\end{align}
+		trong đó ta đã đưa kí hiệu $\mathscr{b}$ vào bên trong dấu tenseur  hạng ba để nhấn mạnh rằng phép lấy gradient cho ta một tenseur hạng ba.
+	\subsubsection{Tính toán cho đại lượng thể tích}
+		Đối với một đại lượng thể tích, người ta sẽ quan tâm đến mật độ thể tích của đại lượng này, $\mathcal{b}\left(\underline{x},t\right)$. Với sự hỗ trợ của phép tính tích phân ba lớp, ta có:
+			\begin{align}\label{eq:Quantite_Volumique_def}
+				\mathscr{B}=\iiint_{\mathscr{V}}\mathcal{b}\left(\underline{x},t\right)d\tau.
+			\end{align}
+		trong đó $d\tau$ là thể tích vi mô của thể tích $\mathscr{V}$. Để giải quyết phép đạo hàm hạt của thể tích này, chúng ta sẽ đưa vào hai khái niệm quan trọng sau:
+		\begin{itemize}
+			\item Thể tích kiểm soát: đây là một thể tích mà nó được giới hạn bởi một bề mặt sao cho thể tích này cố định trong hệ quy chiếu nghiên cứu. Đây là một thể tích được liên kết với hình thức luận Euler.
+			\item Thể tích vật chất: đây là một thể tích mà nó được giới hạn bởi một \bi{mặt vật chất}, có nghĩa là một bề mặt được tạo ra bởi sự sắp xếp của các hạt lưu chất trên đó\footnote{Ta đã đề cập đến các tính chất của nó trong phần giả thiết liên tục theo hình thức luận Lagrange.}. Đây là một thể tích được liên kết với hình thức luận Lagrange.
+		\end{itemize}
+
+		Hiển nhiên, đối với một thể tích kiểm soát thì có các hạt lưu chất đi vào và đi ra nó, còn thể tích vật chất bị vận chuyển đi cùng với lưu chất. Điều này chứng tỏ không có hạt vật chất nào vận chuyển vào hoặc vận chuyển ra khỏi thể tích vật chất.
+		
+		Bây giờ ta sẽ thực hiện đạo hàm tích phân (\ref{eq:Quantite_Volumique_def}). Đương nhiên là thể tích $\mathscr{V}$ được khảo sát phải là thể tích vật chất, nó bị kéo đi trong lưu chất và ta sẽ liên kết nó với các thể tích kiểm soát tại từng vị trí mà nó đi qua. Do đó:
+			\[
+				\begin{aligned}
+					\dfrac{D\mathscr{B}}{Dt}&=\lim\limits_{\delta t\rightarrow0}\dfrac{1}{\delta t}\left(\iiint_{\mathscr{V}\left(t+\delta t\right)}\mathcal{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)d\tau-\iiint_{\mathscr{V}\left(t\right)}\mathcal{b}\left(\underline{x},t\right)d\tau\right)\\
+				\end{aligned}
+			\]
+		Khi sử dụng đến các thể tích được mô tả trong Hình.~\ref{fig:Derivative_Particulaire_Volumique}, hai số hạng trong ngoặc được biến đổi thành:
+			\[
+				\begin{aligned}
+					&\iiint_{\mathscr{V}^p}\mathcal{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)d\tau+\iiint_{\mathscr{V}^+}\mathcal{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)d\tau\\
+					&\qquad-\iiint_{\mathscr{V}^p}\mathcal{b}\left(\underline{x},t\right)d\tau-\iiint_{\mathscr{V}^-}\mathcal{b}\left(\underline{x},t\right)d\tau\\
+					&=\iiint_{\mathscr{V}^p}\left(\mathcal{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)-\mathcal{b}\left(\underline{x},t\right)\right)d\tau\\
+					&\qquad+\iiint_{\mathscr{V}^+}\mathcal{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)d\tau-\iiint_{\mathscr{V}^-}\mathcal{b}\left(\underline{x},t\right)d\tau
+				\end{aligned}
+			\]
+		Vì thể tích $\mathscr{V}^p$ là một thể tích "cố định" tức thời ở thời điểm đang xét, các điểm được tính tích phân sẽ không ra khỏi thể tích này, ta sẽ kí hiệu đơn giản các điểm trong thể tích bởi đơn giản một vecteur vị trí $\underline{x}$ và do đó:
+			\[
+				\begin{aligned}
+					\iiint_{\mathscr{V}^p}\left(\mathcal{b}\left(\underline{x},t+\delta t\right)-\mathcal{b}\left(\underline{x},t\right)\right)d\tau=\delta t\iiint_{\mathscr{V}^p}\dfrac{\partial\mathcal{b}}{\partial t}\left(\underline{x},t\right)d\tau\\
+				\end{aligned}
+			\]
+		Tích phân trên hai thể tích $\mathscr{V}^{\pm}$ được tính dựa vào sự vận chuyển của thể tích $\mathscr{V}$, sau đó dựa vào phần tử diện tích :
+			\[
+				\begin{aligned}
+					&\iiint_{\mathscr{V}^+}\mathcal{b}\left(\underline{x}+\underline{u}\left(\underline{x},t\right)\delta t,t+\delta t\right)d\tau-\iiint_{\mathscr{V}^-}\mathcal{b}\left(\underline{x},t\right)d\tau=\\
+					&=\delta t\iint_{\partial\mathscr{V}^p}\mathcal{b}\left(\underline{x},t\right)\underline{u}\left(\underline{x},t\right)\cdot d\underline{S}-\delta t\iint_{\partial\mathscr{V}^p}\mathcal{b}\left(\underline{x},t\right)\underline{u}\left(\underline{x},t\right)\cdot d\underline{S}\\
+					&=\delta t\oiint_{\partial\mathscr{V}^p}\mathcal{b}\left(\underline{x},t\right)\underline{u}\left(\underline{x},t\right)\cdot d\underline{S}
+				\end{aligned}
+			\]
+		Như vậy, đạo hàm hạt của tích phân của đại lượng thể tích được tính:
+			\begin{align}
+				\boxed{\dfrac{D\mathscr{B}}{Dt}=\iiint_{\mathscr{V}^p}\dfrac{\partial\mathcal{b}}{\partial t}\left(\underline{x},t\right)d\tau+\oiint_{\partial\mathscr{V}^p}\mathcal{b}\left(\underline{x},t\right)\underline{u}\left(\underline{x},t\right)\cdot d\underline{S}}.
+			\end{align}
+
+		Biểu thức này là tổng quát cho các đại lượng vô hướng, vecteur và tenseur hạng hai.
+		\subfile{../IMAGE/DERIVATIVE_PARTICULAIRE_VOLUMIQUE.tex}
+
+		Khi chỉ cần tính đến các tích phân thể tích, ta có thể viết dựa vào divergence của đại lượng:
+			% \begin{align}
+			% 	\dfrac{D\mathscr{B}}{Dt}=\iiint_{\mathscr{V}^p}\dfrac{\partial\mathcal{b}}{\partial t}\left(\underline{x},t\right)d\tau+\iiint_{\mathscr{V}^p}\mathcal{b}\left(\underline{x},t\right)\underline{u}\left(\underline{x},t\right)\cdot d\underline{S}\\
+
+			% \end{align}
+	\subsubsection{Tính toán cho đại lượng mặt}
+		Đối với đại lượng mặt, thực hiện phép đạo hàm tương tự như đối với trường hợp đại lượng thể tích, ta thu được công thức quan trọng sau:
+
+	\subsubsection{Tính toán cho đại lượng đường}
+\end{document}
