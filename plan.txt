@@ -1,7 +1,11 @@
 Partie 1 :
 Théorie fondamentale :
 	|---L’approche par MMC :
+		|---Objectivite.
 		|---Cinématique.
+			|---Lagrangien et Eulerien.
+			|---Derivative particulaire.
+			|---Deformation des fluides.
 		|---Dynamique.
 		|---Modélisation des forces.
 		|---Loi constitutive.
