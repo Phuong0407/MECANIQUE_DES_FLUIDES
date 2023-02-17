@@ -62,3 +62,16 @@
     }%
 }
 \makeatother
+
+%==================================================Bookmark setting==================================================
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\bookmarksetup{
+	numbered,
+	addtohook={%
+		\ifnum\bookmarkget{level}>1 %
+		\bookmarksetup{numbered=false}%
+		\fi
+	},
+}
