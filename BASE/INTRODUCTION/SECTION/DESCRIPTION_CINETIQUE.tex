@@ -121,10 +121,76 @@
 			\dot{\arc{d\Omega_t}}=\underline{\nabla}\cdot\underline{u}\left(\underline{x},t\right)d\Omega_t
 		\end{align}
 
-	Công thức này cho ta thấy vai trò của div của trường vận tốc, nó đại diện cho mức độ giản nở của lưu chất. Ta sẽ biểu diển lại vai trò này thông qua tóc độ biến đổi thể tích tương đối:
+	Công thức này cho ta thấy vai trò của dive của trường vận tốc, nó đại diện cho mức độ giản nở của lưu chất. Ta sẽ biểu diển lại vai trò này thông qua tóc độ biến đổi thể tích tương đối:
 	\begin{align}
 		\dfrac{\dot{\arc{d\Omega_t}}}{d\Omega_t}\left(\underline{x},t\right)=\underline{\nabla}\cdot\underline{u}\left(\underline{x},t\right)
 	\end{align}
 \subsection{Tốc độ xoay của lưu chất}
+	Lấy lại phép đạo hàm vật chất của một vecteur vật chất vô cùng nhỏ đã thực hiện bên trên:
+		\[
+			\dot{\arc{\underline{dx}}}=\underline{\underline{\nabla u}}\left(\underline{x},t\right)\cdot\underline{dx}
+		\]
+	Phân tích phép tính này, khi phân tích thành phần của $\underline{\underline{\nabla u}}$, ta thấy có tồn tại hai tenseur hạng hai đối xứng $\underline{\underline{d}}$ và phản đối xứng $\underline{\underline{\omega}}$ sao cho:
+		\begin{align}
+			\underline{\underline{\nabla u}}\left(\underline{x},t\right)=\underline{\underline{d}}\left(\underline{x},t\right)+\underline{\underline{\omega}}\left(\underline{x},t\right)
+		\end{align}
+	Ta gọi $\underline{\underline{d}}\left(\underline{x},t\right)$ là \bi{tenseur tốc độ biến dạng} và $\underline{\underline{\omega}}\left(\underline{x},t\right)$ là \bi{tenseur tốc độ xoay}. Hiển nhiên, vì là các thành phần đối xứng và phản đối xứng của trường vận tốc, định nghĩa của chúng như sau:
+			\begin{align}
+				\underline{\underline{d}}\left(\underline{x},t\right):=\dfrac{1}{2}\left(\underline{\underline{\nabla u}}\left(\underline{x},t\right)+{}^t\underline{\underline{\nabla u}}\left(\underline{x},t\right)\right)\\
+				\underline{\underline{\omega}}\left(\underline{x},t\right):=\dfrac{1}{2}\left(\underline{\underline{\nabla u}}\left(\underline{x},t\right)-{}^t\underline{\underline{\nabla u}}\left(\underline{x},t\right)\right)
+			\end{align}
 
+	Khi phân tích phép nhân tenseur rút gọn của tenseur phản đối xứng với vecteur vật chất vô cùng nhỏ, theo những gì phát triển trong đại số, ta thấy tồn tại một giả-vecteur $\underline{\omega}$ mà ta gọi là \bi{vecteur xoay}, sao cho:
+		\begin{align}\label{eq:Tenseur_rotation_def}
+			\underline{\underline{\omega}}\left(\underline{x},t\right)\cdot\underline{dx}=\underline{\omega}\left(\underline{x},t\right)\wedge\underline{dx}.
+		\end{align}
+	
+	
+	Kết hợp những điều này lại với nhau, ta thu được một công thức quan trọng về đạo hàm hạt một vecteur vật chất vô cùng nhỏ:
+		\begin{align}
+			\boxed{\dot{\arc{\underline{dx}}}=\underline{\underline{d}}\left(\underline{x},t\right)\cdot\underline{dx}+\underline{\omega}\left(\underline{x},t\right)\wedge\underline{dx}}.
+		\end{align}
+
+	Đây là một công thức biểu thị sự biến dạng tổng quát của lưu chất. Nó thể hiện hai sự biến dạng điển hình của lưu chất là sự giản nở của lưu chất và sự xoay của lưu chất một cách địa phương.
+	
+	Bây giờ ta sẽ liên hệ nó với trường vận tốc. Khi khai triển công thức (\ref{eq:Tenseur_rotation_def}) trong hệ tọa độ Descartes trực chuẩn $(\underline{e}_1,\underline{e}_2,\underline{e}_3)$ ta có:
+		\[
+			\begin{aligned}
+				\underline{\underline{\omega}}\left(\underline{x},t\right)\cdot\underline{dx}&=\left(\dfrac{1}{2}\left(\dfrac{\partial u_1}{\partial x_2}-\dfrac{\partial u_2}{\partial x_1}\right)\left(\underline{e}_1\otimes\underline{e}_2-\underline{e}_2\otimes\underline{e}_1\right)\right.\\
+				&\qquad+\dfrac{1}{2}\left(\dfrac{\partial u_1}{\partial x_3}-\dfrac{\partial u_3}{\partial x_1}\right)\left(\underline{e}_1\otimes\underline{e}_3-\underline{e}_3\otimes\underline{e}_1\right)\\
+				&\left.\qquad+\dfrac{1}{2}\left(\dfrac{\partial u_2}{\partial x_3}-\dfrac{\partial u_3}{\partial x_2}\right)\left(\underline{e}_2\otimes\underline{e}_3-\underline{e}_3\otimes\underline{e}_2\right)\right)\\
+				&\qquad\cdot\left(dx_1\underline{e}_1+dx_2\underline{e}_2+dx_3\underline{e}_3\right)\\
+				&=\dfrac{1}{2}\left(\dfrac{\partial u_1}{\partial x_2}-\dfrac{\partial u_2}{\partial x_1}\right)\left(dx_2\underline{e}_1-dx_1\underline{e}_2\right)\\
+				&\quad+\dfrac{1}{2}\left(\dfrac{\partial u_1}{\partial x_3}-\dfrac{\partial u_3}{\partial x_1}\right)\left(dx_3\underline{e}_1-dx_1\underline{e}_3\right)\\
+				&\quad+\dfrac{1}{2}\left(\dfrac{\partial u_2}{\partial x_3}-\dfrac{\partial u_3}{\partial x_2}\right)\left(dx_3\underline{e}_2-dx_2\underline{e}_3\right).
+			\end{aligned}
+		\]
+		\[
+			\begin{aligned}
+				\underline{\omega}\wedge\underline{dx}&=\left(\omega_1\underline{e}_1+\omega_2\underline{e}_2+\omega_3\underline{e}_3\right)\wedge\left(dx_1\underline{e}_1+dx_2\underline{e}_2+dx_3\underline{e}_3\right)\\
+				&=\left(\omega_2dx_3-\omega_3dx_2\right)\underline{e}_1+\left(\omega_3dx_1-\omega_1dx_3\right)\underline{e}_2+\left(\omega_1dx_2-\omega_2dx_1\right)\underline{e}_3.
+			\end{aligned}
+		\]
+	So sánh hai biểu thức này, ta thu được:
+		\[
+			\omega_1=\dfrac{1}{2}\left(\dfrac{\partial u_3}{\partial x_2}-\dfrac{\partial u_2}{\partial x_3}\right),\quad\omega_2=\dfrac{1}{2}\left(\dfrac{\partial u_1}{\partial x_3}-\dfrac{\partial u_3}{\partial x_1}\right),\quad\omega_3=\dfrac{1}{2}\left(\dfrac{\partial u_2}{\partial x_1}-\dfrac{\partial u_1}{\partial x_2}\right).
+		\]
+
+	Các thành phần này không gì khác hơn chính là các thành phần của vecteur thu được khi lấy rota của trường vận tốc, do đó ta đã thiết lập được công thức quan trọng sau:
+		\begin{align}
+			\boxed{\underline{\omega}\left(\underline{x},t\right)=\dfrac{1}{2}\underline{\nabla}\wedge\underline{u}\left(\underline{x},t\right)}.
+		\end{align}
+
+	Như vậy bằng việc đưa vào vecteur xoay (địa phương) của lưu chất, ta có thể biểu diển thành phần xoay của tốc độ biến dạng của một vecteur vật chất vô cùng bé bất kỳ bên trong lưu chất. Hơn nữa, việc liên hệ vecteur xoay này với rota của trường vận tốc cho ta thấy một kết luận quan trọng: \bi{chuyển động của lưu chất thể hiện sự xoay khi và chỉ khi tồn tại ít nhất một điểm bên trong lòng lưu chất sao cho rota của trường vận tốc tại điểm này là khác không}. Nói cách khác, một lưu chất chuyển động không xoay khi và chỉ khi rota của trường vận tốc của lưu chất là triệt tiêu tại mọi điểm.
+	\begin{description}
+		\item[Nhận xét:] Đối với một vât rắn hình trụ chuyển động xoay đều xung quanh trục $\underline{e}_z$ cố định của nó, trường vận tốc của vật rắn này được viết:
+			\begin{align}
+				\underline{u}\left(\underline{x},t\right)=\omega r\underline{e}_\theta.
+			\end{align}
+		trong đó $\underline{e}_\theta$ chính là vecteur trực xuyên tâm của hệ tọa độ trụ, $\omega$ là tốc độ góc của hình trụ và $r$ là khoảng cách đến trục. Lấy rota của trường vận tốc này, ta có:
+			\[
+				\underline{\nabla}\wedge\underline{u}\left(\underline{x},t\right)=2\omega\underline{e}_z.
+			\]
+		Điều này biện minh cho tên gọi vecteur xoay của thành phần rota của trường vận tốc.
+	\end{description}
 \end{document}
