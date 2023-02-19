@@ -1,0 +1,35 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
+Khi dòng chảy là dừng, hệ phương trình Euler được đơn giản thành:
+	\begin{equation}
+		\begin{dcases}
+				\underline{\nabla}\cdot\left(\rho \underline{u}\right)=0\\[10pt]
+				\rho\dfrac{D\underline{u}}{Dt}=-\underline{\nabla}p\\[10pt]
+				\underline{\nabla}\cdot\left[\rho\left(c_vT+\dfrac{\underline{u}^2}{2}+\dfrac{p}{\rho}\right)\underline{u}\right]=0\\[10pt]
+				p=\rho RT
+		\end{dcases}.
+	\end{equation}
+Khai triển phương trình năng lượng, ta có:
+	\[
+		\begin{aligned}
+			\underline{\nabla}\cdot\left[\rho\left(c_vT+\dfrac{\underline{u}^2}{2}+\dfrac{p}{\rho}\right)\underline{u}\right]&=\left(c_vT+\dfrac{\underline{u}^2}{2}+\dfrac{p}{\rho}\right)\underbrace{\underline{\nabla}\cdot\left(\rho\underline{u}\right)}_{=0}+\rho\underline{u}\underline{\nabla\left(c_vT+\rho\dfrac{\underline{u}^2}{2}+\dfrac{p}{\rho}\right)}\\
+			&=\rho\underline{u}\underline{\nabla\left(c_vT+\rho\dfrac{\underline{u}^2}{2}+\dfrac{p}{\rho}\right)}\\
+			&=\underline{0}.
+		\end{aligned}
+	\]
+Do đó, đối với một dòng chuyển động dừng và không nhớt thì ở mọi điểm bên trong lưu chất, năng lượng riêng của nó phải được bảo toàn, tức là:
+	\begin{align}
+		\boxed{c_vT+\rho\dfrac{\underline{u}^2}{2}+\dfrac{p}{\rho}=hs}.
+	\end{align}
+Khi lưu chất được chọn là khí lý tưởng, sử dụng phương trình trạng thái của khí lý tưởng, thay vào đó, ta có:
+	\begin{align}
+		\boxed{c_pT+\rho\dfrac{\underline{u}^2}{2}=hs}.
+	\end{align}
+Đây là một phương trình quan trọng bởi vì thứ nhất nó là một phương trình vô hướng đơn giản; thứ hai, nó liên hệ trạng thái của lưu chất $T$ với thông số của dòng chuyển động $\underline{u}$. Như vậy, ta sẽ sủ dụng hệ thức này để nghiên cứu dòng chuyển động của lưu chất. Lưu ý rằng phương trình này thu được bằng phép đạo hàm vật chất, do đó phương trình này chỉ đúng đối với một đường dòng nào đó. Khi đi dọc theo đường dòng, tồn tại một điểm mà ở đó hạt lưu chất nằm trong trạng thái nghỉ và ta gọi là \bi{trạng thái tham chiếu}, tức là:
+	\begin{align}
+		\boxed{c_pT+\rho\dfrac{\underline{u}^2}{2}=h_0}.
+	\end{align}
+Trong đó $h_0$ là enthalpy của điểm dừng.
+	
+\end{document}

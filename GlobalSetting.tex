@@ -1,6 +1,6 @@
 %================================================Page layout setting=================================================
 \usepackage[paperwidth=19cm,paperheight=27cm,inner=1.8cm,outer=1.8cm,top=2cm,bottom=2cm,heightrounded=true]{geometry}
-\usepackage{pifont,framed,enumitem,enumerate,scrextend,indentfirst,titlesec,subfiles}
+\usepackage{pifont,framed,enumitem,enumerate,scrextend,indentfirst,titlesec,subfiles,minitoc}
 \usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
 \usepackage[hidelinks]{hyperref}
 \usepackage[atend]{bookmark}
@@ -20,9 +20,8 @@
 
 \usepackage{tikz,graphicx}
 
-
-
 \changefontsizes{13pt}
+
 \setcounter{secnumdepth}{4}
 
 %==========================================Reduced formulas used frequently==========================================
@@ -66,6 +65,7 @@
 %==================================================Bookmark setting==================================================
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+\setcounter{minitocdepth}{1}
 
 \bookmarksetup{
 	numbered,
