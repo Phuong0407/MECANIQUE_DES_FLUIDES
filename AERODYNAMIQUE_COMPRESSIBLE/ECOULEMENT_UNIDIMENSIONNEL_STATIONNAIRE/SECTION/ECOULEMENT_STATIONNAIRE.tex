@@ -1,0 +1,24 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
+Khi dòng chảy là dừng, hệ phương trình Euler được đơn giản thành:
+	\begin{equation}
+		\begin{dcases}
+				\underline{\nabla}\cdot\left(\rho \underline{u}\right)=0\\[10pt]
+				\rho\dfrac{D\underline{u}}{Dt}=-\underline{\nabla}p\\[10pt]
+				\underline{\nabla}\cdot\left[\rho\left(c_vT+\dfrac{\underline{u}^2}{2}\right)\underline{u} \right]=0\\[10pt]
+				p=\rho RT
+		\end{dcases}.
+	\end{equation}
+Khai triển phương trình năng lượng, ta có:
+	\[
+		\begin{aligned}
+			\underline{\nabla}\cdot\left[\rho\left(c_vT+\dfrac{\underline{u}^2}{2}\right)\underline{u}\right]&=\left(c_vT+\dfrac{\underline{u}^2}{2}\right)\underbrace{\underline{\nabla}\cdot\left(\rho\underline{u}\right)}_{=0}+\rho\underline{u}\underline{\nabla\left(c_vT+\rho\dfrac{\underline{u}^2}{2}\right)}\\
+			&=\rho\underline{u}\underline{\nabla\left(c_vT+\rho\dfrac{\underline{u}^2}{2}\right)}.
+		\end{aligned}
+	\]
+Do đó, đối với một dòng chuyển động dừng và không nhớt thì ở mọi điểm bên trong lưu chất, năng lượng riêng của nó phải được bảo toàn, tức là:
+	\begin{align}
+		\boxed{c_vT+\rho\dfrac{\underline{u}^2}{2}=hs}.
+	\end{align}
+\end{document}

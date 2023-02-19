@@ -3,27 +3,32 @@
 \begin{document}
     Như đã đề cập ở bên trên, một lưu chất nén được được đặc trưng thông qua khối lượng riêng, trường vận tốc, trường nhiệt độ và trường áp suất. Tức là 6 thông số cần phải được mô tả để mô tả đặc tính của một lưu chất nén được. Các phương trình (\ref{eq:conserve_mass}), (\ref{eq:nse}) và (\ref{eq:conserver_energie}) chỉ cung cấp 5 phương trình, như vậy là còn thiếu một phương trình.
 
-    Phương trình còn thiếu này chắc chắn phải liên quan đến hành vi của lưu chất, mà ta sẽ gọi là phương trình trạng thái của lưu chất. Có nhiều phương trình trạng thái, nhưng có hai phương trình quan trọng :
+    Phương trình còn thiếu này chắc chắn phải liên quan đến hành vi của lưu chất, mà ta sẽ gọi là phương trình trạng thái của lưu chất. Có nhiều phương trình trạng thái, nhưng có hai phương trình quan trọng và sẽ được sử dụng trong toàn bộ phần nghiên cứu này:
         \begin{itemize}
             \item Phương trình trạng thái của khí lý tưởng:
                 \begin{align}
                     p = \rho RT.
                 \end{align}
             Trong đó $R=\SI{287.07}{\joule\per\kilogram\per\kelvin}$ là hằng số khí cho không khí. Đối với các khí khác, hằng số được cho trong bảng (???).
-            \item Phương trình trạng thái polytrophic: một khí polytrophic là một khí lý tưởng mà nhiệt dung riêng là hằng số, tức là
+            \item Phương trình trạng thái polytrophic: một khí polytrophic là một khí lý tưởng mà nhiệt dung riêng đẳng tích là hằng số, tức là
                 \begin{align}
                     e = c_vT
                 \end{align}
-            trong đó $c_v$ là nhiệt dung riêng đẳng tích và là hằng số. Tỉ số giữa nhiệt dung riêng đẳng áp và nhiệt dung riêng đẳng tích là hằng số, đối với không khí
+            trong đó $c_v$ là nhiệt dung riêng đẳng tích và là hằng số. Tỉ số giữa nhiệt dung riêng đẳng áp và nhiệt dung riêng đẳng tích hiển nhiên là hằng số, đối với không khí
                 \begin{align}
-                    \gamma = \dfrac{c_p}{c_v} = \begin{cases}
-                        1.4 & \text{đối với các điều kiện nhiệt độ thông thường}\\
-                        1.3 & \text{đối với các buồng đốt có nhiệt độ cao}
-                    \end{cases}.
+                    \gamma = \dfrac{c_p}{c_v}=1.4.
+                    % \begin{cases}
+                    %     1.4 & \text{đối với các điều kiện nhiệt độ thông thường}\\
+                    %     1.3 & \text{đối với các buồng đốt có nhiệt độ cao}
+                    % \end{cases}.
                 \end{align}
         \end{itemize}
 
-    Như vậy, trong khuôn khổ của phần lớn nghiên cứu của chúng ta, ta chỉ làm việc với khí lý tưởng polytropic. Do đó, hệ phương trình chi phối hành vi của lưu chất được viết:
+    Như vậy, trong khuôn khổ của phần lớn nghiên cứu của chúng ta, ta chỉ làm việc với khí lý tưởng polytropic. Hơn nữa, quá trình trao đổi nhiệt được giới hạn trong định luật truyền nhiệt \textsc{Fourier}:
+    	\begin{align}
+    		\underline{j}_{th}=-K\underline{\nabla T}.
+    	\end{align}
+    Trong đó $K$ được gọi là hệ số dẫn nhiệt. Khi đó, hệ phương trình chi phối hành vi của lưu chất được viết:
         \begin{equation}\label{eq:reel}
             \boxed{
                 \begin{aligned}
@@ -36,7 +41,7 @@
         \end{equation}
     mà ta gọi là \bi{hệ phương trình lưu chất thực}.
 
-    Trong chừng mực mà lưu chất được xem là không nhớt, không có sự trao đổi nhiệt, cũng như các lực thể tích hệ phương trình trên được đơn giản thành hệ phương trình có phương trình động lượng theo Euler:
+    Trong chừng mực mà lưu chất được xem là không nhớt, không có sự trao đổi nhiệt, các lực thể tích có thể bỏ qua được thì hệ phương trình trên được đơn giản thành hệ phương trình có phương trình động lượng theo Euler:
         \begin{equation}\label{eq:parfait}
             \boxed{
                 \begin{aligned}
@@ -50,57 +55,57 @@
     mà ta gọi là \bi{hệ phương trình lưu chất lý tưởng}.
 
     \begin{description}
-        \item[Chú ý 1:] Tồn tại nhiền hơn phương trình trạng thái của lưu chất bên cạnh phương trình khí lý tưởng. Chẳng hạn như phương trình Wan der Waals dành cho khí thực:
+        \item[Chú ý:] Tồn tại nhiền hơn phương trình trạng thái của lưu chất bên cạnh phương trình khí lý tưởng. Chẳng hạn như phương trình Wan der Waals dành cho khí thực:
             \[
                 \left(P+\dfrac{n^2a}{V}\right)\left(V-nb\right)=nRT.
             \]
-        \item[Chú ý 2:] Ta hãy khử thứ nguyên của phương trình (\ref{eq:reel}) tùy theo điều kiện của miền mà lưu chất chiếm mà miền này có:
-        \begin{center}
-            \begin{tabular}{||c|c|c||}
-                \hline
-                    Đại lượng & Kí hiệu (đặc trưng) & Kí hiệu (vô thứ nguyên)\tabularnewline
-                \hline
-                \hline
-                    Chiều dài & $L_{\infty}$ & $x^*=x/L$ \tabularnewline
-                \hline
-                    Vận tốc & $U_{\infty}$ & $t^*=t/t_0$ \tabularnewline
-                \hline
-                    Khối lượng riêng & $\rho_{\infty}$ & $p^*=p/p_\infty$ \tabularnewline
-                \hline
-                    Áp suất & $p_{\infty}$ & $\underline{u}^*=\underline{u}/U_\infty$ \tabularnewline
-                \hline
-                    Độ nhớt & $\mu_{\infty}$ & $\mu^*=\mu/\mu_\infty$ \tabularnewline
-                \hline
-                    Hệ số dẫn nhiệt & $k_{\infty}$ & $k^*=k/k_\infty $\tabularnewline
-                \hline
-            \end{tabular}
-        \end{center}
-        Trong đó ta giả sử rằng sự truyền nhiệt thỏa mãn định luật Fourier:
-            \[
-                \underline{j}_{th}=-k\underline{\nabla}T.
-            \]
-        Như vậy, ta có thể định nghĩa thời gian tham chiếu như là
-            \[
-                t_0 =\dfrac{L}{U_\infty}.
-            \]
-        % và các biến số vô thứ nguyên mới:
+        % \item[Chú ý 2:] Ta hãy khử thứ nguyên của phương trình (\ref{eq:reel}) tùy theo điều kiện của miền mà lưu chất chiếm mà miền này có:
+        % \begin{center}
+        %     \begin{tabular}{||c|c|c||}
+        %         \hline
+        %             Đại lượng & Kí hiệu (đặc trưng) & Kí hiệu (vô thứ nguyên)\tabularnewline
+        %         \hline
+        %         \hline
+        %             Chiều dài & $L_{\infty}$ & $x^*=x/L$ \tabularnewline
+        %         \hline
+        %             Vận tốc & $U_{\infty}$ & $t^*=t/t_0$ \tabularnewline
+        %         \hline
+        %             Khối lượng riêng & $\rho_{\infty}$ & $p^*=p/p_\infty$ \tabularnewline
+        %         \hline
+        %             Áp suất & $p_{\infty}$ & $\underline{u}^*=\underline{u}/U_\infty$ \tabularnewline
+        %         \hline
+        %             Độ nhớt & $\mu_{\infty}$ & $\mu^*=\mu/\mu_\infty$ \tabularnewline
+        %         \hline
+        %             Hệ số dẫn nhiệt & $k_{\infty}$ & $k^*=k/k_\infty $\tabularnewline
+        %         \hline
+        %     \end{tabular}
+        % \end{center}
+        % Trong đó ta giả sử rằng sự truyền nhiệt thỏa mãn định luật Fourier:
         %     \[
-        %         x^*=\dfrac{x}{L},\quad t^*=\dfrac{t}{t_0},\quad\rho^*=\dfrac{\rho}{\rho_\infty},\quad p^*=\dfrac{p}{p_\infty},\quad\underline{u}^*=\dfrac{\underline{u}}{U_\infty},\quad\mu^*=\dfrac{\mu}{\mu_0},\quad k^*=\dfrac{k}{k_0}.
+        %         \underline{j}_{th}=-k\underline{\nabla}T.
         %     \]
-        Hệ phương trình (\ref{eq:reel}) được biến đổi thành:
-            \[
-                \begin{aligned}
-                    \begin{cases}
-                        \dfrac{\partial\rho^*}{\partial t^*}+\underline{\nabla}^*\cdot\left(\rho^*\underline{u}^*\right)=0\\[10pt]
-                        \rho^*\dfrac{D^*\underline{u}^*}{Dt^*}=-\dfrac{\gamma}{M^2_\infty}\underline{\nabla}^* p^*+\dfrac{1}{Re} \underline{\nabla}^*\cdot\left[\mu^*\left(\underline{\nabla}^* \underline{u}^*+{}^t\underline{\nabla}^* \underline{u}^*-\dfrac{2}{3}\left(\underline{\nabla}^*\cdot\underline{u}^*\right) \underline{\underline{\mathbbm{1}}}\right)\right]&\\
-                        \qquad\qquad\qquad+\dfrac{1}{\rho_\infty U_\infty^2L} \underline{\nabla}\cdot\left(\zeta\left(\underline{\nabla}\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right)+\dfrac{1}{Fr^2}\underline{e}_g&\\[10pt]
-                        \dfrac{\partial^*}{\partial t^*}\left[\rho^*\left(c_vT+\dfrac{(\underline{u}^*)^2}{2}\right)\right]+\underline{\nabla}^*\cdot\left[\rho^*\left(c_vT+\dfrac{\underline{u}^2}{2}\right)\underline{u}^*+\underline{j}_{th}-\underline{\underline{\sigma}}\cdot\underline{u}\right]=\rho q + \rho\underline{g}\cdot\underline{u}\\[10pt]
-                        p = \rho RT
-                    \end{cases}
-                \end{aligned}
-            \]
-        trong đó $Re$ là số Reynolds và $Fr$ là số Froude.
+        % Như vậy, ta có thể định nghĩa thời gian tham chiếu như là
+        %     \[
+        %         t_0 =\dfrac{L}{U_\infty}.
+        %     \]
+        % % và các biến số vô thứ nguyên mới:
+        % %     \[
+        % %         x^*=\dfrac{x}{L},\quad t^*=\dfrac{t}{t_0},\quad\rho^*=\dfrac{\rho}{\rho_\infty},\quad p^*=\dfrac{p}{p_\infty},\quad\underline{u}^*=\dfrac{\underline{u}}{U_\infty},\quad\mu^*=\dfrac{\mu}{\mu_0},\quad k^*=\dfrac{k}{k_0}.
+        % %     \]
+        % Hệ phương trình (\ref{eq:reel}) được biến đổi thành:
+        %     \[
+        %         \begin{aligned}
+        %             \begin{cases}
+        %                 \dfrac{\partial\rho^*}{\partial t^*}+\underline{\nabla}^*\cdot\left(\rho^*\underline{u}^*\right)=0\\[10pt]
+        %                 \rho^*\dfrac{D^*\underline{u}^*}{Dt^*}=-\dfrac{\gamma}{M^2_\infty}\underline{\nabla}^* p^*+\dfrac{1}{Re} \underline{\nabla}^*\cdot\left[\mu^*\left(\underline{\nabla}^* \underline{u}^*+{}^t\underline{\nabla}^* \underline{u}^*-\dfrac{2}{3}\left(\underline{\nabla}^*\cdot\underline{u}^*\right) \underline{\underline{\mathbbm{1}}}\right)\right]&\\
+        %                 \qquad\qquad\qquad+\dfrac{1}{\rho_\infty U_\infty^2L} \underline{\nabla}\cdot\left(\zeta\left(\underline{\nabla}\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right)+\dfrac{1}{Fr^2}\underline{e}_g&\\[10pt]
+        %                 \dfrac{\partial^*}{\partial t^*}\left[\rho^*\left(c_vT+\dfrac{(\underline{u}^*)^2}{2}\right)\right]+\underline{\nabla}^*\cdot\left[\rho^*\left(c_vT+\dfrac{\underline{u}^2}{2}\right)\underline{u}^*+\underline{j}_{th}-\underline{\underline{\sigma}}\cdot\underline{u}\right]=\rho q + \rho\underline{g}\cdot\underline{u}\\[10pt]
+        %                 p = \rho RT
+        %             \end{cases}
+        %         \end{aligned}
+        %     \]
+        % trong đó $Re$ là số Reynolds và $Fr$ là số Froude.
         
-        Điều này dẫn chúng ta đến một sự đơn giản chớp nhoáng, trong đó khi số Reynolds là rất lớn, số hạng lực nhớt có thể bị bỏ qua và ta thu được phương trình động lượng Euler cho lưu chất lý tưởng. Phải chăng sự gần đúng này là hợp lý ? Một cách ngây thơ, chỉ cần bỏ đi số hạng nhớt, tuy nhiên, hai phương trình động lượng Euler và Navier-Stokes biểu hiện hoàn toàn khác nhau. Thực vậy, nghiệm của phương trình Euler là hoàn toàn trơn. Còn đối với PNS ở số Reynolds rất lớn, nghiệm luôn luôn thể hiện sự mất ổn định.
+        % Điều này dẫn chúng ta đến một sự đơn giản chớp nhoáng, trong đó khi số Reynolds là rất lớn, số hạng lực nhớt có thể bị bỏ qua và ta thu được phương trình động lượng Euler cho lưu chất lý tưởng. Phải chăng sự gần đúng này là hợp lý ? Một cách ngây thơ, chỉ cần bỏ đi số hạng nhớt, tuy nhiên, hai phương trình động lượng Euler và Navier-Stokes biểu hiện hoàn toàn khác nhau. Thực vậy, nghiệm của phương trình Euler là hoàn toàn trơn. Còn đối với PNS ở số Reynolds rất lớn, nghiệm luôn luôn thể hiện sự mất ổn định.
     \end{description}
 \end{document}

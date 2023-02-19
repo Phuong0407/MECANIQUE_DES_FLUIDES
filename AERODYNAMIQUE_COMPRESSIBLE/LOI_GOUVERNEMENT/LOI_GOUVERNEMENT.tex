@@ -4,31 +4,22 @@
 \chapter{CÁC PHƯƠNG TRÌNH CHI PHỐI}
 	\section{Mở đầu}
 		\subfile{./SECTION/INTRODUCTION.tex}
+	\section{Tính nén được của lưu chất}
+		\subfile{./SECTION/COMPRESSIBILITE.tex}
 	\section{Nhắc lại về cơ lưu chất}
 		\subfile{./SECTION/RAPELLONS_MECANIQUE_DES_FLUIDES.tex}
 	\section{Nhắc lại về nhiệt động lực học}
 		\subfile{./SECTION/RAPELLONS_THERMODYNAMIQUE.tex}
 	\section{Hệ phương trình chi phối hành vi của lưu chất}
 		\subfile{./SECTION/SYSTEM_DES_EQUATIONS_GOUVERNEMENT.tex}
-	\section{Tính đến sự bất liên tục}
-Giả sử tồn tại một mặt không liên tục, $\Sigma_t$ trong miền $\Omega_t$. Như những điều đã biết thì đối với một đại lượng thể tích $g$ ($g$ có thể là một đại lượng vô hướng, vecteur hoặc tenseur), đạo hàm đối lưu đối với đại lượng này như sau:
-\begin{align}
-	\dfrac{D}{Dt}\iiint_{\Omega_t}gd\tau=\iiint_{\Omega_t}\left(\dfrac{\partial g}{\partial t}+\underline{\nabla}\cdot\left(g\otimes\underline{U}\right)\right)d\tau+\oiint_{\Sigma_t}\llbracket g\left(\underline{U}-\underline{W}\right)\rrbracket dS
-\end{align}
+	% \section{Tính đến sự bất liên tục}
+% Giả sử tồn tại một mặt không liên tục, $\Sigma_t$ trong miền $\Omega_t$. Như những điều đã biết thì đối với một đại lượng thể tích $g$ ($g$ có thể là một đại lượng vô hướng, vecteur hoặc tenseur), đạo hàm đối lưu đối với đại lượng này như sau:
+% \begin{align}
+% 	\dfrac{D}{Dt}\iiint_{\Omega_t}gd\tau=\iiint_{\Omega_t}\left(\dfrac{\partial g}{\partial t}+\underline{\nabla}\cdot\left(g\otimes\underline{U}\right)\right)d\tau+\oiint_{\Sigma_t}\llbracket g\left(\underline{U}-\underline{W}\right)\rrbracket dS
+% \end{align}
 
-Áp dụng biểu thức này đối với khối lượng riêng, $\rho$, ta thu được phương trình liên hệ cho sự không liên tục của khối lượng riêng:
-\begin{align}
-	\llbracket\rho\left(\underline U-\underline W\right)\rrbracket=0.
-\end{align}
-
-
-
-
-
-
-
-
-
-
-
+% Áp dụng biểu thức này đối với khối lượng riêng, $\rho$, ta thu được phương trình liên hệ cho sự không liên tục của khối lượng riêng:
+% \begin{align}
+% 	\llbracket\rho\left(\underline U-\underline W\right)\rrbracket=0.
+% \end{align}
 \end{document}

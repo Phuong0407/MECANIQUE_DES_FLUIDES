@@ -1,26 +1,30 @@
 \documentclass[../../../main.tex]{subfiles}
 
 \begin{document}
-	Ở đây xin không chứng minh lại các biểu thức mà chỉ đơn giản liệt kê chúng với mục đích làm tham chiếu trực tiếp cho các phát triển sau này. Đầu tiên là phương trình bảo toàn lưu lượng:
-		\begin{align}\label{eq:conserve_mass}
-			\dfrac{\partial\rho}{\partial t}+\underline{\nabla}\cdot\left(\rho\underline{u}\right)=0.
-		\end{align}
-	Tiếp theo là phương trình Navier-Stokes (phương trình cân bằng động lượng) : mặc dù có phương trình dưới dạng tổng quát, phương trình động lượng Cauchy, mà nó được viết
-		\begin{align}
-			\rho\dfrac{D\underline{u}}{Dt}=-\underline\nabla\cdot\underline{\underline{\sigma}}+\underline{f}.
-		\end{align}
-	trong đó $\underline{\underline{\sigma}}$ là tenseur ứng suất, và $\underline{f}$ là lực thể tích tác dụng lên lưu chất. Như đã thảo luận, trong dòng chảy nén được, không thể bỏ qua hiện tượng lan truyền sóng, do dó, chúng tôi đưa ra phương trình tổng quát sau đây
-		\begin{align}\label{eq:nse}
-			\rho\dfrac{D\underline{u}}{Dt}=-\underline{\nabla}p+\vnabla\cdot\left[\mu\left(\vnabla\underline{u}+{}^t\vnabla\underline{u}-\dfrac{2}{3}\left(\vnabla\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right)+\zeta\left(\vnabla\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right]+\rho\underline{g}.
-		\end{align}
-	trong đó $\zeta=\lambda+2\mu/3$ là hệ số nhớt khối, là một hệ số phụ thuộc không những vào đặc tính lưu chất mà còn vào đặc tính dòng chuyển động. Điều này ứng với phương trình ứng suất-biến dạng có dạng:
-		\begin{align}
-			\underline{\underline{\tau}}=\mu\left(\vnabla\underline{u}+{}^t\vnabla\underline{u}-\dfrac{2}{3}\left(\vnabla\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right)+\zeta\left(\vnabla\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}.
-		\end{align}
-	Các hệ số nhớt này biến đổi thế nào theo nhiệt độ? Tuy nhiên trong các nghiên cứu mà không có sự hấp thụ âm thanh hay sự suy giảm sóng xung kích, ta sẽ sử dụng dạng phương trình đơn giản hơn của phương trình Navier-Stokes:
-		\begin{align}
-			\boxed{
-				\rho\dfrac{D\underline{u}}{Dt}=-\underline{\nabla}p+\mu\Delta\underline{u}+\dfrac{1}{3}\mu\underline{\nabla}\left(\underline{\nabla}\cdot\underline{u}\right)+\rho\underline{g}.
-			}
-		\end{align}
+	Ở đây xin không chứng minh lại các biểu thức mà chỉ đơn giản liệt kê chúng với mục đích làm tham chiếu trực tiếp cho các phát triển sau này.
+		\begin{description}
+			\item[Phương trình bảo toàn lưu lượng:]
+				\begin{align}\label{eq:conserve_mass}
+					\dfrac{\partial\rho}{\partial t}+\underline{\nabla}\cdot\left(\rho\underline{u}\right)=0.
+				\end{align}
+			\item[Phương trình Navier-Stokes:] như đã thảo luận, trong dòng chảy nén được, không thể bỏ qua hiện tượng lan truyền sóng, do dó, chúng tôi đưa ra phương trình tổng quát sau đây
+			\begin{align}\label{eq:nse}
+				\rho\dfrac{D\underline{u}}{Dt}=-\underline{\nabla}p+\underline{\nabla}\cdot\left[\mu\left(\underline{\nabla}\underline{u}+{}^t\underline{\nabla}\underline{u}-\dfrac{2}{3}\left(\underline{\nabla}\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right)+\zeta\left(\underline{\nabla}\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right]+\rho\underline{g}.
+			\end{align}
+			trong đó $\zeta=\lambda+2\mu/3$ là hệ số nhớt khối, là một hệ số phụ thuộc không những vào đặc tính lưu chất mà còn vào đặc tính dòng chuyển động. Điều này ứng với phương trình ứng suất-biến dạng có dạng:
+				\begin{align}
+					\underline{\underline{\tau}}=\mu\left(\underline{\nabla}\underline{u}+{}^t\underline{\nabla}\underline{u}-\dfrac{2}{3}\left(\underline{\nabla}\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}\right)+\zeta\left(\underline{\nabla}\cdot\underline{u}\right)\underline{\underline{\mathbbm{1}}}.
+				\end{align}
+			Tuy nhiên trong các nghiên cứu mà không có sự hấp thụ âm thanh hay sự suy giảm sóng xung kích, ta sẽ sử dụng dạng phương trình đơn giản hơn của phương trình Navier-Stokes:
+				\begin{align}
+					\boxed{
+						\rho\dfrac{D\underline{u}}{Dt}=-\underline{\nabla}p+\mu\Delta\underline{u}+\dfrac{1}{3}\mu\underline{\nabla}\left(\underline{\nabla}\cdot\underline{u}\right)+\rho\underline{g}.
+					}
+				\end{align}
+		\end{description}
 \end{document}
+	% mặc dù có phương trình dưới dạng tổng quát, phương trình động lượng Cauchy, mà nó được viết
+	% 	\begin{align}
+	% 		\rho\dfrac{D\underline{u}}{Dt}=-\underline\nabla\cdot\underline{\underline{\sigma}}+\underline{f}.
+	% 	\end{align}
+	% trong đó $\underline{\underline{\sigma}}$ là tenseur ứng suất, và $\underline{f}$ là lực thể tích tác dụng lên lưu chất.

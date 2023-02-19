@@ -1,0 +1,30 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
+	Mọi vật chất đều có tính nén được. Khi ta nén một vật chất, ta có thể làm thay đổi thể tích và qua đó thay đổi khối lượng riêng của nó, điều này đặc trưng cho tính nén được của nó. Tính nén được đối với chất khí là rõ ràng; đối với chất lỏng tính chất này là ít đặc trưng hơn; đối với chất rắn, tính nén được hầu như không xảy ra.
+	
+	Để đặc trưng cho tính nén được, ta sẽ đặc trưng nó bởi hệ số nén:
+		\begin{align}
+			\tau=\dfrac{1}{\rho}\dfrac{d\rho}{dp}.
+		\end{align}
+	Trong đó, $d\rho$ là lượng tăng khối lượng riêng của khối lưu chất có khối lượng riêng ban đầu $\rho$ khi áp đặt vào nó một sự tăng áp suất một lượng $dp$. Định nghĩa này đương nhiên là không đủ, bởi vì lưu chất có quá trình trao đổi năng lượng với môi trường bên ngoài và do đó sự thay đổi nhiệt độ của nó là đáng kể và ta phải tính đến điều này. Đối với một quá trình đẳng nhiệt, ta định nghĩa hệ số nén đẳng nhiệt bởi:
+		\begin{align}
+			\tau_t=\dfrac{1}{\rho}\left(\dfrac{\partial\rho}{\partial p}\right)_{T=hs}.
+		\end{align}
+	Đối với quá trình nén đẳng entropy, nó không trao đổi nhiệt với môi trường bên ngoài, do đó ta có thể liên hệ nhiệt độ của nó bởi các hệ thức đã biết về quá trình đoạn nhiệt, do đó ta có thể định nghĩa hệ số nén đẳng entropy:
+		\begin{align}
+			\tau_s=\dfrac{1}{\rho}\left(\dfrac{\partial\rho}{\partial p}\right)_{s=hs}.
+		\end{align}
+	
+	Như vậy, với điều kiện nào thì lưu chất không nén được? Từ phương trình định nghĩa tính nén được:
+		\[
+			d\rho=\tau\rho dp.
+		\]
+	 Ta thấy độ tăng khối lượng riêng tỉ lệ với độ tăng áp suất áp đặt lên lưu chất. Do đó:
+	 \begin{itemize}
+	 	\item Đối với các lưu chất có hệ số nén là nhỏ: nếu một sự tăng áp suất là không quá lớn, tức là áp suất có thể thay đổi giá trị trong một \bi{khoảng đủ rộng}, ta vẫn xem lưu chất là không nén được. Đây là một trường hợp rất điển hình đối với các chất lỏng.
+	 	\item Đối với các lưu chất có hệ số nén là đủ lớn: nếu một sự tăng áp suất nhỏ, tức là áp suất chỉ có thể thay trong một \bi{khoảng giá trị hạn chế}. Điều này ngầm định rằng các dòng chuyển động có vận tốc không quá lớn. Đây là trường hợp rất điển hình đối với các chất khí.
+	 \end{itemize}
+	 
+	 Nếu hai điều kiện vừa phân tích ở bên trên đều bị vi phạm, ta bắt buộc phải áp dụng một khuôn khổ lưu chất nén được để khảo sát động lực học các lưu chất.
+\end{document}
