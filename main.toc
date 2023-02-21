@@ -5,16 +5,17 @@
 \contentsline {section}{\numberline {1.1}Đối tượng nghiên cứu}{8}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Mô tả chuyển động}{9}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Hình thức luận Lagrange}{9}{subsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.1.1}Giả thiết liên tục theo quan điểm Lagrange}{10}{subsubsection.1.2.1.1}%
-\contentsline {subsection}{\numberline {1.2.2}Hình thức luận Euler}{10}{subsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.2.1}Trường vecteur}{10}{subsubsection.1.2.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2.2}Vận tốc trong hình thức luận Euler}{11}{subsubsection.1.2.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Sự duy nhất của vận tốc}{11}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Thể hiện các dòng chảy}{12}{subsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.4.1}Quỹ đạo hạt}{12}{subsubsection.1.2.4.1}%
-\contentsline {subsubsection}{\numberline {1.2.4.2}Đường dòng}{12}{subsubsection.1.2.4.2}%
-\contentsline {subsubsection}{\numberline {1.2.4.3}Đường phát xạ - tiếp cận thực nghiệm}{12}{subsubsection.1.2.4.3}%
-\contentsline {section}{\numberline {1.3}Mô tả động học lưu chất}{13}{section.1.3}%
+\contentsline {subsection}{\numberline {1.2.2}Mô tả phương pháp}{9}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Giả thiết liên tục theo quan điểm Lagrange}{10}{subsubsection.1.2.2.1}%
+\contentsline {subsection}{\numberline {1.2.3}Hình thức luận Euler}{10}{subsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.3.1}Trường vecteur}{10}{subsubsection.1.2.3.1}%
+\contentsline {subsubsection}{\numberline {1.2.3.2}Vận tốc trong hình thức luận Euler}{11}{subsubsection.1.2.3.2}%
+\contentsline {subsection}{\numberline {1.2.4}Sự duy nhất của vận tốc}{11}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Thể hiện các dòng chảy}{12}{subsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.5.1}Quỹ đạo hạt}{12}{subsubsection.1.2.5.1}%
+\contentsline {subsubsection}{\numberline {1.2.5.2}Đường dòng}{12}{subsubsection.1.2.5.2}%
+\contentsline {subsubsection}{\numberline {1.2.5.3}Đường phát xạ - tiếp cận thực nghiệm}{12}{subsubsection.1.2.5.3}%
+\contentsline {section}{\numberline {1.3}Động học lưu chất}{13}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Mô tả biến dạng của lưu chất}{13}{subsection.1.3.1}%
 \contentsline {subsubsection}{\numberline {1.3.1.1}Tốc độ biến dạng của một vecteur vật chất}{13}{subsubsection.1.3.1.1}%
 \contentsline {subsubsection}{\numberline {1.3.1.2}Tốc độ giản nở của thể tích}{15}{subsubsection.1.3.1.2}%
@@ -22,7 +23,7 @@
 \contentsline {subsection}{\numberline {1.3.2}Các dòng lưu chất điển hình}{19}{subsection.1.3.2}%
 \contentsline {subsubsection}{\numberline {1.3.2.1}Dòng chảy không nén được}{19}{subsubsection.1.3.2.1}%
 \contentsline {subsubsection}{\numberline {1.3.2.2}Dòng chảy xoay}{19}{subsubsection.1.3.2.2}%
-\contentsline {section}{\numberline {1.4}Mô tả các đại lượng vật lý}{19}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Biểu diển các đại lượng vật lý}{19}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Trong hình thức luận Lagrange}{19}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Trong hình thức luận Euler}{20}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Phép đạo hàm hạt}{20}{subsection.1.4.3}%
@@ -30,31 +31,35 @@
 \contentsline {subsubsection}{\numberline {1.4.3.2}Tính toán cho đại lượng thể tích}{22}{subsubsection.1.4.3.2}%
 \contentsline {subsubsection}{\numberline {1.4.3.3}Tính toán cho đại lượng mặt}{23}{subsubsection.1.4.3.3}%
 \contentsline {subsubsection}{\numberline {1.4.3.4}Tính toán cho đại lượng đường}{24}{subsubsection.1.4.3.4}%
-\contentsline {section}{\numberline {1.5}Mô tả động lực học lưu chất}{24}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Biểu diển động lực học lưu chất}{24}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Mở đầu}{24}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Tác động cơ bề mặt}{25}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}Đương lượng thể tích và đương lượng khối lượng}{26}{subsection.1.5.3}%
 \contentsline {subsection}{\numberline {1.5.4}Phương trình cân bằng động lượng}{27}{subsection.1.5.4}%
 \contentsline {subsection}{\numberline {1.5.5}Phương trình cân bằng moment động lượng}{27}{subsection.1.5.5}%
-\contentsline {chapter}{\numberline {2}THỦY TĨNH HỌC}{31}{chapter.2}%
-\contentsline {chapter}{\numberline {3}ĐỘNG HỌC LƯU CHẤT}{33}{chapter.3}%
-\contentsline {chapter}{\numberline {4}ĐỘNG LỰC HỌC LƯU CHẤT}{35}{chapter.4}%
-\contentsline {chapter}{\numberline {5}LƯU CHẤT LÝ TƯỞNG}{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}LƯU CHẤT THỰC}{39}{chapter.6}%
-\contentsline {chapter}{\numberline {7}LƯU BIẾN HỌC}{41}{chapter.7}%
-\contentsline {chapter}{\numberline {8}ĐỘNG HỌC XOÁY}{43}{chapter.8}%
-\contentsline {part}{II\hspace {1em}CƠ HỌC CÁC LƯU CHẤT NÉN ĐƯỢC}{45}{part.2}%
-\contentsline {xpart}{CƠ HỌC CÁC LƯU CHẤT NÉN ĐƯỢC}{47}{part.2}%
-\contentsline {chapter}{\numberline {9}CÁC PHƯƠNG TRÌNH CHI PHỐI}{47}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Mở đầu}{47}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Tính nén được của lưu chất}{48}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Nhắc lại về cơ lưu chất}{49}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Nhắc lại về nhiệt động lực học}{49}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Cân bằng năng lượng tổng quát}{49}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Cân bằng entropy}{50}{subsection.9.4.2}%
-\contentsline {section}{\numberline {9.5}Hệ phương trình chi phối hành vi của lưu chất}{51}{section.9.5}%
-\contentsline {chapter}{\numberline {10}DÒNG CHUYỂN ĐỘNG KHÔNG NHỚT}{55}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Dòng chuyển động ổn định}{55}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Độ nhớt và sự truyền nhiệt}{56}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Sóng xung kích}{56}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Sóng xung kích thẳng}{56}{section.10.4}%
+\contentsline {section}{\numberline {1.6}Nghiên cứu nhiệt động lực học của lưu chất}{29}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Cân bằng năng lượng tổng quát}{29}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Cân bằng entropy}{30}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Các định luật hành vi của lưu chất}{31}{subsection.1.6.3}%
+\contentsline {chapter}{\numberline {2}THỦY TĨNH HỌC}{33}{chapter.2}%
+\contentsline {chapter}{\numberline {3}ĐỘNG HỌC LƯU CHẤT}{35}{chapter.3}%
+\contentsline {chapter}{\numberline {4}ĐỘNG LỰC HỌC LƯU CHẤT}{37}{chapter.4}%
+\contentsline {chapter}{\numberline {5}LƯU CHẤT LÝ TƯỞNG}{39}{chapter.5}%
+\contentsline {chapter}{\numberline {6}LƯU CHẤT THỰC}{41}{chapter.6}%
+\contentsline {chapter}{\numberline {7}LƯU BIẾN HỌC}{43}{chapter.7}%
+\contentsline {chapter}{\numberline {8}ĐỘNG HỌC XOÁY}{45}{chapter.8}%
+\contentsline {part}{II\hspace {1em}CƠ HỌC CÁC LƯU CHẤT NÉN ĐƯỢC}{47}{part.2}%
+\contentsline {xpart}{CƠ HỌC CÁC LƯU CHẤT NÉN ĐƯỢC}{49}{part.2}%
+\contentsline {chapter}{\numberline {9}CÁC PHƯƠNG TRÌNH CHI PHỐI}{49}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Mở đầu}{49}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Tính nén được của lưu chất}{50}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Nhắc lại về cơ lưu chất}{51}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Nhắc lại về nhiệt động lực học}{51}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Cân bằng năng lượng tổng quát}{51}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Cân bằng entropy}{52}{subsection.9.4.2}%
+\contentsline {section}{\numberline {9.5}Hệ phương trình chi phối hành vi của lưu chất}{53}{section.9.5}%
+\contentsline {chapter}{\numberline {10}DÒNG CHUYỂN ĐỘNG KHÔNG NHỚT}{57}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Dòng chuyển động ổn định}{57}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Độ nhớt và sự truyền nhiệt}{58}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Sóng xung kích}{58}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Sóng xung kích thẳng}{58}{section.10.4}%

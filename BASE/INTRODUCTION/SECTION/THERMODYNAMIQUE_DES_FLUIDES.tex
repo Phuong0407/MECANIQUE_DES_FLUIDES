@@ -1,0 +1,71 @@
+\documentclass[../../../main.tex]{subfiles}
+
+\begin{document}
+\subsection{Cân bằng năng lượng tổng quát}
+    Nguyên lý thứ nhất của nhiệt động lực học phát biểu rằng, năng lượng của một hệ cô lập được bảo toàn, đương nhiên lưu chất cũng không phải là một ngoại lệ. Năng lượng của lưu chất bao gồm nội năng và động năng, mà khi xem xét sự biến đổi, phải bằng tổng lượng nhiệt và lượng công mà lưu chất trao đổi (cho và nhận), như vậy nếu kí hiệu $e$ là nội năng riêng của lưu chất, phương trình cân bằng năng lượng được viết:
+        \begin{align}
+            \dfrac{D}{Dt}\iiint_{\Omega}\rho\left(\underline{x},t\right)\left(e\left(\underline{x},t\right)+\dfrac{\underline{u}^2}{2}\left(\underline{x},t\right)\right)d\tau=\dot{W}+\dot{Q}.
+        \end{align}
+
+    Nhiệt mà lưu chất trao đổi bao gồm lượng nhiệt mà bản thân lưu chất sinh ra và không có nguồn gốc phi cơ học, chẳng hạn khi có sự xuất hiện của một phản ứng hóa học; và thông qua sự truyền nhiệt với môi trường bên ngoài. Công mà lưu chất trao đổi bao gồm công do các tác động cơ ngoại sinh ra và công do chính các tác động cơ nội bên trong lưu chất. Do đó, nếu gọi $q\left(\underline{x},t\right)$ là tốc độ sinh nhiệt riêng của lưu chất và $\underline{j}_{th}\left(\underline{x},t\right)$ là vecteur mật độ dòng nhiệt (theo quy ước, luôn luôn hướng ra khỏi $\Omega$), sự trao đổi nhiệt đi qua thể tích tưởng tượng $\Omega$ (với biên $\partial\Omega$) có thể được viết:
+    \begin{align}
+        \dot{Q}&=\iiint_{\Omega}\rho\left(\underline{x},t\right)q\left(\underline{x},t\right)d\tau+\oiint_{\partial\Omega}-\underline{j}_{th}\left(\underline{x},t\right)d\underline{S};\\
+        \dot{W}&=\iiint_{\Omega}\underline{\underline{\sigma}}\left(\underline{x},t\right)\colon\underline{\underline{d}}\left(\underline{x},t\right)d\tau+\iiint_{\Omega}\rho\left(\underline{x},t\right)\underline{g}\cdot\underline{u}\left(\underline{x},t\right)d\tau
+    \end{align}
+    trong đó
+        \[
+            \underline{\underline{d}}=\dfrac{1}{2}\left(\underline{\underline{\nabla u}} +{}^t\underline{\underline{\nabla u}}\right)
+        \]
+    là tenseur tốc độ biến dạng. Kết hợp các phương trình này lại bằng cách thế các công thức (...) vào (...):
+        \[
+            \begin{aligned}
+                \dfrac{D}{Dt}\iiint_{\Omega}\rho\left(e+\dfrac{\underline{u}^2}{2}\right)d\tau&=\iiint_{\Omega}\rho qd\tau+\oiint_{\partial\Omega}-\underline{j}_{th}d\underline{S}\\
+                &\qquad\qquad+\iiint_{\Omega}\underline{\underline{\sigma}}\colon\underline{\underline{d}}d\tau+\iiint_{\Omega}\rho\underline{g}\cdot\underline{u}d\tau
+            \end{aligned}
+        \]
+    Sử dụng định lý Gauss-Odtrogradsky và giả sử rằng sự truyền nhiệt tuân theo định luật \textsc{Fourier}, ta biếu đổi số hạng dẫn nhiệt trong công thức trên:
+        \[
+            \begin{aligned}
+                \oiint_{\partial\Omega}-\underline{j}_{th}d\underline{S}&=-\iiint_{\Omega}\underline{\nabla}\cdot\underline{j}_{th}d\Omega=-\iiint_{\Omega}\underline{\nabla}\cdot\left(\lambda\underline{\nabla T}\right)d\Omega.
+            \end{aligned}
+        \]
+    Thay lại công thức này vào công thức bên trên, ta có:
+        \[
+            \begin{aligned}
+                \dfrac{D}{Dt}\iiint_{\Omega}\rho\left(e+\dfrac{\underline{u}^2}{2}\right)d\tau&=\iiint_{\Omega}\rho qd\tau-\iiint_{\Omega}\underline{\nabla}\cdot\left(\lambda\underline{\nabla T}\right)d\Omega\\
+                &\qquad\qquad+\iiint_{\Omega}\underline{\underline{\sigma}}\colon\underline{\underline{d}}d\tau+\iiint_{\Omega}\rho\underline{g}\cdot\underline{u}d\tau
+            \end{aligned}
+        \]
+    Khai triển công thức đạo hàm đối lưu, sau đó chuyển các số hạng từ vế phải sang vế trái, chú ý rằng đẳng thức này đúng đối với mọi thể tích con, ta có:
+        \begin{align}
+            \boxed{\dfrac{\partial}{\partial t}\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)\right]+\underline{\nabla}\cdot\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)\underline{u}\right]=\rho q-\underline{\nabla}\cdot\left(\lambda\underline{\nabla T}\right)+\underline{\underline{\sigma}}:\underline{\underline{d}}+\rho\underline{g}\cdot\underline{u}}.
+        \end{align}
+
+    % Sử dụng định nghĩa của tenseur tốc độ biến dạng, ta có:
+    %     \begin{align}\label{eq:conserver_energie}
+    %         \dfrac{\partial}{\partial t}\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)\right]+\underline{\nabla}\cdot\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)\underline{u}+\lambda\underline{\nabla T}-\underline{\underline{\sigma}}\cdot\underline{u}\right]=\rho q+\rho\underline{g}\cdot\underline{u}.
+    %     \end{align}
+\subsection{Cân bằng entropy}
+    Bây giờ ta áp dụng các khái niệm đã biết của nguyên lý thứ hai nhiệt động lực học cho khối lưu chất. Nếu gọi $\mathcal{s}$ là entropy riêng của lưu chất, thế thì entropy của toàn bộ khối lưu chất được viết 
+        \begin{align}
+            S=\iiint_{\Omega}\rho\left(\underline{x},t\right)\mathcal{s}\left(\underline{x},t\right)d\tau.
+        \end{align}
+    Entropy liên hệ trực tiếp đến thông tin của hệ thống, do đó nó không thể bị phá hủy, điều đó chứng tỏ phải có sự cân bằng entropy. Sự biến thiên entropy của lưu chất có thể do sự cung cấp của môi trường bên ngoài và sự biến đổi của tự bản thân lưu chất, nếu gọi $\underline{\Phi}_S\left(\underline{x},t\right)$ là vecteur thông lượng entropy sinh ra do tương tác với môi trường bên ngoài và $\mathscr{S}\left(\underline{x},t\right)$ là tốc độ sinh ra entropy riêng bên trong bản thân lưu chất, ta có:
+    \begin{align}
+        \Delta S=\iiint_{\Omega}\rho\left(\underline{x},t\right)\mathscr{S}\left(\underline{x},t\right)d\tau+\oiint_\mathscr{S}-\underline{\Phi}_S\left(\underline{x},t\right)d\underline{S}.
+    \end{align}
+    Như vậy entropy nội sinh của lưu chất được tính :
+    \begin{align}
+        S_{\text{ns}}=\dot{S}-\Delta S=\dfrac{D}{Dt}\iiint_{\Omega} \rho\mathcal{s}d\tau-\iiint_{\Omega}\rho \mathscr{S}d\tau+\oiint_\mathscr{S}\underline{\Phi}_Sd\underline{S}.
+        \end{align}
+    Theo nguyên lý thứ hai nhiệt động lực học, $\boxed{S_{\text{ns}}\ge0}$, do đó khi sử dụng định lý Gauss-Odtrogradsky, ta có bất đẳng thức entropy cục bộ:
+        \begin{align}
+            \dfrac{D(\rho\mathcal{s})}{Dt}-\rho\mathscr{S}+\underline{\nabla}\cdot\underline{\Phi}_S\ge 0.
+        \end{align}
+    Sử dụng các mật độ trao đổi nhiệt trong phần trên, ta có thể khai thác tiếp tục dạng của entropy riêng được sinh ra và được trao đổi, khi đó, bất đẳng thức này được viết lại:
+        \begin{align}
+            \boxed{
+                \dfrac{D(\rho\mathcal{s})}{Dt} - \rho\dfrac{q}{T} + \underline{\nabla}\cdot\left(\dfrac{\lambda\underline{\nabla T}}{T}\right)\ge0}.
+        \end{align}
+    Bất đẳng thức này có tến là \bi{bất đẳng thức Claussius-Duhem} và rất quan trọng, bởi vì, mọi hành vi của lưu chất mà không thỏa mãn bất đẳng thức này đều không thể xảy ra trong tự nhiên.
+\end{document}
