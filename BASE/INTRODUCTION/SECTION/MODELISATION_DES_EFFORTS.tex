@@ -1,5 +1,219 @@
 \documentclass[../../../main.tex]{subfiles}
 
 \begin{document}
+\subsection{Mở đầu}
+Trong phần này chúng ta sẽ sử dụng các kết quả đã được thiết lập trong cơ học môi trường liên tục để mô hình hóa các tác động cơ. Do đó, chúng ta sẽ chỉ nêu ra các kết quả cần thiết và đi trực tiếp vào các phương trình hữu dụng cho cơ lưu chất.
 
+Xét một thể tích $\Omega$ ảo được giới hạn bởi một mặt tưởng tượng $\partial\Omega$ bên trên lòng lưu chất. Tồn tại các tác động cơ tác động lên thể tích ảo này, bao gồm các lực khối và các lực bề mặt. Các lực khối bao gồm, chẳng hạn trọng lực và lực điện, và hiển nhiên là các lực tầm xa; điều này ngụ ý rằng chúng tác dụng lên mọi phần tử lưu chất. Hệ quả là, các lực này tỷ lệ thuận với kích thước của phần tử thể tích. Do đó, nếu kí hiệu $\underline{f}_{\text{vol}}$ là lực thể tích thì tác dụng của nó lên một thể tích vi mô $d\Omega$ được tính bởi:
+	\begin{align}
+		d\underline{f}_{\text{vol}}\left(\underline{x}\right)=\underline{\mathcal{F}}_{\text{vol}}\left(\underline{x}\right)d\Omega.
+	\end{align}
+Trong đó $\underline{\mathcal{F}}_{\text{vol}}$ là mật độ lực thể tích.
+
+Đối với tương tác giữa các hạt lưu chất ở hai bên của mặt ảo này, ta sẽ mô hình hóa nó bằng các lực bề mặt. Sở dĩ ta làm được điều này là bởi vì, đầu tiên chúng là các lực tầm rất ngắn, suy giảm rất nhanh khi khoảng cách giữa hai hạt tăng lên, nên chúng chỉ có tác dụng ở khoảng cách một vài phân tử. Do đó, chúng chỉ đáng kể khi có tiếp xúc cơ học trực tiếp giữa các phần tử lưu chất. Đối với các chất khí, các lực tầm ngắn tác dụng giữa hai khối khí tiếp xúc trực tiếp tại ranh giới là do các phân tử khí di chuyển qua bề mặt và mang theo động lượng. Đối với các chất lỏng, sự dao động phân tử giúp động lượng được vận chuyển và lực hút giữa các phân tử ở hai phía của mặt tưởng tượng tạo ra một lực tổng hợp nhỏ hơn nhiều. Như vậy, các lực tương tác này được định xứ trên một lớp mỏng ở lân cận bề mặt $\partial\Omega$.
+\subsection{Tác động cơ bề mặt}
+	Theo những gì đã phát triển trong cơ học môi trường liên tục, ta sẽ sử dụng định lý Cauchy:
+		\begin{quotation}
+			\noindent{\emph{Tại mọi điểm $P$ trên $\partial\Omega$, tồn tại một vecteur mật độ lực bề mặt (gọi là \textbf{vecteur ứng suất}), kí hiệu là $\underline{T}\left(\underline{x},\underline{n}\left(\underline{x}\right)\right)$, phụ thuộc vào vecteur pháp tuyến, $\underline{n}\left(\underline{x}\right)$, tại điểm $\underline{x}$ trên bề mặt sao cho một lực bề mặt vô cùng nhỏ được tính:
+				\begin{align}
+					d\underline{f}_{\text{sur}}\left(\underline{x}\right)=\underline{T}\left(\underline{x},\underline{n}\left(\underline{x}\right)\right)dS.
+				\end{align}
+			Hơn nữa, tồn tại một trường tenseur hạng hai tại điểm $\underline{x}$ sao cho:
+				\begin{align}
+					\underline{T}\left(\underline{x},\underline{n}\left(\underline{x}\right)\right)=\underline{\underline{\sigma}}\left(\underline{x}\right)\cdot\underline{n}\left(\underline{x}\right).
+				\end{align}
+			Tenseur này được gọi là \textbf{tenseur ứng suất Cauchy}.			
+			}}
+		\end{quotation}
+
+	% Như vậy, một lực mặt vô cùng nhỏ trên bề mặt tưởng tượng $\partial\Omega$ được tính bởi công thức dưới đây:
+	% 	\begin{align}
+	% 		d\underline{f}_{\text{sur}}\left(\underline{x}\right)=\underline{\underline{\sigma}}\left(\underline{x}\right)\cdot\underline{n}\left(\underline{x}\right)dS.
+	% 	\end{align}
+	% Lực bề mặt này được phân tích thành một thành phần pháp tuyến và một thành phần tiếp tuyến:
+	% 	\begin{align}
+	% 		d\underline{f}_{\text{sur}}\left(\underline{x}\right)=d\underline{f}_{\text{sur},N}\left(\underline{x}\right)+d\underline{f}_{\text{sur},T}\left(\underline{x}\right).
+	% 	\end{align}
+	% Lực pháp tuyến được tính bởi:
+	% 	\[
+	% 		\begin{aligned}
+	% 			d\underline{f}_{\text{sur},N}\left(\underline{x}\right)&=\left(d\underline{f}_{\text{sur}}\left(\underline{x}\right)\cdot\underline{n}\left(\underline{x}\right)\right)\underline{n}\left(\underline{x}\right)\\
+	% 			&=\left[\left(\underline{\underline{\sigma}}\left(\underline{x}\right)\cdot\underline{n}\left(\underline{x}\right)dS\right)\cdot\underline{n}\left(\underline{x}\right)\right]\underline{n}\left(\underline{x}\right)\\
+	% 			&=
+	% 		\end{aligned}
+	% 	\]
+	Trong biểu diển ma trận, tenseur ứng suất Cauchy được viết trong cơ sở trực chuẩn $\left(\underline{e}_1,\underline{e}_2,\underline{e}_3\right)$ bởi:
+		\begin{align}
+			\underline{\underline{\sigma}}=\left[
+				\begin{array}{ccc}
+					\sigma_{11} & \sigma_{12} & \sigma_{13}\\
+					\sigma_{21} & \sigma_{22} & \sigma_{23}\\
+					\sigma_{31} & \sigma_{32} & \sigma_{33}
+				\end{array}\right]
+		\end{align}
+	Thông thường, ta sẽ phân tích tenseur ứng suất thành dạng:
+		\begin{align}
+			\underline{\underline{\sigma}}=-p\underline{\underline{\mathbbm
+			1}}+\underline{\underline{s}}
+		\end{align}
+	Trong đó:
+		\begin{itemize}
+			\item $p=-\dfrac{1}{3}\tr\underline{\underline{\sigma}}$ là một vô hướng được gọi là \emph{áp suất thủy tĩnh}. Sở dĩ có tên gọi này là vì khi lưu chất đứng yên thì tenseur ứng suất được viết\footnote{Ta sẽ tìm hiểu kỹ hơn về đặc tính của áp suất thủy tĩnh ở phần thủy tĩnh học.}
+				\begin{align}
+					\underline{\underline{\sigma}}=-p\underline{\underline{\mathbbm
+					1}}.
+				\end{align}
+			Lúc này lực bề mặt thu lại chỉ còn thành phần pháp tuyến:
+				\begin{align}
+					d\underline{f}_{\text{sur}}\left(\underline{x}\right)=-p\left(\underline{x}\right)\underline{n}\left(\underline{x}\right)dS.
+				\end{align}
+			\item $\underline{\underline{s}}$ được gọi là \emph{tenseur lệch} và đặc trưng cho đặc \emph{tính nhớt} của lưu chất và có liên quan trực tiếp đến sự biến dạng của một lưu chất có tính nhớt.
+		\end{itemize}
+\subsection{Đương lượng thể tích và đương lượng khối lượng}
+	%Để thực hiện các nghiên cứu về sau, chúng ta tính toán đương lượng thể tích và đương lượng khối lượng của các lực, đặc biệt là các lực bề mặt.
+	
+	Đương lượng thể tích $\underline{f}_{\text{vol}}$ của một lực $\underline{F}$ nào đó tác dụng lên một phần tử lưu chất có khối lượng $dm$ với thể tích $d\tau$ được định nghĩa như sau :
+		\begin{equation}
+			\begin{aligned}
+				d\underline{F}=\underline{f}_{\text{vol}}d\tau.
+			\end{aligned}
+		\end{equation}
+	Đương lượng khối lượng $\underline{f}_{\text{m}}$ được định nghĩa như sau :
+		\begin{equation}
+			\begin{aligned}
+				d\underline{F}=\underline{f}_{\text{m}}dm.
+			\end{aligned}
+		\end{equation}
+	
+	Đối với áp lực, xét một thể tích nguyên tố $d\Omega$ mà bề mặt của nó được kí hiệu là $\partial\Omega$ trong lòng lưu chất, áp lực tác dụng lên thể tích này được tính theo áp suất $p\left(\underline{x},t\right)$ trên bề mặt được tính như sau :
+		\[
+			d\underline{F}_p=\oiint_{\partial\Omega}-p\left(\underline{x}\right)\underline{n}\left(\underline{x}\right)dS=\iiint_{d\Omega}-\underline{\nabla p}\left(\underline{x}\right)d\tau.
+		\]
+	Trong đó, để đi từ tích phân thứ nhất sang tích phân thứ hai, chúng ta đã sử dụng định lý Gauss-Ostrogradsky. Khi cho thể tích $d\Omega$ tiến tới gần không (đương nhiên vẫn ở thang trung mô), trên thể tích vi mô này, chúng ta giả sử $-\underline{\nabla p}\left(\underline{x}\right)$ biến đổi nhỏ và do đó ta có thể bỏ qua sự biến đổi của nó, và do đó, đương lượng thể tích của áp lực là:
+	\begin{align}
+		\boxed{\underline{f}_{\text{p,vol}}=-\underline{\nabla p}}.
+	\end{align}
+	Nếu tính đến đương lượng khối lượng của áp lực, chúng ta có :
+		\begin{equation}
+			\begin{aligned}
+				\boxed{
+					\underline{f}_{\text{p,m}}=-\frac{1}{\rho}\underline{\nabla p}.
+				}
+			\end{aligned}
+		\end{equation}
+	Một phép tính tương tự đối với tenseur ứng suất một cách tổng quát cho ta đương lượng thể tích của lực tiếp xúc:
+		\[
+			\begin{aligned}
+				d\underline{F}_{\text{sur}}&=\oiint_{\partial\Omega}\underline{\underline{\sigma}}\left(\underline{x}\right)\cdot\underline{n}\left(\underline{x}\right)dS=\iiint_{\Omega}\underline{\nabla}\cdot\underline{\underline{\sigma}}\left(\underline{x}\right)d\tau
+			\end{aligned}
+		\]
+	Điều này cho ta tương đương thể tích của lực bề mặt:
+		\begin{align}
+			\underline{f}_{\text{sur,vol}}=\underline{\nabla}\cdot\underline{\underline{\sigma}}.
+		\end{align}
+	\begin{description}
+		\item[Chú ý:] Thực hiện phân tích đã thực hiện ở phần bên trên, ta có thể phân tích được hai thành phần của đương lượng thể tích của áp lực:
+			\[
+				\begin{aligned}
+					\underline{\nabla}\cdot\underline{\underline{\sigma}}&=\underline{\nabla}\cdot\left(-p\underline{\underline{\mathbbm{1}}}+\underline{\underline{s}}\right)=\underline{\nabla}\cdot\left(-p\underline{\underline{\mathbbm{1}}}\right)+\underline{\nabla}\cdot\underline{\underline{s}}=-\underline{\nabla p}+\underline{\nabla}\cdot\underline{\underline{s}}.
+				\end{aligned}
+				\]
+			Kết quả cuối cùng này cho ta lại kết quả về đương lượng thể tích áp suất được tính ở trên.
+			\end{description}
+
+	Một phép tính đơn giản với trọng lực cho ta đương lượng thể tích và đương lượng khối lượng của nó lần lượt là:
+		\begin{align}
+			\underline{f}_{\text{gra,vol}}=\rho\underline{g},\quad\underline{f}_{\text{gra,m}}=\underline{g}.
+		\end{align}
+\subsection{Phương trình cân bằng động lượng}
+	Bây giờ, sau khi đã tiến hành mô hình hóa các lực khối cũng như các lực mặt, ta đã có thể hiện thực hóa hệ thức cơ bản của động lực học cho lưu chất.
+
+	Xét một khối lưu chất là miền $\Omega$ là một thể tích vật chất (ta cũng kí hiệu $\Omega$ cho thể tích của miền) được giới hạn bởi bề mặt $\partial\Omega$. Áp dụng hệ thức cơ bản của động lực học cho từng hạt lưu chất trong thể tích này tác dụng lên lưu chất, sau đó cho toàn bộ thể tích ta viết được phương trình động lượng:
+		\begin{align}
+			\iiint_{\Omega}\rho\dfrac{D\underline{u}}{Dt}d\tau=\oiint_{\partial\Omega}\underline{\underline{\sigma}}\cdot\underline{n}dS+\iiint_{\Omega}\rho\underline{f}_{\text{v,m}}d\tau.
+		\end{align}
+	Sử dụng tương đương thể tích của lực bề mặt, ta thu được:
+		\begin{align}
+			\iiint_{\Omega}\rho\dfrac{D\underline{u}}{Dt}d\tau=\iiint_{\Omega}\underline{\nabla}\cdot\underline{\underline{\sigma}}d\tau+\iiint_{\Omega}\rho\underline{f}_{\text{v,m}}d\tau.
+		\end{align}
+	Điều này nghiệm đúng cho mọi thể tích tưởng tượng của lưu chất, do đó hệ thức tích phân được thu gọn thành:
+		\begin{align}
+			\boxed{\rho\left(\underline{x},t\right)\dfrac{D\underline{u}}{Dt}\left(\underline{x},t\right)=\underline{\nabla}\cdot\underline{\underline{\sigma}}\left(\underline{x},t\right)+\rho\left(\underline{x},t\right)\underline{f}_{\text{v,m}}\left(\underline{x},t\right)}.
+		\end{align}
+
+	Đây là một hệ thức quan trọng và có tên là \bi{phương trình động lượng Cauchy} và ta sẽ diển giải hệ thức này trong hệ tọa độ \textsc{Descartes} trực chuẩn $(\underline{e}_1,\underline{e}_2,\underline{e}_3)$:
+		\begin{equation}
+			\boxed{\begin{aligned}
+					&\rho\frac{Du_{1}}{Dt}=\frac{\partial\sigma_{11}}{\partial x}+\frac{\partial\sigma_{12}}{\partial y}+\frac{\partial\sigma_{13}}{\partial z}+\rho f_{v,m,1}\\
+					&\rho\frac{Du_{2}}{Dt}=\frac{\partial\sigma_{21}}{\partial x}+\frac{\partial\sigma_{22}}{\partial y}+\frac{\partial\sigma_{23}}{\partial z}+\rho f_{v,m,2}\\
+					&\rho\frac{Du_{3}}{Dt}=\frac{\partial\sigma_{31}}{\partial x}+\frac{\partial\sigma_{32}}{\partial y}+\frac{\partial\sigma_{33}}{\partial z}+\rho f_{v,m,3}
+				\end{aligned}}.
+		\end{equation}
+\subsection{Phương trình cân bằng moment động lượng}
+	Lấy lại các kí hiệu của phần (...), ta sẽ viết phương trình cân bằng moment động lượng. Đầu tiên, nhân có hướng vecteur vị trí $\left(\underline{x}-\underline{x}_0\right)$ (trong đó $A$ cố định) vào số hạng gia tốc. Đó chính là số hạng đạo hàm của moment động lượng của hạt lưu chất, do đó nó phải bằng tổng moment động lượng của các lực tác dụng lên hạt lưu chất, tức là bằng với moment của lực khối và lực mặt. Sau đó cộng tất cả các phương trình này trên thể tích $\Omega$, ta có:
+		\begin{equation}
+			\begin{aligned}	
+				\iiint_{\Omega}\left(\underline{x}-\underline{x}_0\right)\wedge\rho\dfrac{D\underline{u}}{Dt}d\tau&=\oiint_{\partial\Omega}\left(\underline{x}-\underline{x}_0\right)\wedge\underline{\underline{\sigma}}\cdot\underline{n}dS\\
+				&\quad+\iiint_{\Omega}\left[\left(\underline{x}-\underline{x}_0\right)\wedge\rho\underline{f}_{\text{v,m}}+\underline{m}\right]d\tau
+			\end{aligned}.
+		\end{equation}
+	Thực hiện biến đổi số hạng dive của tensor ứng suất, ta suy ra:
+		\[
+			\begin{aligned}
+				\oiint_{\partial\Omega}\left(\underline{x}-\underline{x}_0\right)\wedge\underline{\underline{\sigma}}\left(\underline{x},t\right)\cdot\underline{n}\left(\underline{x}\right)dS&=\iiint_{\partial\Omega}\underline{\nabla}\cdot\left(\left(\underline{x}-\underline{x}_0\right)\wedge\underline{\underline{\sigma}}\left(\underline{x},t\right)\right)d\tau.
+			\end{aligned}
+		\]
+	Tiếp theo ta biến đổi dive của tích vô hướng của vế phải:
+		\[
+			\begin{aligned}
+				\underline{\nabla}\cdot\left(\left(\underline{x}-\underline{x}_0\right)\wedge\underline{\underline{\sigma}}(\underline{x},t)\right)&=(q_i\sigma_{jk}-q_j\sigma_{ik})_{,k}\underline{e}_k\\
+				&=\left[q_{i,k}\sigma_{jk}-q_{j,k}\sigma_{ik}+(q_i\sigma_{jk,k}-q_j\sigma_{ik,k})\right]\underline{e}_k\\
+				&=\left[\sigma_{ji}-\sigma_{ij}+(q_i\sigma_{jk,k}-q_j\sigma_{ik,k})\right]\underline{e}_k.
+			\end{aligned}
+		\]
+	Trong đó ta đã kí hiệu các thành phần của $\underline{x}-\underline{x}_0$ bởi $q_i$ (theo cách kí hiệu tổng Einstein). Sử dụng tenseur Levi-Civita, $\underline{\underline{\underline{\epsilon}}}$, ta có thể viết được công thức dive ở trên thành:
+		\[
+			\underline{\nabla}\cdot\left(\left(\underline{x}-\underline{x}_0\right)\wedge\underline{\underline{\sigma}}\right)=\left({}^t\underline{\underline{\sigma}}-\underline{\underline{\sigma}}\right)\colon\underline{\underline{\underline{\epsilon}}}+\left(\underline{x}-\underline{x}_0\right)\wedge\underline{\nabla}\cdot\underline{\underline{\sigma}}
+		\]
+	% tenseur hoán vị lẻ
+	% 	\[
+	% 		\begin{aligned}
+	% 			\underline{\underline{\underline{\varepsilon}}}&=\varepsilon_{ijk}\underline{e}_i\otimes\underline{e}_j\otimes\underline{e}_k\\
+	% 			\varepsilon_{ijk}:&=\begin{dcases}
+	% 				+1 & \text{nếu $i,j,k$ là một hoán vị chẳn của $\{1,2,3\}$}\\
+	% 				-1 & \text{nếu $i,j,k$ là một hoán vị lẻ của $\{1,2,3\}$}\\
+	% 				0 & \text{nếu ít nhất hai chỉ số là giống nhau}
+	% 			\end{dcases}.
+	% 		\end{aligned}
+	% 	\]
+	Thay lại vào công thức (...), ta thu được:
+		\[
+			\begin{aligned}	
+				\iiint_{\Omega}\left(\underline{x}-\underline{x}_0\right)\wedge\rho\dfrac{D\underline{u}}{Dt}d\tau&=\iiint_{\Omega}\left[\left({}^t\underline{\underline{\sigma}}-\underline{\underline{\sigma}}\right)\colon\underline{\underline{\underline{\epsilon}}}+\left(\underline{x}-\underline{x}_0\right)\wedge\underline{\nabla}\cdot\underline{\underline{\sigma}}\right]d\tau\\
+				&\quad+\iiint_{\Omega}\left[\underline{x}\wedge\rho\underline{f}_{\text{v,m}}+\underline{m}\right]d\tau
+			\end{aligned}.
+		\]
+	Tiếp theo, nhân có hướng hai vế của phương trình động lượng Cauchy với $\left(\underline{x}-\underline{x}_0\right)$ rồi lấy tích phân trên thể tích $\Omega$:
+		\[
+			\begin{aligned}
+				\iiint_{\Omega}\left(\underline{x}-\underline{x}_0\right)\wedge\rho\dfrac{D\underline{u}}{Dt}d\tau&=\iiint_{\Omega}\left(\underline{x}-\underline{x}_0\right)\wedge\left(\underline{\nabla}\cdot\underline{\underline{\sigma}}+\rho\underline{f}_{\text{v,m}}\right)d\tau.
+			\end{aligned}
+		\]
+	Trừ hai vế của phương trình này cho nhau, ta thu được công thức cân bằng moment động lượng cục bộ dạng vi phân:
+		\begin{align}
+			\boxed{\left({}^t\underline{\underline{\sigma}}\left(\underline{x},t\right)-\underline{\underline{\sigma}}\left(\underline{x},t\right)\right)\colon\underline{\underline{\underline{\epsilon}}}+\underline{m}\left(\underline{x},t\right)=\underline{0}}.
+		\end{align}
+	
+	Trong một trường hợp cực kỳ quan trọng đó là không có moment lực khối $\underline{m}\left(\underline{x},t\right)$ biểu thức trên được rút gọn thành:
+		\begin{align}
+			\boxed{{}^t\underline{\underline{\sigma}}\left(\underline{x},t\right)-\underline{\underline{\sigma}}\left(\underline{x},t\right)=\underline{0}}.
+		\end{align}
+	Lúc này ta thấy \bi{tenseur ứng suất là đối xứng}. Đây là kết quả ta sẽ luôn luôn áp dụng trong trường hợp các dòng lưu chất chuyển động chỉ với tác dụng của trọng trường.
+	\begin{description}
+		\item[Chú ý:] Trong từ-thủy động học, vì có sự hiện diện của từ trường trong thành phần lực khối, các dòng vật chất đã được ion hoá có các tenseur ứng suất là không đối xứng. Cụ thể hơn, đối với một dòng lưu chất tích điện có vận tốc $\underline{u}$ chuyển động dưới tác dụng của từ trường $\underline{B}$, tenseur ứng suất được tính bởi:
+			\begin{align}
+				\sigma_{ij}=\dfrac{\partial B_j}{\partial x_k}\dfrac{\partial u_k}{\partial x_i}.
+			\end{align}
+			
+	\end{description}
 \end{document}
