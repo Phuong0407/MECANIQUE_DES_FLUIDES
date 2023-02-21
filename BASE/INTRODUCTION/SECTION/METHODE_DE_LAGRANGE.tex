@@ -1,6 +1,7 @@
 \documentclass[../../../main.tex]{subfiles}
 
 \begin{document}
+\subsection{Mô tả phương pháp}
     Đầu tiên ta sẽ giả thiết rằng sự mô hình hóa môi trường liên tục là hợp lệ. Tiếp theo ta sẽ trang bị một hệ quy chiếu $\mathcal{R}$ có hệ tọa độ \textsc{Descartes} $\mathcal{B}=(\underline{e}_1,\underline{e}_2,\underline{e}_3)$ liên kết làm hệ quy chiếu cho các khảo sát cơ học.
     
     Mỗi thể tích trung mô sẽ được đánh dấu bằng một nhãn để phân biệt chúng và đối với mỗi hạt này, ta theo dõi quỹ đạo của nó theo thời gian tương tự như những gì đã làm trong môn cơ học chất điểm. Để có thể làm được điều này, ta sẽ chọn một thời điểm cố định $t_0$ mà ta gọi là thời điểm tham chiếu và thông tin của hệ cơ học, bao gồm vị trí các hạt lưu chất ở thời điểm này là \bi{hình thái tham chiếu}, kí hiệu là $\kappa_0$. Ở mọi thời điểm sau đó, ta sẽ so sánh các thông tin liên kết với hạt tương ứng, ta gọi nó là \bi{hình thái hiện tại} và kí hiệu $\kappa_t$, với các thông tin tương ứng trong hình thái tham chiếu.
@@ -9,13 +10,13 @@
 		\begin{align}\label{eq:Lagrange_trajectoire}
 			\underline{x}=\underline{\phi}\left(\underline{X},t\right).
 		\end{align}
-trong đó hàm vecteur $\underline{\phi}$ là một hàm đủ chính quy\footnote{"Đủ chính quy" ở đây là một từ dường như mang đến một sự nhập nhằng, tuy nhiên, chúng tôi sử dụng nó để tránh chủ nghĩa hình thức toán học nặng nề. Nói cho đơn giản, đó là một hàm số liên tục  từng khúc và không có vô hạn số miền gián đoạn.}.
+	trong đó hàm vecteur $\underline{\phi}$ là một hàm đủ chính quy\footnote{"Đủ chính quy" ở đây là một từ dường như mang đến một sự nhập nhằng, tuy nhiên, chúng tôi sử dụng nó để tránh chủ nghĩa hình thức toán học nặng nề. Nói cho đơn giản, đó là một hàm số liên tục  từng khúc và không có vô hạn số miền gián đoạn.}.
 
 	Vận tốc của hạt này đơn giản chính là đạo hàm riêng phần theo thời gian của biến thời gian $t$:
 		\begin{align}
 			\underline{U}\left(\underline{X},t\right)=\dfrac{\partial\underline{\phi}}{\partial t}\left(\underline{X},t\right)
 		\end{align}
-điều này là hiển nhiên vì $\underline{X}$ không phụ thuộc vào thời gian (do là vị trí của hạt ở thời điểm tham chiếu). Tương tự, ta định nghĩa gia tốc của hạt:
+	điều này là hiển nhiên vì $\underline{X}$ không phụ thuộc vào thời gian (do là vị trí của hạt ở thời điểm tham chiếu). Tương tự, ta định nghĩa gia tốc của hạt:
 		\begin{align}
 			\underline{A}\left(\underline{X},t\right)=\dfrac{\partial^2\underline{\phi}}{\partial t^2}\left(\underline{X},t\right)
 		\end{align}
