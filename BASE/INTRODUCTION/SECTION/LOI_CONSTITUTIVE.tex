@@ -1,9 +1,118 @@
 \documentclass[../../../main.tex]{subfiles}
 
 \begin{document}
-Hành vi của lưu chất là các ứng xử của lưu chất khi gặp phải các điều kiện ngoài, tức là các phản ứng nội tại của lưu chất khi gặp các tác động vật lý lên nó, chẳng hạn như sự thay đổi nhiệt độ, các lực được áp đặt lên lưu chất hoặc hình dạng của cố thể mà lưu chất tương tác khi nó chuyển động qua cố thể này.
+\subsection{Tổng quan}
+	Hành vi của lưu chất là các ứng xử của lưu chất khi gặp các tác động vật lý lên nó, chẳng hạn như sự thay đổi nhiệt độ, các lực được áp đặt lên lưu chất. Một cách tổng quát, trạng thái của lưu chất được định nghĩa thông qua các biến số vĩ mô nội tại của lưu chất; và thường là một hệ thức liên hệ các tham số động lực học và tham số động học của lưu chất, kết hợp với các thông số nhiệt động lực học để mô tả bản chất trao đổi năng lượng của lưu chất.
+	
+	Ở phần cân bằng các đại lượng cơ học và nhiệt động lực học, ta chỉ mới sử dụng dạng tổng quát của trạng thái ứng suất của lưu chất, còn dạng tường minh của nó là gì thì ta vẫn chưa biết. Như vậy, việc xác định được dạng tường minh trạng thái vĩ mô của lưu chất sẽ giúp ta hoàn thành việc mô tả\footnote{Ít nhất là về mặt hình thức các ứng xử của lưu chất}. Do đó, bây giờ ta sẽ nghiên cứu một số dạng hành vi ứng xử điển hình của lưu chất.
 
-Một cách tổng quát, trạng thái của lưu chất được định nghĩa thông qua các biến số vĩ mô nội tại của lưu chất; và thường là một hệ thức liên hệ các tham số động lực học và tham số động học của lưu chất, kết hợp với các thông số nhiệt động lực học để mô tả bản chất trao đổi năng lượng của lưu chất. Ở phần cân bằng các đại lượng cơ học, ta chỉ mới sử dụng dạng tổng quát của trạng thái ứng suất của lưu chất, còn dạng tường minh của nó là gì thì ta vẫn chưa đề cập. Như vậy, việc xác định được dạng tường minh trạng thái ứng suất của lưu chất sẽ giúp ta hoàn thành việc mô tả\footnote{Ít nhất là về mặt hình thức các ứng xử của lưu chất}. Do đó, bây giờ ta sẽ nghiên cứu một số dạng hành vi ứng xử điển hình của lưu chất.
+    Các tác động từ bên ngoài được xem như đã biết. Vì vậy, ta sẽ giả định rằng các đặc tính của vật liệu độc lập với các tác động bên ngoài. Các đại lượng ứng suất, nội năng và thông lượng nhiệt được trao đổi phụ thuộc không chỉ vào đặc tính của vật liệu mà còn phụ thuộc vào các quá trình tác động ngoại vào lưu chất do đó ta sử dụng nó như là các thông số trạng thái của lưu chất.
+
+    Hiển nhiên, các thông số trạng thái của lưu chất phụ thuộc vào \bi{lich sử} của hành vi lưu chất (tức là phụ thuộc vào trạng thái tồn tại trước đó của lưu chất). Do đó, luật hành vi của lưu chất được xác định bởi:
+    	\begin{quotation}
+    		\noindent{\emph{Gọi $\mathcal{Q}$ là một đại lượng trạng thái, tồn tại một hàm hành vi $\mathcal{F}$ sao cho luật hành vi của lưu chất được biểu diển bởi:}}
+    			\begin{equation}
+    				\begin{aligned}
+    					\mathcal{Q}\left(\underline{X},t\right)&=\mathcal{F}\left(\underline{\phi}\left(\underline{Y},t-s\right),\dfrac{\partial^n\underline{\phi}}{\partial\underline{X}^n}\left(\underline{Y},t-s\right),\right.\\
+					&\qquad\qquad\qquad\qquad\rho\left(\underline{Y},t-s\right),T\left(\underline{Y},t-s\right),\underline{X},t\bigg).
+    				\end{aligned}
+    			\end{equation}
+    		\emph{Trong đó $t_0\leq s\leq t$, $\underline{Y}\in\Omega_0$ và $n\in\mathbb{N}$ là bậc của vật liệu.}
+    	\end{quotation}
+    \begin{description}
+    	\item[Nhận xét 1:] Trong công thức này, ta đã thể hiện một cách tiên nghiệm sự phụ thuộc của một đại lượng trạng thái ở thời điểm $t$ bởi các thời điểm trước đó thông qua biến số $t-s$; còn biến $\underline{Y}$ được lấy trên toàn bộ miền không gian được lưu chất chiếm trong hình thái $\kappa_0$, điều này là phức tạp và ta sẽ đơn giản nó về sau. Sự phụ thuộc của biến số trạng thái vào khối lượng riêng, hàm quỹ đạo và nhiệt độ của lưu chất sẽ được biện luận về sau.
+    	\item[Nhận xét 2:] $n$ là bậc của gradient biến đổi mà ta cũng gọi là \bi{bậc của vật liệu}. Trong các tính toán về biến dạng của lưu chất ta xấp xỉ sai số của phép khai triển đến bậc hai của gradient quỹ đạo, và điều này là đủ chính xác trong phần lớn các trường hợp. Đó là lý do tại sao ta giới hạn ở gradient bậc nhất của quỹ đạo. Hiện tại, điều này vẫn còn có giá trị, do đó ta vẫn sẽ xem xét sự phụ thuộc của đại lượng trạng thái vào gradient biến đổi.
+    \end{description}
+    
+    \bi{Nguyên lý tác động cục bộ} cho rằng sự phụ thuộc không gian của các hàm hành vi vào một lân cận nhỏ tùy ý xung quanh điểm $\underline{X}$. Hàm hành vi do đó trở thành:
+		\begin{equation}
+    		\begin{aligned}
+    			\mathcal{Q}\left(\underline{X},t\right)&=\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\right.\\
+				&\qquad\qquad\qquad\qquad\rho\left(\underline{X},t-s\right),T\left(\underline{X},t-s\right),\underline{X},t\bigr).
+			\end{aligned}
+    	\end{equation}
+    Trong đó $t_0\leq s\leq t$. Một vật liệu mà sự phụ thuộc của đại lượng trạng thái chỉ vào bậc nhất của gradient biến đổi được gọi là các \bi{vật liệu đơn giản}. Trong phần lớn các nghiên cứu, ta sẽ giả thiết rằng lưu chất là đơn giản.
+\subsection{Tính khách quan của vật liệu}
+	Vì bất kỳ thuộc tính nội tại nào của vật liệu phải độc lập với người quan sát, nên ta giả định rằng đối với bất kỳ đại lượng trạng thái nào, quan hệ hành vi của nó phải bất biến đối với bất kỳ thay đổi hệ quy chiếu nào. Về mặt toán học, ta phải có:
+		\begin{align}
+			\mathcal{F}_{\mathcal{B}}\left(\cdot\right)=\mathcal{F}_{\mathcal{B}^*}\left(\cdot\right).
+		\end{align}
+	Trong đó $\mathcal{B}=\left(O,\underline{e}_1,\underline{e}_2,\underline{e}_3,t\right)$ và $\mathcal{B}^*=\left(O^*,\underline{e}_1^*,\underline{e}_2^*,\underline{e}_3^*,t^*\right)$ là hai hệ quy chiếu bất kỳ (ta đã gộp kí hiệu gốc tọa độ, ba vecteur đơn vị trực chuẩn và thời gian lại chung với nhau).
+	
+	Để thực hiện việc nghiên cứu, ta sẽ định nghĩa phép biến đổi hệ quy chiếu:
+		\begin{equation}
+			\begin{dcases}
+				\underline{x}^*=\underline{\underline{\mathcal{R}}}\left(t\right)\underline{x}+\underline{\mathcal{T}}\left(t\right)\\
+				t^*=t+a
+			\end{dcases}
+		\end{equation}
+	Trong đó $\underline{x}^*$ và $\underline{x}$ là tọa độ tương ứng của một điểm lần lượt trong hai hệ quy chiếu $\mathcal{B}^*$ và $\mathcal{B}$, $\underline{\underline{\mathcal{R}}}$ là tenseur xoay, và $\underline{\mathcal{T}}$ là một vecteur tịnh tiến.
+		\begin{quotation}
+			\noindent{\emph{Một đại lượng $\mathcal{Q}$ được gọi là bất biến-hệ quy chiếu đối với phép biến đổi bên trên nếu và chỉ nếu:}}
+				\begin{align}
+					\mathcal{Q}^*=\underline{\underline{\mathcal{R}}}\mathcal{Q}
+					%{}^t\underline{\underline{\mathcal{R}}}
+				\end{align}
+		\end{quotation}
+
+	Thay thế điều kiện bất biến này vào (...), ta có:
+		\[
+			\begin{aligned}
+				&\mathcal{F}\left(\underline{\phi}^*\left(\underline{X}^*,t^*-s\right),\underline{\underline{F}}^*\left(\underline{X}^*,t^*-s\right),\rho^*\left(\underline{X}^*,t^*-s\right),T^*\left(\underline{X}^*,t^*-s\right),\underline{X}^*,t^*\right)\\
+				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\rho\left(\underline{X},t-s\right),T\left(\underline{X},t-s\right),\underline{X},t\right)
+			\end{aligned}
+		\]
+	Trong đẳng thức này, hiển nhiên là khối lượng riêng và nhiệt độ là các đại lượng vô hướng, do đó sự thay đổi hệ quy chiếu không làm thay đổi giá trị của nó. Do đó, ở đây, để cho đơn giản, ta sẽ bỏ qua chúng trong các kí hiệu và do đó ta viết lại:
+		\[
+			\begin{aligned}
+				&\mathcal{F}\left(\underline{\phi}^*\left(\underline{X},t^*-s\right),\underline{\underline{F}}^*\left(\underline{X},t^*-s\right),\underline{X},t^*\right)\\
+				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right)
+			\end{aligned}
+		\]
+	Công thức biến đổi hệ quy chiếu cho phép ta viết:
+		\[
+			\underline{\phi}^*\left(\underline{X},t^*\right)=\underline{x}^*=\underline{\underline{\mathcal{R}}}\left(t\right)\underline{x}+\underline{\mathcal{T}}\left(t\right)=\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t\right)+\underline{\mathcal{T}}\left(t\right)
+		\]
+	Đạo hàm hai vế biểu thức này tọa độ không gian cho phép ta viết được gradient của phép biến đổi: 
+		\begin{align}
+			\underline{\underline{F}}^*\left(\underline{X},t^*\right)=\underline{\underline{\mathcal{R}}}\left(t\right)\underline{\underline{F}}\left(\underline{X},t\right)
+		\end{align}
+	Thay thế công thức này vào công thức (...), đồng thời thay thế luôn hàm quỹ đạo bởi công thức biến đổi hệ quy chiếu của nó, ta có:
+		\[
+			\begin{aligned}
+				&\mathcal{F}\left(\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
+				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right)
+			\end{aligned}
+		\]
+	Điều này đúng với mọi tenseur xoay, do đó khi thay thế tenseur xoay $\underline{\underline{\mathcal{R}}}=\underline{\underline{\mathbbm{1}}}$ vào biểu thức của sự khách quan của tenseur ứng suất, ta có:
+
+	% Đối với tenseur ứng suất Cauchy, sự bất biến của nó đã được thực hiện:
+	% 	\begin{align}
+	% 		\underline{\underline{\sigma}}^*=\underline{\underline{\mathcal{R}}}\ \underline{\underline{\sigma}}{\ }^t\underline{\underline{\mathcal{R}}}.
+	% 	\end{align}
+		\begin{equation}
+			\begin{aligned}
+				&\mathcal{F}\left(\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
+				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right){}^t\underline{\underline{\mathcal{R}}}\left(t-s\right)
+			\end{aligned}
+		\end{equation}
+		\begin{equation}
+			\begin{aligned}
+				&\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\left(t-s\right)\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
+				&=\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right)
+			\end{aligned}
+		\end{equation}
+	Rõ ràng $\underline{\mathcal{T}}$ là một vecteur bất kỳ do đó, điều này ngụ ý rằng hàm hành vi của chúng ta không thể phụ thuộc vào hàm quỹ đạo. Điều này cho phép ta viết lại biểu thức đơn giản hơn của hàm hành vi:
+		\begin{align}
+			\mathcal{Q}\left(\underline{X},t\right)&=\mathcal{F}\left(\underline{\underline{F}}\left(\underline{X},t-s\right),\rho\left(\underline{X},t-s\right),T\left(\underline{X},t-s\right),\underline{X},t\right).
+		\end{align}
+\subsubsection{Sự đối xứng của vật liệu}
+	
 \subsection{Lưu chất newton}
+    Chúng ta gọi lưu chất newton là lưu chất có quy luật ứng suất-tốc độ biến dạng là tuyến tính. Các hệ số chi phối quy luật đó được gọi là \bi{hệ số nhớt}. Đối với lưu chất newton, hệ số nhớt chỉ phụ thuộc vào nhiệt độ và khối lượng riêng\footnote{và cũng phụ thuộc vào thành phần hóa học của lưu chất nếu nó không phải là một chất thuần túy}, và không phụ thuộc vào các lực tác dụng lên phần tử lưu chất. Do đó quy luật ứng xử của lưu chất không phụ thuộc vào lịch sử các quá trình tác dụng của lưu chất và ta nói lưu chất newton không có \emph{trí nhớ}.
 
+    Một cách tổng quát, đối với một lưu chất newton, quan hệ ứng suất-tốc độ biến dạng được viết:
+        \begin{align}
+            \underline{\underline{\sigma}}=\underline{f}
+        \end{align}
 \end{document}

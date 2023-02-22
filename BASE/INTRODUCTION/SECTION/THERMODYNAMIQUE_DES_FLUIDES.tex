@@ -23,22 +23,24 @@
                 &\qquad\qquad+\iiint_{\Omega}\underline{\underline{\sigma}}\colon\underline{\underline{d}}d\tau+\iiint_{\Omega}\rho\underline{g}\cdot\underline{u}d\tau
             \end{aligned}
         \]
-    Sử dụng định lý Gauss-Odtrogradsky và giả sử rằng sự truyền nhiệt tuân theo định luật \textsc{Fourier}, ta biếu đổi số hạng dẫn nhiệt trong công thức trên:
+    Sử dụng định lý Gauss-Odtrogradsky, ta biếu đổi số hạng dẫn nhiệt trong công thức trên:
+%     và giả sử rằng sự truyền nhiệt tuân theo định luật \textsc{Fourier}
         \[
             \begin{aligned}
-                \oiint_{\partial\Omega}-\underline{j}_{th}d\underline{S}&=-\iiint_{\Omega}\underline{\nabla}\cdot\underline{j}_{th}d\Omega=-\iiint_{\Omega}\underline{\nabla}\cdot\left(\lambda\underline{\nabla T}\right)d\Omega.
+                \oiint_{\partial\Omega}-\underline{j}_{th}d\underline{S}&=-\iiint_{\Omega}\underline{\nabla}\cdot\underline{j}_{th}d\Omega
+%=-\iiint_{\Omega}\underline{\nabla}\cdot\left(\lambda\underline{\nabla T}\right)d\Omega.
             \end{aligned}
         \]
     Thay lại công thức này vào công thức bên trên, ta có:
         \[
             \begin{aligned}
-                \dfrac{D}{Dt}\iiint_{\Omega}\rho\left(e+\dfrac{\underline{u}^2}{2}\right)d\tau&=\iiint_{\Omega}\rho qd\tau-\iiint_{\Omega}\underline{\nabla}\cdot\left(\lambda\underline{\nabla T}\right)d\Omega\\
+                \dfrac{D}{Dt}\iiint_{\Omega}\rho\left(e+\dfrac{\underline{u}^2}{2}\right)d\tau&=\iiint_{\Omega}\rho qd\tau-\iiint_{\Omega}\underline{\nabla}\cdot\underline{j}_{th}d\Omega\\
                 &\qquad\qquad+\iiint_{\Omega}\underline{\underline{\sigma}}\colon\underline{\underline{d}}d\tau+\iiint_{\Omega}\rho\underline{g}\cdot\underline{u}d\tau
             \end{aligned}
         \]
     Khai triển công thức đạo hàm đối lưu, sau đó chuyển các số hạng từ vế phải sang vế trái, chú ý rằng đẳng thức này đúng đối với mọi thể tích con, ta có:
         \begin{align}
-            \boxed{\dfrac{\partial}{\partial t}\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)\right]+\underline{\nabla}\cdot\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)\underline{u}\right]=\rho q-\underline{\nabla}\cdot\left(\lambda\underline{\nabla T}\right)+\underline{\underline{\sigma}}:\underline{\underline{d}}+\rho\underline{g}\cdot\underline{u}}.
+            \boxed{\dfrac{\partial}{\partial t}\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)+\underline{j}_{th}\right]+\underline{\nabla}\cdot\left[\rho\left(e+\dfrac{\underline{u}^2}{2}\right)\underline{u}\right]=\rho q+\underline{\underline{\sigma}}:\underline{\underline{d}}+\rho\underline{g}\cdot\underline{u}}.
         \end{align}
 
     % Sử dụng định nghĩa của tenseur tốc độ biến dạng, ta có:
@@ -65,7 +67,7 @@
     Sử dụng các mật độ trao đổi nhiệt trong phần trên, ta có thể khai thác tiếp tục dạng của entropy riêng được sinh ra và được trao đổi, khi đó, bất đẳng thức này được viết lại:
         \begin{align}
             \boxed{
-                \dfrac{D(\rho\mathcal{s})}{Dt} - \rho\dfrac{q}{T} + \underline{\nabla}\cdot\left(\dfrac{\lambda\underline{\nabla T}}{T}\right)\ge0}.
+                \dfrac{D(\rho\mathcal{s})}{Dt}-\rho\dfrac{q}{T}+\underline{\nabla}\cdot\left(\dfrac{\underline{j}_{th}}{T}\right)\ge0}.
         \end{align}
     Bất đẳng thức này có tến là \bi{bất đẳng thức Claussius-Duhem} và rất quan trọng, bởi vì, mọi hành vi của lưu chất mà không thỏa mãn bất đẳng thức này đều không thể xảy ra trong tự nhiên.
 \end{document}
