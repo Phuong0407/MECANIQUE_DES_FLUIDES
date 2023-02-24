@@ -11,7 +11,7 @@
     Hiển nhiên, các thông số trạng thái của lưu chất phụ thuộc vào \bi{lich sử} của hành vi lưu chất (tức là phụ thuộc vào trạng thái tồn tại trước đó của lưu chất). Do đó, luật hành vi của lưu chất được xác định bởi:
     	\begin{quotation}
     		\noindent{\emph{Gọi $\mathcal{Q}$ là một đại lượng trạng thái, tồn tại một hàm hành vi $\mathcal{F}$ sao cho luật hành vi của lưu chất được biểu diển bởi:}}
-    			\begin{equation}
+    			\begin{equation}\label{eq:fonction_comportement}
     				\begin{aligned}
     					\mathcal{Q}\left(\underline{X},t\right)&=\mathcal{F}\left(\underline{\phi}\left(\underline{Y},t-s\right),\dfrac{\partial^n\underline{\phi}}{\partial\underline{X}^n}\left(\underline{Y},t-s\right),\right.\\
 					&\qquad\qquad\qquad\qquad\rho\left(\underline{Y},t-s\right),T\left(\underline{Y},t-s\right),\underline{X},t\bigg).
@@ -42,11 +42,11 @@
 	Để thực hiện việc nghiên cứu, ta sẽ định nghĩa phép biến đổi hệ quy chiếu:
 		\begin{equation}
 			\begin{dcases}
-				\underline{x}^*=\underline{\underline{\mathcal{R}}}\left(t\right)\underline{x}+\underline{\mathcal{T}}\left(t\right)\\
+				\underline{X}=\underline{\underline{\mathcal{R}}}\left(t\right)\underline{x}+\underline{\mathcal{T}}\left(t\right)\\
 				t^*=t+a
 			\end{dcases}
 		\end{equation}
-	Trong đó $\underline{x}^*$ và $\underline{x}$ là tọa độ tương ứng của một điểm lần lượt trong hai hệ quy chiếu $\mathcal{B}^*$ và $\mathcal{B}$, $\underline{\underline{\mathcal{R}}}$ là tenseur xoay, và $\underline{\mathcal{T}}$ là một vecteur tịnh tiến.
+	Trong đó $\underline{X}$ và $\underline{x}$ là tọa độ tương ứng của một điểm lần lượt trong hai hệ quy chiếu $\mathcal{B}^*$ và $\mathcal{B}$, $\underline{\underline{\mathcal{R}}}$ là tenseur xoay, và $\underline{\mathcal{T}}$ là một vecteur tịnh tiến.
 		\begin{quotation}
 			\noindent{\emph{Một đại lượng $\mathcal{Q}$ được gọi là bất biến-hệ quy chiếu đối với phép biến đổi bên trên nếu và chỉ nếu:}}
 				\begin{align}
@@ -54,51 +54,62 @@
 					%{}^t\underline{\underline{\mathcal{R}}}
 				\end{align}
 		\end{quotation}
-
-	Thay thế điều kiện bất biến này vào (...), ta có:
+	Thay thế điều kiện bất biến này vào biểu thức của hàm hành vi (\ref{eq:fonction_comportement}), ta thu được:
 		\[
 			\begin{aligned}
-				&\mathcal{F}\left(\underline{\phi}^*\left(\underline{X}^*,t^*-s\right),\underline{\underline{F}}^*\left(\underline{X}^*,t^*-s\right),\rho^*\left(\underline{X}^*,t^*-s\right),T^*\left(\underline{X}^*,t^*-s\right),\underline{X}^*,t^*\right)\\
-				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\rho\left(\underline{X},t-s\right),T\left(\underline{X},t-s\right),\underline{X},t\right)
+				&\mathcal{F}\left(\underline{\phi}^*\left(\underline{X},t^*-s\right),\underline{\underline{F}}^*\left(\underline{X},t^*-s\right),\rho^*\left(\underline{X},t^*-s\right),T^*\left(\underline{X},t^*-s\right),\underline{X},t^*\right)\\
+				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\rho\left(\underline{X},t-s\right),T\left(\underline{X},t-s\right),\underline{X},t\right).
 			\end{aligned}
 		\]
-	Trong đẳng thức này, hiển nhiên là khối lượng riêng và nhiệt độ là các đại lượng vô hướng, do đó sự thay đổi hệ quy chiếu không làm thay đổi giá trị của nó. Do đó, ở đây, để cho đơn giản, ta sẽ bỏ qua chúng trong các kí hiệu và do đó ta viết lại:
+	Trong đó vì tọa độ $\underline{X}$ trong hình thái tham chiếu đương nhiên là không phụ thuộc thời gian do đó nó không phụ thuộc vào hệ quy chiếu.
+
+	Trong đẳng thức này, hiển nhiên là khối lượng riêng và nhiệt độ là các đại lượng vô hướng, do đó sự thay đổi hệ quy chiếu không làm thay đổi giá trị của nó, tức là:
 		\[
+			\begin{aligned}
+				&\rho^*\left(\underline{X},t^*-s\right)=\rho\left(\underline{X},t-s\right)\\
+				&T^*\left(\underline{X},t^*-s\right)=T\left(\underline{X},t-s\right)
+			\end{aligned}
+		\]
+	Do đó, ở đây, để cho đơn giản, ta sẽ bỏ qua chúng trong các kí hiệu và do đó ta viết lại:
+		\begin{equation}\label{eq:fonction_comportement_reduced}
 			\begin{aligned}
 				&\mathcal{F}\left(\underline{\phi}^*\left(\underline{X},t^*-s\right),\underline{\underline{F}}^*\left(\underline{X},t^*-s\right),\underline{X},t^*\right)\\
 				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right)
 			\end{aligned}
-		\]
+		\end{equation}
 	Công thức biến đổi hệ quy chiếu cho phép ta viết:
 		\[
-			\underline{\phi}^*\left(\underline{X},t^*\right)=\underline{x}^*=\underline{\underline{\mathcal{R}}}\left(t\right)\underline{x}+\underline{\mathcal{T}}\left(t\right)=\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t\right)+\underline{\mathcal{T}}\left(t\right)
+			\begin{aligned}
+				\underline{\phi}^*\left(\underline{X},t^*-s\right)=:\underline{x}^*&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{x}+\underline{\mathcal{T}}\left(t-s\right)\\
+				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right)
+			\end{aligned}
 		\]
 	Đạo hàm hai vế biểu thức này tọa độ không gian cho phép ta viết được gradient của phép biến đổi: 
 		\begin{align}
 			\underline{\underline{F}}^*\left(\underline{X},t^*\right)=\underline{\underline{\mathcal{R}}}\left(t\right)\underline{\underline{F}}\left(\underline{X},t\right)
 		\end{align}
-	Thay thế công thức này vào công thức (...), đồng thời thay thế luôn hàm quỹ đạo bởi công thức biến đổi hệ quy chiếu của nó, ta có:
+	Thay thế công thức này vào công thức (\ref{eq:fonction_comportement_reduced}), đồng thời thay thế luôn hàm quỹ đạo bởi công thức biến đổi hệ quy chiếu của nó, ta có:
 		\[
 			\begin{aligned}
 				&\mathcal{F}\left(\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
 				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right)
 			\end{aligned}
 		\]
-	Điều này đúng với mọi tenseur xoay, do đó khi thay thế tenseur xoay $\underline{\underline{\mathcal{R}}}=\underline{\underline{\mathbbm{1}}}$ vào biểu thức của sự khách quan của tenseur ứng suất, ta có:
+	Điều này đúng với mọi tenseur xoay, do đó nó cũng đúng đối với tenseur xoay $\underline{\underline{\mathcal{R}}}=\underline{\underline{\mathbbm{1}}}$. Thay thế  tenseur xoay $\underline{\underline{\mathcal{R}}}=\underline{\underline{\mathbbm{1}}}$ vào biểu thức của sự khách quan của tenseur ứng suất, ta có:
 
 	% Đối với tenseur ứng suất Cauchy, sự bất biến của nó đã được thực hiện:
 	% 	\begin{align}
 	% 		\underline{\underline{\sigma}}^*=\underline{\underline{\mathcal{R}}}\ \underline{\underline{\sigma}}{\ }^t\underline{\underline{\mathcal{R}}}.
 	% 	\end{align}
+		% \begin{equation}
+		% 	\begin{aligned}
+		% 		&\mathcal{F}\left(\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
+		% 		&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right){}^t\underline{\underline{\mathcal{R}}}\left(t-s\right)
+		% 	\end{aligned}
+		% \end{equation}
 		\begin{equation}
 			\begin{aligned}
-				&\mathcal{F}\left(\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\underline{\underline{\mathcal{R}}}\left(t-s\right)\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
-				&=\underline{\underline{\mathcal{R}}}\left(t-s\right)\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right){}^t\underline{\underline{\mathcal{R}}}\left(t-s\right)
-			\end{aligned}
-		\end{equation}
-		\begin{equation}
-			\begin{aligned}
-				&\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\left(t-s\right)\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
+				&\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right)+\underline{\mathcal{T}}\left(t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t^*\right)\\
 				&=\mathcal{F}\left(\underline{\phi}\left(\underline{X},t-s\right),\underline{\underline{F}}\left(\underline{X},t-s\right),\underline{X},t\right)
 			\end{aligned}
 		\end{equation}
@@ -106,8 +117,46 @@
 		\begin{align}
 			\mathcal{Q}\left(\underline{X},t\right)&=\mathcal{F}\left(\underline{\underline{F}}\left(\underline{X},t-s\right),\rho\left(\underline{X},t-s\right),T\left(\underline{X},t-s\right),\underline{X},t\right).
 		\end{align}
-\subsubsection{Sự đối xứng của vật liệu}
-	
+\subsection{Sự đối xứng của vật liệu}
+	Luật hành vi được viết cho các chuyển động đối với một hình thái tham chiếu. Để đánh dấu hình thái ta sử dụng chỉ số của hình thái tham chiếu, $\kappa_0$ trong biểu thức của hàm hành vi:
+		\begin{align}
+			\mathcal{Q}\left(\underline{X},t\right)&=\mathcal{F}_{\kappa_0}\left(\underline{\underline{F}}\left(\underline{X},t-s\right),\rho\left(\underline{X},t-s\right),T\left(\underline{X},t-s\right),\underline{X},t\right)
+		\end{align}
+	Khi lấy một hình thái khác làm hình thái tham chiếu $\widehat{\kappa}_0$, (lúc này ta sẽ sử dụng kí hiệu $\widehat{\cdot}$ cho mọi đại lượng liên quan đến hình thái tham chiếu mới này), ta kí hiệu:
+	\begin{align}
+		\mathcal{Q}\left(\underline{\widehat{X}},t\right)&=\mathcal{F}_{\widehat{\kappa}_0}\left(\underline{\underline{\widehat{F}}}\left(\underline{\widehat{X}},t-s\right),\rho\left(\underline{\widehat{X}},t-s\right),T\left(\underline{\widehat{X}},t-s\right),\underline{\widehat{X}},t\right)
+	\end{align}
+	Trong đó hàm quỹ được được viết lại cho hình thái mới này:
+		\begin{align}
+			\underline{x}=\underline{\widehat{\phi}}\left(\underline{\widehat{X}},t\right).
+		\end{align}
+	Tức là khi cho hai hàm quỹ đạo này bằng nhau, ta liên hệ hai tọa độ trong hai hình thái tham chiếu với nhau:
+		\[
+			\begin{aligned}
+				\underline{\widehat{\phi}}\left(\underline{\widehat{X}},t\right)=\underline{\phi}\left(\underline{X},t\right)\Longleftrightarrow\underline{\widehat{X}}=\left(\underline{\widehat{\phi}}^{-1}\circ\underline{\phi}\right)\left(\underline{X},t\right)
+			\end{aligned}
+		\]
+	Do đó tenseur biến đổi được tính:
+		\begin{align}
+			\underline{\underline{\widehat{F}}}\left(\underline{\widehat{X}},t\right):=\underline{\underline{\nabla_{\widehat{X}}\widehat{\phi}}}\left(\underline{\widehat{X}},t\right)=\underline{\underline{\nabla_X\phi}}\left(\underline{X},t\right)\underline{\underline{P}}^{-1}\left(\underline{X},t\right)=\underline{\underline{F}}\left(\underline{X},t\right)\underline{\underline{P}}^{-1}\left(\underline{X},t\right).
+		\end{align}
+	Trong đó
+		\begin{align}
+			\underline{\underline{P}}^{-1}\left(\underline{X},t\right)=\underline{\underline{\nabla_X}}\left(\underline{\widehat{\phi}}^{-1}\circ\underline{\phi}\right)\left(\underline{X},t\right)
+		\end{align}
+
+	Hai phép biến đổi được gọi là không biệt được về mặt vật chất nếu và chỉ nếu tác động của chúng không tác động đến các hàm hành vi của vật liệu, có nghĩa là:
+		\begin{align}\label{eq:materiaux_indiscernible}
+			\mathcal{F}_{\kappa_0}\left(\cdot\right)=\mathcal{F}_{\widehat{\kappa}_0}\left(\cdot\right).
+		\end{align}
+	Hai đại lượng vô hướng là không phụ thuộc vào tính đối xứng của vật liệu, do đó ta sẽ đơn giản bỏ đi hai kí hiệu này trong cách kí hiệu và viết lại biểu thức bên trên bởi:
+		\begin{equation}
+			\begin{aligned}
+				\mathcal{F}_{\kappa_0}\left(\underline{\underline{F}}\left(\underline{X},t-s\right)\right)=\mathcal{F}_{\widehat{\kappa}_0}\left(\underline{\underline{F}}\left(\underline{X},t\right)\underline{\underline{P}}^{-1}\left(\underline{X},t\right)\right).
+			\end{aligned}
+		\end{equation}
+
+	Lưu ý rằng hai cấu hình có thể không phân biệt được đối với một thuộc tính vật lý và không phải cho các đại lượng khác, mà để đơn giản chúng ta sẽ không phân biệt điều này. Một phép biến hình $\underline{\underline{P}}\in\text{GL}(E)$ được gọi là phép đối xứng của vật liệu nếu nó thỏa mãn (\ref{eq:materiaux_indiscernible}). Chúng ta có thể giới hạn bản thân với các thành phần của nhóm đơn mô đun bởi vì sẽ rất ngạc nhiên nếu người ta có thể không bị trừng phạt thay đổi thể tích của vật liệu mà không làm thay đổi phản ứng của nó. Sau đó chúng tôi có 
 \subsection{Lưu chất newton}
     Chúng ta gọi lưu chất newton là lưu chất có quy luật ứng suất-tốc độ biến dạng là tuyến tính. Các hệ số chi phối quy luật đó được gọi là \bi{hệ số nhớt}. Đối với lưu chất newton, hệ số nhớt chỉ phụ thuộc vào nhiệt độ và khối lượng riêng\footnote{và cũng phụ thuộc vào thành phần hóa học của lưu chất nếu nó không phải là một chất thuần túy}, và không phụ thuộc vào các lực tác dụng lên phần tử lưu chất. Do đó quy luật ứng xử của lưu chất không phụ thuộc vào lịch sử các quá trình tác dụng của lưu chất và ta nói lưu chất newton không có \emph{trí nhớ}.
 
